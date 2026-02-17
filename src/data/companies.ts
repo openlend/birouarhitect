@@ -1,0 +1,1220 @@
+export interface Company {
+  id: string;
+  name: string;
+  slug: string;
+  description: string;
+  shortDesc: string;
+  city: string;
+  address?: string;
+  phone?: string;
+  email?: string;
+  website?: string;
+  category: string;
+  categoryIcon: string;
+  tags: string[];
+  rating: number;
+  reviewCount: number;
+  projectCount: number;
+  employeeCount?: string;
+  foundedYear?: number;
+  isPremium: boolean;
+  isVerified: boolean;
+}
+
+export const companies: Company[] = [
+  {
+    id: "1",
+    name: "Brick Art",
+    slug: "brick-art-bucuresti",
+    description: "Brick Art este un birou de arhitectură din București specializat în proiectare rezidențială și comercială. Oferă servicii complete de la concept la finalizare, cu accent pe design modern și funcționalitate.",
+    shortDesc: "Brick Art este un birou de arhitectură din București specializat în proiectare rezidențială și comercială. Oferă servicii complete de la concept la finalizare, cu accent pe design modern și funcționalitate.",
+    city: "București",
+    address: "Strada Foisorului nr. 107, Sector 3, București",
+    phone: "0722 614 143",
+    email: "office@brickart.ro",
+    website: "https://www.brickart.ro",
+    category: "Rezidențial",
+    categoryIcon: "🏠",
+    tags: ["arhitectură","proiectare rezidențială","autorizații construire","design interior"],
+    rating: 4.7,
+    reviewCount: 32,
+    projectCount: 48,
+    isPremium: false,
+    isVerified: true,
+  },
+  {
+    id: "2",
+    name: "ArhiDinamiK",
+    slug: "arhidinamik-bucuresti",
+    description: "Firma ArhiDinamiK oferă servicii de proiectare complexe, îmbinând soluții funcționale și tehnice. Echipa dinamică de arhitecți cu experiență elaborează proiecte în calitate de Proiectant General, asigurând toate specialitățile necesare.",
+    shortDesc: "Firma ArhiDinamiK oferă servicii de proiectare complexe, îmbinând soluții funcționale și tehnice. Echipa dinamică de arhitecți cu experiență elaborează proiecte în calitate de Proiectant General, asigurând toate specialitățile necesare.",
+    city: "București",
+    address: "Splaiul Unirii 39, bl. M12, sc. B, Sector 3, București",
+    phone: "0722 629 698",
+    email: "office@arhidinamik.ro",
+    website: "https://arhidinamik.ro",
+    category: "Comercial",
+    categoryIcon: "🏢",
+    tags: ["proiectare generală","arhitectură","structură","instalații","construcții civile"],
+    rating: 4.8,
+    reviewCount: 18,
+    projectCount: 88,
+    isPremium: false,
+    isVerified: true,
+  },
+  {
+    id: "3",
+    name: "Cocheci Birou de Arhitectură",
+    slug: "cocheci-birou-arhitectura-cluj",
+    description: "Cocheci Birou de Arhitectură este un birou de proiectare din Cluj-Napoca cu experiență în proiectare case și clădiri rezidențiale. Oferă servicii complete de arhitectură și proiectare.",
+    shortDesc: "Cocheci Birou de Arhitectură este un birou de proiectare din Cluj-Napoca cu experiență în proiectare case și clădiri rezidențiale. Oferă servicii complete de arhitectură și proiectare.",
+    city: "Cluj-Napoca",
+    address: "Str. Cetății, nr. 17, Cluj-Napoca, Cluj",
+    phone: "0264 536 150",
+    email: "cocheci.birou.arhitectura@gmail.com",
+    website: "http://www.cbda.ro",
+    category: "Rezidențial",
+    categoryIcon: "🏠",
+    tags: ["proiectare case","arhitectură rezidențială","urbanism"],
+    rating: 4.5,
+    reviewCount: 12,
+    projectCount: 65,
+    isPremium: false,
+    isVerified: true,
+  },
+  {
+    id: "4",
+    name: "ADS Studio",
+    slug: "ads-studio-cluj",
+    description: "ADS Studio este un birou de arhitectură din Cluj-Napoca oferind servicii de proiectare arhitecturală, design interior și urbanism. Echipa combină creativitatea cu soluții tehnice practice.",
+    shortDesc: "ADS Studio este un birou de arhitectură din Cluj-Napoca oferind servicii de proiectare arhitecturală, design interior și urbanism. Echipa combină creativitatea cu soluții tehnice practice.",
+    city: "Cluj-Napoca",
+    address: "Str. Eremia Grigorescu nr. 11, Cluj-Napoca, Cluj",
+    phone: "0745 662 775",
+    email: "office@adSStudio.ro",
+    website: "https://www.adsstudio.ro",
+    category: "Design Interior",
+    categoryIcon: "🎨",
+    tags: ["arhitectură","design interior","urbanism","proiectare"],
+    rating: 4.6,
+    reviewCount: 10,
+    projectCount: 54,
+    isPremium: false,
+    isVerified: true,
+  },
+  {
+    id: "5",
+    name: "Strumberger Architekten",
+    slug: "strumberger-architekten-timisoara",
+    description: "Birou de arhitectură condus de Thomas Strumberger, arhitect specializat în proiectarea de case și design interior. Proiectează case care aduc familia împreună și ajută businessurile să funcționeze profitabil.",
+    shortDesc: "Birou de arhitectură condus de Thomas Strumberger, arhitect specializat în proiectarea de case și design interior. Proiectează case care aduc familia împreună și ajută businessurile să funcționeze profitabil.",
+    city: "Timișoara",
+    address: "Piața Unirii 1, 300092, Timișoara, Timiș",
+    phone: "0752 271 707",
+    email: "thomas@strumberger.ro",
+    website: "https://www.strumberger.ro",
+    category: "Rezidențial",
+    categoryIcon: "🏠",
+    tags: ["arhitectură rezidențială","design interior","case moderne","design mobilier"],
+    rating: 4.9,
+    reviewCount: 28,
+    projectCount: 72,
+    isPremium: false,
+    isVerified: true,
+  },
+  {
+    id: "6",
+    name: "Arhigest",
+    slug: "arhigest-timisoara",
+    description: "Arhigest este un atelier de proiectare și birou de arhitectură din Timișoara. Oferă servicii complete de proiectare pentru construcții civile și industriale, de la concept la autorizare.",
+    shortDesc: "Arhigest este un atelier de proiectare și birou de arhitectură din Timișoara. Oferă servicii complete de proiectare pentru construcții civile și industriale, de la concept la autorizare.",
+    city: "Timișoara",
+    address: "Str. Anton Pann nr. 1, Timișoara, Timiș",
+    phone: "0727 444 378",
+    email: "office@arhigest.ro",
+    website: "https://arhigest.ro",
+    category: "Comercial",
+    categoryIcon: "🏢",
+    tags: ["proiectare","arhitectură","construcții civile","construcții industriale"],
+    rating: 4.5,
+    reviewCount: 16,
+    projectCount: 45,
+    isPremium: false,
+    isVerified: true,
+  },
+  {
+    id: "7",
+    name: "Contur Studio Arhitectura",
+    slug: "contur-studio-iasi",
+    description: "Contur Studio Arhitectura este un birou de arhitectură din Iași. Echipa abordează cu profesionalism fiecare proiect, oferind servicii de proiectare și consultanță în domeniul construcțiilor.",
+    shortDesc: "Contur Studio Arhitectura este un birou de arhitectură din Iași. Echipa abordează cu profesionalism fiecare proiect, oferind servicii de proiectare și consultanță în domeniul construcțiilor.",
+    city: "Iași",
+    address: "Iași, România",
+    phone: "0745 204 538",
+    email: "office@conturstudio.ro",
+    website: "https://www.conturstudio.ro",
+    category: "Rezidențial",
+    categoryIcon: "🏠",
+    tags: ["arhitectură","proiectare rezidențială","consultanță","autorizații"],
+    rating: 4.7,
+    reviewCount: 22,
+    projectCount: 97,
+    isPremium: false,
+    isVerified: true,
+  },
+  {
+    id: "8",
+    name: "GoConcept",
+    slug: "goconcept-iasi",
+    description: "GoConcept este un birou de arhitectură din Iași cu o reputație puternică pentru furnizarea de servicii profesionale de înaltă calitate. Specializat în proiecte rezidențiale și comerciale.",
+    shortDesc: "GoConcept este un birou de arhitectură din Iași cu o reputație puternică pentru furnizarea de servicii profesionale de înaltă calitate. Specializat în proiecte rezidențiale și comerciale.",
+    city: "Iași",
+    address: "Iași, România",
+    website: "https://www.goconcept.ro",
+    category: "Design Interior",
+    categoryIcon: "🎨",
+    tags: ["arhitectură","design interior","proiectare","consultanță"],
+    rating: 4.6,
+    reviewCount: 18,
+    projectCount: 87,
+    isPremium: false,
+    isVerified: true,
+  },
+  {
+    id: "9",
+    name: "UberHause",
+    slug: "uberhause-brasov",
+    description: "UberHause oferă proiectare și construcție case în Brașov. Serviciile includ consultanță, documentații pentru autorizații, proiectare de urbanism (PUZ, PUD), expertizare tehnică și antrepriză generală.",
+    shortDesc: "UberHause oferă proiectare și construcție case în Brașov. Serviciile includ consultanță, documentații pentru autorizații, proiectare de urbanism (PUZ, PUD), expertizare tehnică și antrepriză generală.",
+    city: "Brașov",
+    address: "Str. Republicii nr. 655, Sânpetru, Brașov",
+    phone: "0747 203 203",
+    email: "brasov@uberhause.ro",
+    website: "https://uberhause.ro",
+    category: "Rezidențial",
+    categoryIcon: "🏠",
+    tags: ["proiecte case","construcții la cheie","PUZ","PUD","antrepriză generală"],
+    rating: 4.8,
+    reviewCount: 45,
+    projectCount: 89,
+    isPremium: false,
+    isVerified: true,
+  },
+  {
+    id: "10",
+    name: "Macaveiu Simona - Birou Individual de Arhitectură",
+    slug: "macaveiu-simona-brasov",
+    description: "Biroul de arhitectură a fost înființat în 1993 de către arhitecta Simona Macaveiu. Cu experiență de peste 20 de ani, realizează și coordonează proiecte complexe incluzând urbanism, arhitectură, rezistență, instalații și amenajări.",
+    shortDesc: "Biroul de arhitectură a fost înființat în 1993 de către arhitecta Simona Macaveiu. Cu experiență de peste 20 de ani, realizează și coordonează proiecte complexe incluzând urbanism, arhitectură, rezistență, instalații și amenajări.",
+    city: "Brașov",
+    address: "Str. Avram Iancu 52, et. 2, cam. 3, 500075, Brașov",
+    phone: "0741 302 888",
+    category: "Urbanism",
+    categoryIcon: "🌆",
+    tags: ["arhitectură","urbanism","rezistență","instalații","amenajări interioare"],
+    rating: 4.5,
+    reviewCount: 8,
+    projectCount: 53,
+    foundedYear: 1993,
+    isPremium: false,
+    isVerified: true,
+  },
+  {
+    id: "11",
+    name: "Arhitect Ovidiu Mimler - Atelier MOVART",
+    slug: "atelier-movart-constanta",
+    description: "ATELIER MOVART SRL este o firmă specializată în proiectare și inginerie, oferind pachete complete pentru realizarea caselor, clădirilor publice, industriale și amenajări interioare și exterioare.",
+    shortDesc: "ATELIER MOVART SRL este o firmă specializată în proiectare și inginerie, oferind pachete complete pentru realizarea caselor, clădirilor publice, industriale și amenajări interioare și exterioare.",
+    city: "Constanța",
+    address: "Str. Prelungirea Recoltei, Nr. 17, Constanța",
+    phone: "0743 071 516",
+    email: "office@arhitectovidiumimler.ro",
+    website: "https://arhitectovidiumimler.ro",
+    category: "Urbanism",
+    categoryIcon: "🌆",
+    tags: ["arhitectură","urbanism","design interior","construcții civile","design peisagistic"],
+    rating: 4.7,
+    reviewCount: 20,
+    projectCount: 34,
+    foundedYear: 2016,
+    isPremium: false,
+    isVerified: true,
+  },
+  {
+    id: "12",
+    name: "SafeSite",
+    slug: "safesite-constanta",
+    description: "SafeSite este un birou de arhitectură cu sedii în Constanța și București. Oferă consultanță și servicii de laborator încercări în activitatea de construcții, specializat în proiecte complexe.",
+    shortDesc: "SafeSite este un birou de arhitectură cu sedii în Constanța și București. Oferă consultanță și servicii de laborator încercări în activitatea de construcții, specializat în proiecte complexe.",
+    city: "Constanța",
+    address: "Str. George Bacovia, nr. 32A, Cumpăna, Constanța",
+    phone: "0745 590 688",
+    website: "https://www.safesite.ro",
+    category: "Industrial",
+    categoryIcon: "🏭",
+    tags: ["arhitectură","consultanță","laborator construcții","proiectare"],
+    rating: 4.6,
+    reviewCount: 12,
+    projectCount: 126,
+    isPremium: false,
+    isVerified: true,
+  },
+  {
+    id: "13",
+    name: "MHS Studio",
+    slug: "mhs-studio-sibiu",
+    description: "MHS Studio este un birou de arhitectură, design interior, rezistență și instalații fondat în 2010 în Sibiu. Portofoliul include proiecte rezidențiale, comerciale, educaționale, industriale și de urbanism.",
+    shortDesc: "MHS Studio este un birou de arhitectură, design interior, rezistență și instalații fondat în 2010 în Sibiu. Portofoliul include proiecte rezidențiale, comerciale, educaționale, industriale și de urbanism.",
+    city: "Sibiu",
+    address: "Strada Ion Creangă Nr. 29, Sibiu",
+    phone: "0740 297 202",
+    email: "office@mhs.ro",
+    website: "https://www.mhs.ro",
+    category: "Design Interior",
+    categoryIcon: "🎨",
+    tags: ["arhitectură","design interior","rezistență","instalații","urbanism"],
+    rating: 4.7,
+    reviewCount: 15,
+    projectCount: 137,
+    foundedYear: 2010,
+    isPremium: false,
+    isVerified: true,
+  },
+  {
+    id: "14",
+    name: "Arhidesign",
+    slug: "arhidesign-sibiu",
+    description: "Arhidesign oferă proiectare și execuție completă pentru construcții civile și industriale. Cu peste 15 ani în domeniul proiectării, firma acoperă arhitectură, rezistență, instalații, design interior și consultanță.",
+    shortDesc: "Arhidesign oferă proiectare și execuție completă pentru construcții civile și industriale. Cu peste 15 ani în domeniul proiectării, firma acoperă arhitectură, rezistență, instalații, design interior și consultanță.",
+    city: "Sibiu",
+    address: "Str. Theodor Aman 6, Șelimbăr, Sibiu",
+    phone: "0720 001 303",
+    website: "https://www.arhidesign.com",
+    category: "Comercial",
+    categoryIcon: "🏢",
+    tags: ["proiectare","execuție","construcții civile","construcții industriale","design interior"],
+    rating: 4.5,
+    reviewCount: 10,
+    projectCount: 79,
+    foundedYear: 2004,
+    isPremium: false,
+    isVerified: true,
+  },
+  {
+    id: "15",
+    name: "Birou Individual de Arhitectură Oana Gal",
+    slug: "arhitect-oana-gal-oradea",
+    description: "Arhitect Oana Gal oferă servicii de proiectare arhitecturală pentru case unifamiliale și spații comerciale, urbanism și documentații PUZ/PUD, randări 3D și consultanță profesională în etapele cheie ale proiectului.",
+    shortDesc: "Arhitect Oana Gal oferă servicii de proiectare arhitecturală pentru case unifamiliale și spații comerciale, urbanism și documentații PUZ/PUD, randări 3D și consultanță profesională în etapele cheie ale proiectului.",
+    city: "Oradea",
+    address: "Str. Ciheiului nr. 65, Oradea, Bihor",
+    phone: "0740 237 067",
+    website: "https://www.arhitectoanagal.com",
+    category: "Rezidențial",
+    categoryIcon: "🏠",
+    tags: ["arhitectură","proiectare case","urbanism","PUZ","PUD","randări 3D"],
+    rating: 4.8,
+    reviewCount: 22,
+    projectCount: 52,
+    isPremium: false,
+    isVerified: true,
+  },
+  {
+    id: "16",
+    name: "HH Archstudio",
+    slug: "hh-archstudio-oradea",
+    description: "HH Archstudio realizează proiecte complete de arhitectură și urbanism, de la concept și schițe la autorizare, implementare și urmărirea lucrărilor în șantier. Utilizează programe performante pentru ilustrări 2D și 3D interactive.",
+    shortDesc: "HH Archstudio realizează proiecte complete de arhitectură și urbanism, de la concept și schițe la autorizare, implementare și urmărirea lucrărilor în șantier. Utilizează programe performante pentru ilustrări 2D și 3D interactive.",
+    city: "Oradea",
+    address: "Str. Alexandru D. Xenopol nr. 8, bl. PC1, et. 2, ap. 6, 410229, Oradea, Bihor",
+    category: "Urbanism",
+    categoryIcon: "🌆",
+    tags: ["arhitectură","urbanism","proiectare","management de șantier"],
+    rating: 4.5,
+    reviewCount: 8,
+    projectCount: 52,
+    foundedYear: 2020,
+    isPremium: false,
+    isVerified: true,
+  },
+  {
+    id: "17",
+    name: "3B Studio",
+    slug: "3b-studio-craiova",
+    description: "3B Studio oferă servicii complete de arhitectură în Craiova. Calitatea primează întotdeauna în fața cantității, oferind consultanță și proiectare pentru proiecte rezidențiale și comerciale.",
+    shortDesc: "3B Studio oferă servicii complete de arhitectură în Craiova. Calitatea primează întotdeauna în fața cantității, oferind consultanță și proiectare pentru proiecte rezidențiale și comerciale.",
+    city: "Craiova",
+    address: "Str. Înfrățirii, Nr. 7, Craiova, Dolj",
+    phone: "0723 703 487",
+    email: "v.b@3bstudio.ro",
+    website: "https://www.3bstudio.ro",
+    category: "Rezidențial",
+    categoryIcon: "🏠",
+    tags: ["arhitectură","proiectare","consultanță","design interior"],
+    rating: 4.6,
+    reviewCount: 14,
+    projectCount: 44,
+    isPremium: false,
+    isVerified: true,
+  },
+  {
+    id: "18",
+    name: "Mihaela Steiner - Birou de Arhitectură",
+    slug: "mihaela-steiner-craiova",
+    description: "Birou de arhitectură din Craiova oferind servicii de proiectare pentru construcții civile, autorizații de construire și amenajări. Program de lucru Luni-Vineri, 9:00-17:00.",
+    shortDesc: "Birou de arhitectură din Craiova oferind servicii de proiectare pentru construcții civile, autorizații de construire și amenajări. Program de lucru Luni-Vineri, 9:00-17:00.",
+    city: "Craiova",
+    address: "Str. C.D. Fortunescu, nr. 10, Craiova, Dolj",
+    phone: "0756 196 671",
+    category: "Rezidențial",
+    categoryIcon: "🏠",
+    tags: ["arhitectură","proiectare","autorizații construire","amenajări"],
+    rating: 4.4,
+    reviewCount: 6,
+    projectCount: 62,
+    isPremium: false,
+    isVerified: true,
+  },
+  {
+    id: "19",
+    name: "Ideal Design Team",
+    slug: "ideal-design-team-galati",
+    description: "Ideal Design Team oferă servicii complete de proiectare în domeniul construcțiilor civile și industriale, oferind soluții tehnice la cel mai înalt standard de calitate.",
+    shortDesc: "Ideal Design Team oferă servicii complete de proiectare în domeniul construcțiilor civile și industriale, oferind soluții tehnice la cel mai înalt standard de calitate.",
+    city: "Galați",
+    address: "Str. Gheorghe Asachi 9, 800457, Galați",
+    phone: "0745 134 795",
+    category: "Industrial",
+    categoryIcon: "🏭",
+    tags: ["proiectare","construcții civile","construcții industriale","soluții tehnice"],
+    rating: 5,
+    reviewCount: 1,
+    projectCount: 33,
+    isPremium: false,
+    isVerified: true,
+  },
+  {
+    id: "20",
+    name: "Marin Eleonora Doina - Birou Individual de Arhitectură și Urbanism",
+    slug: "marin-eleonora-galati",
+    description: "Birou individual de arhitectură și urbanism din Galați, oferind servicii de proiectare arhitecturală, documentații tehnice pentru autorizații de construire și desființare, studii topografice și geotehnice.",
+    shortDesc: "Birou individual de arhitectură și urbanism din Galați, oferind servicii de proiectare arhitecturală, documentații tehnice pentru autorizații de construire și desființare, studii topografice și geotehnice.",
+    city: "Galați",
+    address: "Str. Domnească, Nr. 11, Parter, Ap. 1, 800015, Galați",
+    phone: "0757 072 507",
+    category: "Urbanism",
+    categoryIcon: "🌆",
+    tags: ["arhitectură","urbanism","autorizații","studii topografice","studii geotehnice"],
+    rating: 4.5,
+    reviewCount: 5,
+    projectCount: 125,
+    isPremium: false,
+    isVerified: true,
+  },
+  {
+    id: "21",
+    name: "Andra Arhitect",
+    slug: "andra-arhitect-ploiesti",
+    description: "Birou de arhitectură și design interior din Ploiești, oferind servicii complete arhitecturale, de la planuri 2D și 3D până la design interior. Specializat în proiectare locuințe și amenajări.",
+    shortDesc: "Birou de arhitectură și design interior din Ploiești, oferind servicii complete arhitecturale, de la planuri 2D și 3D până la design interior. Specializat în proiectare locuințe și amenajări.",
+    city: "Ploiești",
+    address: "Strada Mândra, nr. 8, Ploiești, Prahova",
+    phone: "0722 161 872",
+    email: "contact@andraarhitect.ro",
+    website: "https://www.andraarhitect.ro",
+    category: "Design Interior",
+    categoryIcon: "🎨",
+    tags: ["arhitectură","design interior","randări 3D","proiectare locuințe","amenajări"],
+    rating: 4.7,
+    reviewCount: 18,
+    projectCount: 90,
+    isPremium: false,
+    isVerified: true,
+  },
+  {
+    id: "22",
+    name: "Albu Birou de Arhitectură",
+    slug: "albu-birou-arhitectura-ploiesti",
+    description: "Albu Birou de Arhitectură este un birou tânăr din Ploiești, pregătit pentru orice provocare în domeniul arhitecturii, de la concept până la construire. Oferă servicii de proiectare peisagistică, design de interior și grafică.",
+    shortDesc: "Albu Birou de Arhitectură este un birou tânăr din Ploiești, pregătit pentru orice provocare în domeniul arhitecturii, de la concept până la construire. Oferă servicii de proiectare peisagistică, design de interior și grafică.",
+    city: "Ploiești",
+    address: "Str. Petrarca nr. 25, 100325, Ploiești, Prahova",
+    phone: "0726 013 557",
+    category: "Peisagistică",
+    categoryIcon: "🌳",
+    tags: ["arhitectură","design interior","proiectare peisagistică","design produs","grafică"],
+    rating: 4.6,
+    reviewCount: 12,
+    projectCount: 38,
+    isPremium: false,
+    isVerified: true,
+  },
+  {
+    id: "23",
+    name: "Proiect 1 - Birou de Arhitectură",
+    slug: "proiect-1-arad",
+    description: "Birou de arhitectură din Arad oferind servicii complete de proiectare de la A la Z. Echipa de arhitecți tratează cu atenție la detalii fiecare proiect, personalizat pentru nevoile și dorințele fiecărui client.",
+    shortDesc: "Birou de arhitectură din Arad oferind servicii complete de proiectare de la A la Z. Echipa de arhitecți tratează cu atenție la detalii fiecare proiect, personalizat pentru nevoile și dorințele fiecărui client.",
+    city: "Arad",
+    address: "Strada Ion Luca Caragiale 46, 310029, Arad",
+    phone: "0743 844 344",
+    category: "Rezidențial",
+    categoryIcon: "🏠",
+    tags: ["arhitectură","proiectare","construcții civile","autorizații"],
+    rating: 4.5,
+    reviewCount: 2,
+    projectCount: 116,
+    isPremium: false,
+    isVerified: true,
+  },
+  {
+    id: "24",
+    name: "Birou Arhitectură Arad",
+    slug: "birou-arhitectura-arad",
+    description: "Echipă de arhitecți și urbaniști pasionați, activând pe piață din 2019. Au realizat proiecte remarcabile combinând creativitatea cu inovația pentru a transforma idei în realitate.",
+    shortDesc: "Echipă de arhitecți și urbaniști pasionați, activând pe piață din 2019. Au realizat proiecte remarcabile combinând creativitatea cu inovația pentru a transforma idei în realitate.",
+    city: "Arad",
+    address: "Arad, România",
+    category: "Urbanism",
+    categoryIcon: "🌆",
+    tags: ["arhitectură","urbanism","proiectare","inovație"],
+    rating: 4.4,
+    reviewCount: 6,
+    projectCount: 30,
+    foundedYear: 2019,
+    isPremium: false,
+    isVerified: true,
+  },
+  {
+    id: "25",
+    name: "Ruxandra Neagoș Birou Arhitectură",
+    slug: "ruxandra-neagos-targu-mures",
+    description: "Birou de arhitectură creativ și tânăr din Târgu Mureș. Oferă beneficiarilor servicii complete de proiectare de arhitectură, instalații și amenajări interioare, cu cele mai bune soluții pentru clienți.",
+    shortDesc: "Birou de arhitectură creativ și tânăr din Târgu Mureș. Oferă beneficiarilor servicii complete de proiectare de arhitectură, instalații și amenajări interioare, cu cele mai bune soluții pentru clienți.",
+    city: "Târgu Mureș",
+    address: "Str. Lăpușna 8, Ap. 2, 540342, Târgu Mureș, Mureș",
+    phone: "0745 755 000",
+    category: "Rezidențial",
+    categoryIcon: "🏠",
+    tags: ["arhitectură","proiectare","instalații","amenajări interioare"],
+    rating: 4.6,
+    reviewCount: 8,
+    projectCount: 90,
+    foundedYear: 2017,
+    isPremium: false,
+    isVerified: true,
+  },
+  {
+    id: "26",
+    name: "Birou Arhitectură Târgu Mureș (Str. Crinului)",
+    slug: "birou-arhitectura-targu-mures-crinului",
+    description: "Birou de arhitectură din Târgu Mureș specializat în proiectare rezidențială și comercială. Oferă servicii de proiectare completă, consultanță și urmărire de șantier.",
+    shortDesc: "Birou de arhitectură din Târgu Mureș specializat în proiectare rezidențială și comercială. Oferă servicii de proiectare completă, consultanță și urmărire de șantier.",
+    city: "Târgu Mureș",
+    address: "Str. Crinului, Nr. 12, Târgu Mureș, Mureș",
+    phone: "0740 014 766",
+    category: "Rezidențial",
+    categoryIcon: "🏠",
+    tags: ["arhitectură","proiectare rezidențială","consultanță","urmărire șantier"],
+    rating: 4.5,
+    reviewCount: 5,
+    projectCount: 37,
+    isPremium: false,
+    isVerified: true,
+  },
+  {
+    id: "27",
+    name: "Trezart",
+    slug: "trezart-baia-mare",
+    description: "Trezart oferă servicii dinamice și eficiente de arhitectură și consultanță în construcții clienților din Baia Mare și din întreaga țară, cu o gamă variată de proiecte pentru sectorul public și privat.",
+    shortDesc: "Trezart oferă servicii dinamice și eficiente de arhitectură și consultanță în construcții clienților din Baia Mare și din întreaga țară, cu o gamă variată de proiecte pentru sectorul public și privat.",
+    city: "Baia Mare",
+    address: "Bd. Republicii nr. 21, 430201, Baia Mare, Maramureș",
+    phone: "0740 046 140",
+    email: "trezart.office@gmail.com",
+    website: "https://trezart.ro",
+    category: "Comercial",
+    categoryIcon: "🏢",
+    tags: ["arhitectură","consultanță construcții","proiecte publice","proiecte private"],
+    rating: 4.6,
+    reviewCount: 10,
+    projectCount: 132,
+    isPremium: false,
+    isVerified: true,
+  },
+  {
+    id: "28",
+    name: "Saski - Proiectare și Design",
+    slug: "saski-proiectare-baia-mare",
+    description: "Birou de arhitectură și design înființat în 1990, cu bogată experiență în elaborarea planurilor urbanistice, proiecte de construcție pentru clădiri civile și industriale și documentații de autorizare.",
+    shortDesc: "Birou de arhitectură și design înființat în 1990, cu bogată experiență în elaborarea planurilor urbanistice, proiecte de construcție pentru clădiri civile și industriale și documentații de autorizare.",
+    city: "Baia Mare",
+    address: "Strada George Coșbuc 14, 430245, Baia Mare, Maramureș",
+    phone: "0724 020 603",
+    website: "https://saski.ro",
+    category: "Urbanism",
+    categoryIcon: "🌆",
+    tags: ["arhitectură","design","urbanism","proiecte civile","proiecte industriale"],
+    rating: 4.7,
+    reviewCount: 8,
+    projectCount: 80,
+    foundedYear: 1990,
+    isPremium: false,
+    isVerified: true,
+  },
+  {
+    id: "29",
+    name: "A|G Birou de Arhitectură",
+    slug: "ag-birou-arhitectura-suceava",
+    description: "A|G Birou de Arhitectură din Suceava este câștigătoarea competiției Firma de Aur. Oferă servicii de proiectare arhitecturală și consultanță în construcții cu experiență și profesionalism.",
+    shortDesc: "A|G Birou de Arhitectură din Suceava este câștigătoarea competiției Firma de Aur. Oferă servicii de proiectare arhitecturală și consultanță în construcții cu experiență și profesionalism.",
+    city: "Suceava",
+    address: "Str. Emil Cioran, Nr. 1, Suceava, Suceava",
+    phone: "0758 021 705",
+    category: "Rezidențial",
+    categoryIcon: "🏠",
+    tags: ["arhitectură","proiectare","consultanță","construcții"],
+    rating: 5,
+    reviewCount: 5,
+    projectCount: 81,
+    isPremium: false,
+    isVerified: true,
+  },
+  {
+    id: "30",
+    name: "Birou Arhitectură Flader",
+    slug: "birou-arhitectura-flader-suceava",
+    description: "Birou Arhitectură Flader din Suceava oferă servicii de proiectare arhitecturală, documentații tehnice și consultanță pentru construcții civile și industriale în județul Suceava.",
+    shortDesc: "Birou Arhitectură Flader din Suceava oferă servicii de proiectare arhitecturală, documentații tehnice și consultanță pentru construcții civile și industriale în județul Suceava.",
+    city: "Suceava",
+    address: "Str. Ștefan Octavian Iosif 2B, 720216, Suceava",
+    category: "Comercial",
+    categoryIcon: "🏢",
+    tags: ["arhitectură","proiectare","documentații tehnice","construcții"],
+    rating: 4.4,
+    reviewCount: 4,
+    projectCount: 78,
+    isPremium: false,
+    isVerified: true,
+  },
+];
+
+export const categories = [
+  { name: "Rezidențial", slug: "rezidential", icon: "🏠", desc: "Case, vile, apartamente" },
+  { name: "Comercial", slug: "comercial", icon: "🏢", desc: "Birouri, magazine, hoteluri" },
+  { name: "Industrial", slug: "industrial", icon: "🏭", desc: "Fabrici, depozite, hale" },
+  { name: "Design Interior", slug: "design-interior", icon: "🎨", desc: "Amenajări interioare" },
+  { name: "Restaurare", slug: "restaurare", icon: "🏛️", desc: "Monumente, clădiri istorice" },
+  { name: "Urbanism", slug: "urbanism", icon: "🌆", desc: "Planificare urbană, PUZ, PUD" },
+  { name: "Peisagistică", slug: "peisagistica", icon: "🌳", desc: "Grădini, parcuri, spații verzi" },
+  { name: "Sustenabil", slug: "sustenabil", icon: "♻️", desc: "Arhitectură verde, eficiență energetică" },
+];
+
+export const cities = [
+  "București", "Cluj-Napoca", "Timișoara", "Iași", "Brașov",
+  "Constanța", "Sibiu", "Oradea", "Craiova", "Galați",
+  "Ploiești", "Arad", "Pitești", "Târgu Mureș", "Baia Mare",
+];
+
+export const articles: { id: string; slug: string; title: string; excerpt: string; content: string; date: string; author: string; views: number; imageUrl?: string; keywords?: string }[] = [
+  {
+    id: "9",
+    slug: "case-pe-malul-lacului-arhitectura-integrata-in-peisaj",
+    title: "Case Pe Malul Lacului: Cum Arhitectura Se Integrează în Peisaj",
+    excerpt: "România oferă peste 3.450 de lacuri naturale și artificiale unde case de calitate pot combina vederi spectaculoase cu integrare arhitecturală responsabilă. Ghid complet pentru proiectarea locuințelor lacustre în 2026.",
+    content: `<img src="/images/articles/lac-colibita-peisaj-munti-transilvania-arhitectura-lacustra-2025.jpg" alt="Lac Colibița peisaj munți Transilvania - Arhitectură lacustră România" style="width:100%;border-radius:12px;margin-bottom:32px;" />
+
+<p>România deține aproximativ 3.450 de lacuri naturale și peste 200 de acumulări artificiale semnificative, oferind oportunități remarcabile pentru <a href="/directory/?cat=rezidential" style="color: #2563eb;">arhitectură rezidențială</a> integrată în peisaj.</p>
+
+<p>Valoarea medie a terenurilor pe malul lacurilor din zonele turistice românești a crescut cu 40-60% între 2020-2025, conform <a href="https://www.imobiliare.ro" target="_blank" rel="noopener" style="color: #2563eb;">datelor pieței imobiliare</a>, reflectând cererea crescândă pentru locuințe cu vedere spectaculoasă.</p>
+
+<p>Proiectarea unei case pe malul lacului necesită înțelegerea profundă a <a href="http://legislatie.just.ro/Public/DetaliiDocument/12940" target="_blank" rel="noopener" style="color: #2563eb;">reglementărilor de protecție a apelor</a>, tehnicilor de construcție adaptate solurilor umede și principiilor de design care maximizează vederea fără a domina peisajul.</p>
+
+<p>Arhitecții români specializați în proiecte lacustre combină expertiza tehnică cu sensibilitate estetică pentru a crea locuințe care celebrează natura înconjurătoare.</p>
+
+<h2>De Ce Case Pe Malul Lacului Necesită Abordare Arhitecturală Specială</h2>
+
+<p>Construcția lângă corpuri de apă aduce provocări tehnice și oportunități de design unice care diferențiază radical aceste proiecte de locuințele convenționale.</p>
+
+<p>Factori critici specifici siturilor lacustre:</p>
+
+<ul>
+<li><strong>Reglementări stricte:</strong> <a href="http://legislatie.just.ro/Public/DetaliiDocument/12940" target="_blank" rel="noopener" style="color: #2563eb;">Legea Apelor 107/1996</a> impune zone de protecție sanitară de minim 5-10 metri față de malul natural, cu excepții pentru lacurile de acumulare reglementate separat</li>
+
+<li><strong>Fundații speciale:</strong> Nivelul freatic ridicat și solurile saturate necesită soluții de fundare costisitoare — piloți înfundați, radiere armate sau platforme suspendate</li>
+
+<li><strong>Umiditate constantă:</strong> Materialele și detaliile constructive trebuie proiectate pentru expunere permanentă la umiditate ridicată, condens și variații termice accentuate</li>
+
+<li><strong>Accesibilitate limitată:</strong> Multe terenuri lacustre au acces dificil, crescând costurile de transport materiale și prelungind duratele de execuție</li>
+
+<li><strong>Impact vizual:</strong> Construcțiile pe malul apelor sunt extrem de vizibile din distanță și necesită integrare atentă pentru a nu domina peisajul natural</li>
+</ul>
+
+<p>Costurile de construcție pentru case lacustre depășesc cu 20-35% prețurile pentru locuințe similare în zone urbane.</p>
+
+<p>Diferența vine din fundațiile speciale, transportul materialelor și necesitatea de finisaje rezistente la umiditate.</p>
+
+<h2>Zonele Lacustre Cheie Din România Pentru Arhitectură Rezidențială</h2>
+
+<h3>Lacurile Din Transilvania — Valea Mureșului și Someșului</h3>
+
+<p>Lacurile de acumulare <a href="https://ro.wikipedia.org/wiki/Lacul_Colibița" target="_blank" rel="noopener" style="color: #2563eb;">Colibița</a> (capacitate 75 milioane m³), Tarnița și Fântânele oferă oportunități substanțiale pentru arhitectură rezidențială de calitate.</p>
+
+<p>Peisaje montane spectaculoase și reglementări mai flexibile decât lacurile naturale protejate fac din această zonă o destinație preferată pentru case de vacanță.</p>
+
+<p>Caracteristici distinctive:</p>
+<ul>
+<li>Altitudine 700-1.000 metri — climat temperat-continental cu ierni aspre</li>
+<li>Acces îmbunătățit prin investițiile în <a href="/article/tendinte-arhitectura-rezidentiala-romania-2026" style="color: #2563eb;">infrastructură turistică 2020-2025</a></li>
+<li>Prețuri terenuri: 50-120 EUR/mp în zonele accesibile, 15-40 EUR/mp în zone izolate</li>
+<li>Reglementări: Avize de la Administrația Bazinală de Apă Someș-Tisa obligatorii</li>
+</ul>
+
+<h3>Zona Lacurilor Glaciare — Munții Retezat și Făgăraș</h3>
+
+<p>Peste 80 de lacuri glaciare în România, majoritatea situate în <a href="https://www.retezat.ro" target="_blank" rel="noopener" style="color: #2563eb;">zone protejate (parcuri naționale)</a> unde construcția rezidențială este interzisă.</p>
+
+<p>Excepții există pentru lacurile situate în zonele de tampon sau în apropierea așezărilor existente.</p>
+
+<p>Considerații speciale:</p>
+<ul>
+<li>Majoritatea în zone protejate IUCN II — construcție interzisă sau extrem de reglementată</li>
+<li>Altitudine 1.800-2.500 metri — accesibilitate sezonieră limitată</li>
+<li>Avize de mediu obligatorii de la <a href="http://www.anpm.ro" target="_blank" rel="noopener" style="color: #2563eb;">Agenția de Protecția Mediului</a> și administrații de parcuri</li>
+</ul>
+
+<h3>Delta Dunării — Arhitectură Pe Apă și La Malul Canalelor</h3>
+
+<p><a href="https://www.ddbra.ro" target="_blank" rel="noopener" style="color: #2563eb;">Delta Dunării</a> (5.800 km²) oferă oportunități unice pentru arhitectură lacustră și pe platforme plutitoare.</p>
+
+<p>Restricții stricte datorită statutului de rezervație biosferei UNESCO limitează construcția la zonele permise.</p>
+
+<p>Specificități Delta:</p>
+<ul>
+<li>Construcție permisă doar în localitățile existente și zonele de tampon</li>
+<li>Fundații pe piloți obligatorii din cauza solului instabil</li>
+<li>Materiale de construcție: transport exclusiv pe apă — costuri suplimentare 30-50%</li>
+<li>Prețuri terenuri: 10-30 EUR/mp în satele deltei, 40-80 EUR/mp în zone turistice consolidate</li>
+</ul>
+
+<img src="/images/articles/casa-moderna-malul-lacului-arhitectura-rezidentiala-romania-2025.jpg" alt="Casă modernă pe malul lacului Bolboci - Arhitectură rezidențială România 2025" style="width:100%;border-radius:12px;margin:32px 0;" />
+
+<img src="/images/articles/canoe-lac-vidraru-peisaj-linistit-case-malul-apei-romania.jpg" alt="Canoe pe Lac Vidraru - Peisaj liniștit pentru case pe malul apei" style="width:100%;border-radius:12px;margin:32px 0;" />
+
+<h2>Principii De Design Pentru Integrare Arhitecturală Responsabilă</h2>
+
+<h3>1. Poziționare Strategică Pe Teren</h3>
+
+<p>Analiza topografică detaliată determină amplasarea optimă care maximizează vederea fără a expune construcția excesiv din perspectivele publice.</p>
+
+<p>Conform principiilor <a href="/article/arhitectura-sustenabila-viitorul-constructiilor-romania" style="color: #2563eb;">arhitecturii sustenabile</a>, orientarea corectă poate reduce consumul energetic cu până la 30%.</p>
+
+<p>Criterii de poziționare:</p>
+<ul>
+<li><strong>Orientare solară:</strong> Fațada principală sud sau sud-vest captează lumină naturală maximă și căldură pasivă iarna</li>
+<li><strong>Protecție față de vânturi dominante:</strong> Identificarea vânturilor predominante și utilizarea reliefului sau vegetației pentru protecție</li>
+<li><strong>Minimizarea mișcărilor de pământ:</strong> Adaptarea volumului la topografia existentă reduce costurile și impactul vizual</li>
+<li><strong>Respectarea retragerilor legale:</strong> Minimum 5-10 metri față de linia maximă a apei, conform Legii 107/1996</li>
+</ul>
+
+<h3>2. Volumetrie Fragmentată — Reducing Visual Mass</h3>
+
+<p>În loc de un volum masiv monolitic, fragmentarea în 2-4 corpuri mai mici conectate prin pasarele sau curți reduce impactul vizual.</p>
+
+<p>Această abordare permite adaptare mai bună la topografie și creează spații exterioare multiple.</p>
+
+<p>Avantaje volumetrie fragmentată:</p>
+<ul>
+<li>Integrare vizuală superioară — construcția "dispare" în peisaj când e privită din distanță</li>
+<li>Ventilație naturală îmbunătățită între corpuri</li>
+<li>Spații exterioare multiple și intime (curți, terase)</li>
+<li>Flexibilitate funcțională — separarea zonei de zi, noapte și oaspeți</li>
+</ul>
+
+<h3>3. Materiale Locale și Naturale</h3>
+
+<p>Utilizarea materialelor locale reduce costurile de transport și susține economia locală.</p>
+
+<p>Integrarea vizuală autentică se realizează prin materiale care reflectă caracterul regional al zonei.</p>
+
+<p>Paleta de materiale recomandată pentru zone lacustre românești:</p>
+<ul>
+<li><strong>Lemn local tratat:</strong> Brad, molid sau stejar din pădurile Carpaților, tratat termic sau cu uleiuri naturale pentru protecție împotriva umidității</li>
+<li><strong>Piatră naturală:</strong> Granit, andezit sau calcar din cariere locale pentru soclu și elemente decorative</li>
+<li><strong>Cărămidă artizanală:</strong> Din Ardeal sau Moldova pentru pereți cu caracter tradițional</li>
+<li><strong>Metal patinabil:</strong> Tablă Corten sau zinc pentru acoperișuri și fațade — dezvoltă patină naturală care se integrează în timp</li>
+</ul>
+
+<h3>4. Ferestre Strategice — Încadrarea Peisajului Ca Artă</h3>
+
+<p>Ferestrele mari transformă vederea lacustră în tablouri vii care schimbă complet caracterul spațiului interior.</p>
+
+<p>Tehnica <a href="/article/cum-sa-incadrezi-peisajul-strategii-design-case" style="color: #2563eb;">încadrării peisajului</a> prin ferestre strategice maximizează valoarea view-ului fără a compromite eficiența termică.</p>
+
+<p>Strategii de ferestre pentru case lacustre:</p>
+<ul>
+<li><strong>Ferestre-cadru fixe:</strong> Deschideri mari (2x2.5m până la 3x4m) fără cercevele intermediare, montate strategic pentru a "încadra" porțiuni spectaculoase de peisaj</li>
+<li><strong>Pereți cortină:</strong> Fațade complet vitrate (de obicei spre lac) cu geamuri triple performante (Ug ≤ 0.6 W/m²K) pentru eficiență termică</li>
+<li><strong>Ferestre colț:</strong> Sticlă care "dispare" în colț creează senzația de continuitate vizuală între interior și exterior</li>
+<li><strong>Soluții de umbrire:</strong> Brisoleile exterioare, copertine retractabile sau vegetație caducă pentru protecție solară vara fără a bloca vederea iarna</li>
+</ul>
+
+<p>Atenție: Geamurile mari orientate sud necesită protecție solară obligatorie în clima românească.</p>
+
+<p>Supraîncălzirea vara poate crește costurile de climatizare cu până la 60% dacă nu există sisteme de umbrire.</p>
+
+<h2>Provocări Tehnice și Soluții Pentru Construcție Lacustră</h2>
+
+<h3>Fundații Pe Soluri Saturate</h3>
+
+<p>Solurile lacustre prezintă capacitate portantă redusă și risc de tasări diferențiate care pot compromite structura.</p>
+
+<p><a href="https://www.igr.ro" target="_blank" rel="noopener" style="color: #2563eb;">Studiul geotehnic</a> detaliat este OBLIGATORIU și trebuie realizat de un laborator atestat.</p>
+
+<p>Soluții de fundare pentru terenuri lacustre:</p>
+<ul>
+<li><strong>Fundații pe piloți:</strong> Piloți înfundați sau forați până la stratul rezistent (3-8 metri adâncime) — costul: 80-150 EUR/ml</li>
+<li><strong>Radier armat:</strong> Platformă din beton armat care distribuie uniform sarcina — adecvat pentru soluri cu capacitate portantă moderată</li>
+<li><strong>Platforme suspendate:</strong> Pentru terenuri extrem de instabile (Delta) — construcție pe piloți cu podea suspendată deasupra solului</li>
+</ul>
+
+<p>Studiul geotehnic costă 800-2.500 lei în funcție de numărul de foraje.</p>
+
+<p>Acest cost se recuperează prin evitarea greșelilor de fundație care ar putea costa zeci de mii de euro în reparații.</p>
+
+<h3>Protecție Împotriva Umidității</h3>
+
+<p>Umiditatea constantă și condensul sunt inamicul principal al construcțiilor lacustre.</p>
+
+<p>Studiile arată că casele fără sistem adecvat de ventilație dezvoltă probleme de mucegai în primii 2-3 ani de utilizare.</p>
+
+<p>Măsuri de protecție:</p>
+<ul>
+<li><strong>Hidroizolație perimetrală completă:</strong> Membrane bituminoase sau PVC sub radier și pe pereții subterani</li>
+<li><strong>Ventilație mecanică cu recuperare:</strong> Sistem VMC cu <a href="https://www.zehnder.ro" target="_blank" rel="noopener" style="color: #2563eb;">recuperator de căldură</a> pentru eliminarea umidității excesive</li>
+<li><strong>Barieră de vapori:</strong> Folie de polietilenă pe interiorul pereților exteriori pentru a preveni condensul interstițial</li>
+<li><strong>Drenaj perimetral:</strong> Șanțuri drenante umplute cu pietriș și tuburi perforate evacuează apa infiltrată</li>
+</ul>
+
+<h3>Rezistență La Condiții Climatice Extreme</h3>
+
+<p>Zonele lacustre prezintă variații termice mai mari decât zonele urbane.</p>
+
+<p>Expunerea la vânt ridicată poate crește pierderile termice cu 20-30% comparativ cu o casă adăpostită.</p>
+
+<p>Soluții constructive pentru <a href="/article/tendinte-arhitectura-rezidentiala-romania-2026" style="color: #2563eb;">case eficiente energetic</a>:</p>
+<ul>
+<li><strong>Izolație termică sporită:</strong> 30-40 cm în pereți exteriori, 40-50 cm în acoperiș</li>
+<li><strong>Ferestre performante:</strong> Geam triplu cu gaz argon (Ug 0.5-0.7 W/m²K)</li>
+<li><strong>Etanșeitate la aer:</strong> Test <a href="https://www.blowerdoor.de" target="_blank" rel="noopener" style="color: #2563eb;">Blower Door</a> pentru verificarea infiltrațiilor</li>
+<li><strong>Finisaje rezistente:</strong> Tencuieli siliconice hidrofobage, vopsele minerale respirante</li>
+</ul>
+
+<h2>Reglementări Legale și Avize Necesare</h2>
+
+<h3>Legea Apelor 107/1996 — Cadrul Juridic Principal</h3>
+
+<p><a href="http://legislatie.just.ro/Public/DetaliiDocument/12940" target="_blank" rel="noopener" style="color: #2563eb;">Legea Apelor</a> stabilește zone de protecție sanitară în jurul corpurilor de apă naturale.</p>
+
+<p>Nerespectarea acestor zone poate duce la refuzul autorizației de construire sau la demolarea construcțiilor ridicate ilegal.</p>
+
+<p>Zone de protecție:</p>
+<ul>
+<li><strong>Zona I de protecție strictă:</strong> 5-10 metri de la malul natural — construcție interzisă</li>
+<li><strong>Zona II de protecție:</strong> 10-50 metri — construcție permisă cu avize speciale</li>
+<li><strong>Zona III de protecție:</strong> 50-200 metri — reglementări standard, avize de la ABA</li>
+</ul>
+
+<h3>Avize Obligatorii Pentru Construcție Lacustră</h3>
+
+<p>Pe lângă <a href="/article/autorizatie-de-construire-ghid-complet-pas-cu-pas" style="color: #2563eb;">autorizația de construire</a> standard, proiectele lacustre necesită documentație suplimentară.</p>
+
+<p>Lipsa oricărui aviz obligatoriu blochează emiterea autorizației de construire.</p>
+
+<p>Avize necesare:</p>
+<ul>
+<li><strong>Aviz de la Administrația Bazinală de Apă (ABA):</strong> Obligatoriu pentru orice construcție la sub 200m de cursuri/corpuri de apă</li>
+<li><strong>Aviz de mediu:</strong> Studiu de impact sau raport de mediu pentru zone sensibile</li>
+<li><strong>Aviz silvic:</strong> Dacă terenul este în proximitatea fondului forestier</li>
+<li><strong>Aviz de la administrațiile de arii protejate:</strong> Pentru lacuri în parcuri naționale sau rezervații</li>
+</ul>
+
+<p>Termenul mediu de obținere a avizelor: 3-6 luni de la depunerea documentației complete.</p>
+
+<p>Pregătirea documentației tehnice de calitate accelerează semnificativ procesul de avizare.</p>
+
+<h2>Costuri Realiste Pentru Case Lacustre În România (2026)</h2>
+
+<p>Bugetul necesar pentru o casă de calitate pe malul lacului depășește semnificativ costurile pentru locuințe urbane comparabile.</p>
+
+<p>Transparența în costuri ajută proprietarii să evite surprizele neplăcute pe parcursul construcției.</p>
+
+<h3>Structura De Costuri — Casă 150 Mp</h3>
+
+<table style="width:100%; border-collapse: collapse; margin: 24px 0;">
+<thead>
+<tr style="background: #f3f4f6;">
+<th style="padding: 12px; text-align: left; border: 1px solid #e5e7eb;">Element</th>
+<th style="padding: 12px; text-align: right; border: 1px solid #e5e7eb;">Cost (EUR)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding: 12px; border: 1px solid #e5e7eb;">Teren (500 mp, zonă accesibilă)</td>
+<td style="padding: 12px; text-align: right; border: 1px solid #e5e7eb;">40.000 - 60.000</td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 12px; border: 1px solid #e5e7eb;">Proiect arhitectură + specialități</td>
+<td style="padding: 12px; text-align: right; border: 1px solid #e5e7eb;">8.000 - 15.000</td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #e5e7eb;">Studiu geotehnic + topografie</td>
+<td style="padding: 12px; text-align: right; border: 1px solid #e5e7eb;">1.500 - 3.000</td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 12px; border: 1px solid #e5e7eb;">Avize (ABA, mediu, etc.)</td>
+<td style="padding: 12px; text-align: right; border: 1px solid #e5e7eb;">2.000 - 5.000</td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #e5e7eb;">Fundații speciale (piloți)</td>
+<td style="padding: 12px; text-align: right; border: 1px solid #e5e7eb;">15.000 - 25.000</td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 12px; border: 1px solid #e5e7eb;">Construcție la roșu</td>
+<td style="padding: 12px; text-align: right; border: 1px solid #e5e7eb;">60.000 - 85.000</td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #e5e7eb;">Instalații + finisaje</td>
+<td style="padding: 12px; text-align: right; border: 1px solid #e5e7eb;">50.000 - 75.000</td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 12px; border: 1px solid #e5e7eb;">Amenajări exterioare + ponton</td>
+<td style="padding: 12px; text-align: right; border: 1px solid #e5e7eb;">10.000 - 20.000</td>
+</tr>
+<tr style="font-weight: bold; background: #dbeafe;">
+<td style="padding: 12px; border: 1px solid #e5e7eb;">TOTAL</td>
+<td style="padding: 12px; text-align: right; border: 1px solid #e5e7eb;">186.500 - 288.000</td>
+</tr>
+</tbody>
+</table>
+
+<p>Cost mediu: <strong>1.240 - 1.920 EUR/mp</strong> (construcție + teren).</p>
+
+<p>Comparativ, casele urbane similare costă 800-1.200 EUR/mp, reprezentând o diferență de aproximativ 40-60%.</p>
+
+<h2>Viața La Lac — Remote Work și Calitatea Vieții</h2>
+
+<p>Tendința de remote work transformă casele lacustre din simpla vacanță în rezidențe permanente sau secundare unde se lucrează și se trăiește.</p>
+
+<p>O casă bine proiectată pe malul lacului poate oferi un echilibru ideal între productivitate profesională și calitatea vieții.</p>
+
+<img src="/images/articles/lac-bicaz-padure-pin-arhitectura-montana-case-vacanta-2025.jpg" alt="Lac Bicaz în pădure de pin - Arhitectură montană case vacanță România" style="width:100%;border-radius:12px;margin:32px 0;" />
+
+<p>Beneficii pentru remote work:</p>
+<ul>
+<li><strong>Mediu liniștit:</strong> Lipsa zgomotului urban crește concentrarea și productivitatea</li>
+<li><strong>Lumină naturală abundentă:</strong> Reducerea oboselii vizuale și creșterea energiei</li>
+<li><strong>Pauze regeneratoare:</strong> Acces imediat la natură pentru plimbări scurte între ședințe</li>
+<li><strong>Flexibilitate de program:</strong> Posibilitatea de a alterna între lucru și activități recreative în același loc</li>
+</ul>
+
+<p>Amenajările esențiale pentru remote work lacustru:</p>
+<ul>
+<li><strong>Birou dedicat cu vedere:</strong> Spațiu separat de zona de zi, cu ferestre strategice</li>
+<li><strong>Internet de mare viteză:</strong> Conexiune fibră optică sau 4G/5G performantă (verificare obligatorie înainte de cumpărare)</li>
+<li><strong>Izolare fonică:</strong> Pereți dubli sau materiale fonoabsorbante pentru call-uri profesionale fără zgomot</li>
+<li><strong>Climatizare eficientă:</strong> Confort termic constant pentru sesiuni lungi de lucru</li>
+</ul>
+
+<h2>Găsește Arhitecți Specializați În Proiecte Lacustre</h2>
+
+<p>Proiectarea unei case pe malul lacului necesită experiență specifică în <a href="http://legislatie.just.ro/Public/DetaliiDocument/12940" target="_blank" rel="noopener" style="color: #2563eb;">reglementări de apă</a>, soluții tehnice pentru soluri saturate și abilități de integrare peisagistică.</p>
+
+<p>Consultă <a href="/directory" style="color: #2563eb; text-decoration: underline;">directorul BirouArhitect.ro</a> pentru a găsi birouri de arhitectură cu experiență în proiecte rezidențiale lacustre și complexe.</p>
+
+<p>Alternativ, explorează <a href="/directory/?cat=rezidential" style="color: #2563eb;">specialiști în arhitectură rezidențială</a> sau <a href="/directory/?cat=urbanism" style="color: #2563eb;">consultanți urbanism</a> pentru proiecte mai complexe.</p>
+
+<p><strong>Criterii de selecție arhitect:</strong></p>
+<ul>
+<li>Portofoliu cu minimum 2-3 proiecte finalizate pe malul apelor</li>
+<li>Cunoașterea <a href="http://www.rowater.ro" target="_blank" rel="noopener" style="color: #2563eb;">reglementărilor ABA</a> și a procedurilor de avizare</li>
+<li>Colaborări stabile cu ingineri geotehnici și constructori experimentați în fundații speciale</li>
+<li>Referințe verificabile de la clienți anteriori cu proiecte similare</li>
+</ul>
+
+<p>Citește și: <a href="/article/cum-sa-alegi-biroul-arhitectura-potrivit" style="color: #2563eb;">Cum să alegi biroul de arhitectură potrivit</a> pentru ghid complet de selecție.</p>`,
+    date: "2026-02-17",
+    author: "Redacția BirouArhitect.ro",
+    views: 0,
+    imageUrl: "/images/articles/casa-malul-lacului-arhitectura-moderna-romania.jpg",
+  },
+  {
+    id: "8",
+    slug: "spatii-educationale-creative-arhitectura-pentru-copii",
+    title: "Spații Educaționale Creative: Cum Arhitectura Transformă Experiența de Învățare",
+    excerpt: "De la biblioteci transformate în sate colorate la clase deschise spre natură — cum arhitectura școlilor influențează dezvoltarea copiilor în 2026.",
+    content: `<img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1200&h=630&fit=crop" alt="Spații educaționale creative" style="width:100%;border-radius:12px;margin-bottom:24px;" />
+
+<h2>Revoluția silențioasă din arhitectura educațională</h2>
+<p>Arhitectura spațiilor educaționale traversează o revoluție silențioasă. În loc de coridoare gri și săli de clasă standardizate, arhitecții creează medii de învățare care stimulează creativitatea, curiozitatea și bunăstarea copiilor. Studiile arată că designul spațiului influențează direct performanța academică — cu până la 25% diferență între o școală bine proiectată și una standard.</p>
+
+<h2>Exemple internaționale care inspiră</h2>
+<p>Un proiect recent din Paris a transformat o bibliotecă școlară într-un sat în miniatură format din căsuțe colorate, aranjate în jurul unei piețe centrale. Copiii pot explora fiecare căsuță tematică, descoperind cărți și materiale educative într-un spațiu care seamănă mai mult cu un loc de joacă decât cu o bibliotecă tradițională.</p>
+<p>În Finlanda, considerată lider mondial în educație, școlile sunt proiectate cu spații deschise, flexibile, cu multă lumină naturală și zone de relaxare. Modelul finlandez demonstrează că investiția în arhitectura educațională se reflectă direct în rezultatele elevilor.</p>
+
+<h2>Situația din România — urgența modernizării</h2>
+<p>În România, nevoia de modernizare a spațiilor educaționale este urgentă. Multe școli funcționează în clădiri vechi, unele din perioada interbelică sau comunistă, care nu mai corespund standardelor moderne de predare. Săli suprapopulate, iluminat artificial insuficient, ventilație precară și lipsa spațiilor de recreere sunt probleme comune.</p>
+<p>Vestea bună: fondurile europene disponibile prin PNRR și programele de dezvoltare regională pot finanța renovarea și construcția de școli moderne. Colaborarea cu un birou de arhitectură specializat face diferența între o renovare cosmetică și o transformare reală.</p>
+
+<h3>Elemente cheie în designul spațiilor educaționale moderne</h3>
+<ul>
+<li><strong>Flexibilitate</strong> — mobilier modular care permite reconfigurarea sălilor pentru lucru individual, în grup sau prezentări</li>
+<li><strong>Lumină naturală abundentă</strong> — ferestre mari, lucarne și pereți translucizi care reduc consumul de energie și îmbunătățesc starea de spirit</li>
+<li><strong>Culori stimulante dar echilibrate</strong> — palette cromatice adaptate vârstei, cu accente de culoare în zonele de socialzare și tonuri calme în sălile de clasă</li>
+<li><strong>Zone de liniște</strong> — spații dedicate lecturii și reflecției individuale, separate acustic</li>
+<li><strong>Spații de socializare informale</strong> — nu doar curți de recreație, ci și colțuri interioare confortabile</li>
+<li><strong>Materiale durabile și ușor de întreținut</strong> — esențiale în mediul intens solicitat al unei școli</li>
+</ul>
+
+<h2>Costurile renovării unei școli</h2>
+<p>Renovarea completă a unei școli în România costă între 400 și 800 euro/mp, în funcție de starea existentă și nivelul de intervenție. O școală nouă, construită de la zero cu standarde moderne, ajunge la 1.000-1.500 euro/mp. Fondurile europene pot acoperi 85-100% din aceste costuri pentru instituțiile publice.</p>
+
+<h2>Cum pot ajuta arhitecții</h2>
+<p>Primăriile și instituțiile de învățământ din România pot accesa fonduri europene pentru modernizarea școlilor. Primul pas e consultarea cu un birou de arhitectură care are experiență în proiecte educaționale. Găsește arhitecți cu experiență pe <a href="/">BirouArhitect.ro</a> — directorul de birouri de arhitectură din România.</p>`,
+    date: "2026-02-17",
+    author: "Redacția BirouArhitect.ro",
+    views: 0,
+    imageUrl: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1200&h=630&fit=crop",
+  },
+  {
+    id: "7",
+    slug: "cum-sa-incadrezi-peisajul-strategii-design-case",
+    title: "Cum Să Încadrezi Peisajul: Strategii de Design pentru Case cu Vedere Spectaculoasă",
+    excerpt: "Ferestre panoramice, curți interioare sau terase deschise? Ghid complet de strategii arhitecturale pentru a maximiza vederea din casa ta.",
+    content: `<img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1200&h=630&fit=crop" alt="Strategii design case cu vedere" style="width:100%;border-radius:12px;margin-bottom:24px;" />
+
+<h2>Arhitectura ca experiență vizuală</h2>
+<p>Una dintre cele mai importante decizii în proiectarea unei case este modul în care aceasta se raportează la peisajul înconjurător. Arhitectura nu înseamnă doar construirea unui adăpost funcțional — înseamnă crearea unei experiențe vizuale și senzoriale care îți îmbogățește viața zilnică.</p>
+<p>O casă bine proiectată transformă vederea din fereastră într-un element de design la fel de important ca finisajele interioare. România, cu diversitatea ei de peisaje — de la munți la câmpie, de la dealuri la mare — oferă oportunități extraordinare pentru acest tip de arhitectură.</p>
+
+<h2>5 strategii arhitecturale pentru a încadra peisajul</h2>
+
+<h3>1. Fereastra-cadru</h3>
+<p>O fereastră mare, strategic poziționată, care transformă o porțiune din peisaj într-un tablou natural. Această tehnică funcționează excelent în zonele montane din România, unde fiecare anotimp aduce o imagine diferită. Dimensiunea optimă: minim 2x2 metri pentru un efect dramatic.</p>
+
+<h3>2. Transparența totală</h3>
+<p>Pereți cortină din sticlă care dizolvă granița dintre interior și exterior. Ideală pentru case cu grădini mature sau vederi panoramice. Necesită soluții termice performante — geamuri triple cu valoare U sub 0.8 W/m2K pentru clima românească. Costul: 300-600 euro/mp de sticlă, inclusiv montaj.</p>
+
+<h3>3. Curtea interioară</h3>
+<p>Un spațiu verde captiv în interiorul casei, inspirat din arhitectura mediteraneană. Oferă intimitate și lumină naturală, perfect pentru parcele urbane din București sau Cluj unde vecinii sunt aproape. Curtea interioară creează un microclim plăcut și poate include plante, apă sau chiar un copac.</p>
+
+<h3>4. Terasa prelungită</h3>
+<p>Spațiul de zi se extinde natural spre o terasă acoperită sau semi-acoperită, creând o zonă de tranziție între casă și grădină. În clima românească, o terasă cu protecție solară (pergolă sau copertină retractabilă) se poate folosi 7-8 luni pe an.</p>
+
+<h3>5. Deschiderile controlate</h3>
+<p>Ferestre înguste și înalte care filtrează vederea, creând momente de surpriză pe măsură ce te deplasezi prin casă. Această strategie funcționează excelent când peisajul e frumos dar intimitatea e limitată — dirijezi privirea spre cer și copaci, nu spre vecini.</p>
+
+<h2>Ce trebuie să iei în calcul în România</h2>
+<p>Alegerea strategiei potrivite depinde de mai mulți factori: orientarea terenului față de soare, clima locală (vântul dominant, însorirea), gradul de intimitate dorit și bugetul disponibil.</p>
+<p><strong>Sfat practic:</strong> Înainte de a începe proiectarea, vizitează terenul în diferite momente ale zilei și în diferite anotimpuri. Înțelegerea luminii naturale și a vederii din fiecare unghi este esențială pentru un proiect reușit.</p>
+<p>Consultă directorul <a href="/">BirouArhitect.ro</a> pentru a găsi un birou de arhitectură din zona ta care te poate ajuta să proiectezi casa perfectă.</p>`,
+    date: "2026-02-17",
+    author: "Redacția BirouArhitect.ro",
+    views: 0,
+    imageUrl: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1200&h=630&fit=crop",
+  },
+  {
+    id: "4",
+    slug: "tendinte-arhitectura-rezidentiala-romania-2026",
+    title: "Tendințe în Arhitectura Rezidențială din România în 2026",
+    excerpt: "Descoperiți cele mai noi tendințe în designul caselor moderne din România: de la case pasive la integrarea naturii în arhitectură.",
+    content: `<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=630&fit=crop" alt="Tendințe arhitectură rezidențială 2026" style="width:100%;border-radius:12px;margin-bottom:24px;" />
+
+<h2>Transformarea profundă a locuinței românești</h2>
+<p>Arhitectura rezidențială din România traversează o perioadă de transformare profundă în 2026. Case pasive, design biofil, spații flexibile și tehnologie smart home redefinesc modul în care locuim. Nu mai e vorba doar de metri pătrați — e vorba de calitatea vieții.</p>
+
+<h2>Case pasive și eficiență energetică</h2>
+<p>Cererea pentru case pasive a crescut cu peste 40% față de anul trecut. Tot mai mulți proprietari înțeleg beneficiile pe termen lung ale unei case cu consum energetic aproape zero. Izolația termică superioară, recuperarea căldurii din ventilație și orientarea optimă față de soare sunt elementele cheie.</p>
+<p>În România, o casă pasivă costă cu 15-25% mai mult decât una convențională, dar economia la facturi recuperează diferența în 8-12 ani. Cu prețurile energiei în creștere, investiția devine tot mai atractivă.</p>
+
+<h2>Design biofil — natura în casă</h2>
+<p>Conceptul de design biofil câștigă teren rapid. Grădinile verticale, curțile interioare și materialele naturale precum lemnul și piatra sunt din ce în ce mai prezente în proiectele rezidențiale moderne. Studiile arată că prezența elementelor naturale în casă reduce stresul cu până la 37%.</p>
+
+<h2>Spații flexibile și multi-funcționale</h2>
+<p>Munca de acasă a schimbat definitiv modul în care folosim spațiul locuinței. Birourile de acasă, spațiile de relaxare și zonele verzi private au devenit cerințe standard în noile proiecte. Arhitecții proiectează acum camere care se pot transforma — birou ziua, dormitor de oaspeți seara.</p>
+
+<h2>Smart home integrat din proiectare</h2>
+<p>Automatizarea locuinței nu mai este un lux, ci o necesitate. Sistemele inteligente de iluminat, climatizare și securitate sunt integrate încă din faza de proiectare. Costul unui sistem smart home complet: între 3.000 și 15.000 euro, în funcție de complexitate.</p>
+
+<h2>Materiale sustenabile</h2>
+<p>Arhitecții români folosesc din ce în ce mai mult materiale reciclate și locale: lemn certificat FSC, cărămidă artizanală și beton cu amprentă de carbon redusă. Aceste materiale nu sunt doar ecologice — sunt și estetice, oferind texturi și culori naturale care îmbogățesc designul.</p>
+
+<p>Vrei să construiești o casă care urmează aceste tendințe? Găsește un birou de arhitectură specializat pe <a href="/">BirouArhitect.ro</a>.</p>`,
+    date: "2026-02-16",
+    author: "Redacția BirouArhitect.ro",
+    views: 0,
+    imageUrl: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=630&fit=crop",
+  },
+  {
+    id: "5",
+    slug: "cum-sa-alegi-biroul-arhitectura-potrivit",
+    title: "Cum Să Alegi Biroul de Arhitectură Potrivit pentru Proiectul Tău",
+    excerpt: "Ghid complet pentru alegerea celui mai bun birou de arhitectură. Criterii esențiale, întrebări de pus și greșeli de evitat.",
+    content: `<img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200&h=630&fit=crop" alt="Cum alegi biroul de arhitectură" style="width:100%;border-radius:12px;margin-bottom:24px;" />
+
+<h2>De ce contează alegerea arhitectului</h2>
+<p>Alegerea biroului de arhitectură potrivit este una dintre cele mai importante decizii pe care le vei lua pentru proiectul tău. Un arhitect bun nu doar desenează planuri — te ghidează prin întreg procesul, de la concept la cheia casei. Un arhitect nepotrivit poate transforma visul în coșmar.</p>
+
+<h2>Pasul 1: Definește-ți clar nevoile</h2>
+<p>Înainte de a contacta orice birou, stabilește:</p>
+<ul>
+<li><strong>Tipul proiectului</strong> — casă nouă, renovare, extindere, design interior?</li>
+<li><strong>Bugetul estimat</strong> — fii realist și include o marjă de 15% pentru neprevăzute</li>
+<li><strong>Termenul dorit</strong> — când vrei să te muți?</li>
+<li><strong>Stilul arhitectural preferat</strong> — modern, tradițional, minimalist?</li>
+</ul>
+
+<h2>Pasul 2: Cercetează portofoliul</h2>
+<p>Un portofoliu solid este cel mai bun indicator al calității. Caută proiecte similare cu al tău, diversitatea stilurilor, calitatea execuției și eventuale premii. Nu te uita doar la randări 3D — cere fotografii cu proiecte construite efectiv.</p>
+
+<h2>Pasul 3: Verifică referințele</h2>
+<p>Contactează foști clienți și întreabă despre respectarea bugetului, respectarea termenelor, comunicarea pe parcursul proiectului și calitatea documentației tehnice. Un arhitect care refuză să dea referințe e un semnal de alarmă.</p>
+
+<h2>Pasul 4: Evaluează comunicarea</h2>
+<p>Din prima întâlnire, observă cât de bine ascultă nevoile tale, claritatea explicațiilor tehnice, disponibilitatea și timpul de răspuns. Chimia personală contează — vei lucra împreună luni de zile.</p>
+
+<h2>Pasul 5: Compară ofertele</h2>
+<p>Nu alege doar pe baza prețului. Compară serviciile incluse, experiența echipei, garanțiile oferite și suportul post-proiect. O ofertă de 3.000 euro care include doar schițele nu e mai ieftină decât una de 7.000 care include tot pachetul.</p>
+
+<h3>Verifică dreptul de semnătură</h3>
+<p>Conform legii, doar arhitecții înregistrați la OAR cu drept de semnătură pot semna proiecte pentru autorizație. Verifică gratuit pe site-ul Ordinului Arhitecților din România.</p>
+
+<p>Pe <a href="/">BirouArhitect.ro</a> poți compara birouri de arhitectură, vedea portofolii și găsi profesioniști verificați din toată România.</p>`,
+    date: "2026-02-16",
+    author: "Redacția BirouArhitect.ro",
+    views: 0,
+    imageUrl: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200&h=630&fit=crop",
+  },
+  {
+    id: "6",
+    slug: "arhitectura-sustenabila-viitorul-constructiilor-romania",
+    title: "Arhitectura Sustenabilă: Viitorul Construcțiilor în România",
+    excerpt: "România adoptă standardele europene de construcții verzi. Află cum arhitectura sustenabilă transformă peisajul urban românesc.",
+    content: `<img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=1200&h=630&fit=crop" alt="Arhitectura sustenabilă România" style="width:100%;border-radius:12px;margin-bottom:24px;" />
+
+<h2>Noua normalitate în construcții</h2>
+<p>Arhitectura sustenabilă nu mai este o tendință — este noua normalitate. România face pași importanți spre adoptarea standardelor europene de construcții verzi. Din 2026, noua directivă UE privind performanța energetică a clădirilor impune standarde stricte: toate clădirile noi trebuie să respecte cerințe nZEB (nearly Zero Energy Building).</p>
+
+<h2>Certificări verzi în România</h2>
+<p>Tot mai multe proiecte românești obțin certificări internaționale:</p>
+<ul>
+<li><strong>BREEAM</strong> — cel mai răspândit standard european, cu proiecte certificate în București și Cluj</li>
+<li><strong>LEED</strong> — standardul american, adoptat de dezvoltatorii de birouri din România</li>
+<li><strong>Passive House</strong> — standardul german de eficiență energetică maximă</li>
+<li><strong>Green Homes</strong> — certificare specifică pentru rezidențial</li>
+</ul>
+
+<h2>Tehnologii verzi adoptate de arhitecții români</h2>
+<p>Panouri fotovoltaice integrate în fațade și acoperișuri, sisteme de recuperare a apei pluviale, pereți verzi și acoperișuri vegetale, pompe de căldură geotermale — toate aceste tehnologii sunt acum disponibile și accesibile în România.</p>
+<p>Un sistem fotovoltaic rezidențial de 5-10 kW costă între 5.000 și 12.000 euro (cu subvenție Casa Verde), iar o pompă de căldură geotermală începe de la 8.000 euro. Ambele investiții se amortizează în 5-8 ani.</p>
+
+<h2>Beneficii economice concrete</h2>
+<ul>
+<li>Reduceri de <strong>60-80%</strong> la costurile energetice lunare</li>
+<li>Valoare de piață cu <strong>15-25%</strong> mai mare la revânzare</li>
+<li>Durată de viață extinsă a clădirii</li>
+<li>Confort termic superior iarnă și vară</li>
+<li>Acces la finanțări verzi cu dobânzi preferențiale</li>
+</ul>
+
+<h2>Viitorul e verde</h2>
+<p>Reglementările europene împing toate clădirile noi spre eficiență energetică maximă. Proprietarii care investesc acum în arhitectură sustenabilă vor fi cu un pas înainte. Caută arhitecți specializați în construcții verzi pe <a href="/">BirouArhitect.ro</a>.</p>`,
+    date: "2026-02-15",
+    author: "Redacția BirouArhitect.ro",
+    views: 0,
+    imageUrl: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=1200&h=630&fit=crop",
+  },
+  {
+    id: "1",
+    slug: "noi-tendinte-arhitectura-sustenabila-romania",
+    title: "Noi tendințe în arhitectura sustenabilă din România",
+    excerpt: "Arhitecții români adoptă din ce în ce mai mult materiale ecologice și soluții de eficiență energetică.",
+    content: `<h2>Materiale ecologice în ascensiune</h2>
+<p>Arhitecții români adoptă din ce în ce mai mult materiale ecologice și soluții de eficiență energetică în proiectele lor. De la lemnul certificat FSC și BCA-ul reciclat, la izolația din cânepă și betonul cu amprentă de carbon redusă — opțiunile sunt tot mai diverse și accesibile.</p>
+
+<h2>Ce înseamnă sustenabil în 2026</h2>
+<p>Sustenabilitatea în arhitectură nu mai e un concept abstract. E o cerință concretă: materiale cu energie înglobată mică, emisii zero de substanțe toxice, reciclabilitate la finalul duratei de viață. Clădirile sunt responsabile pentru 40% din emisiile de CO2 la nivel global — de aceea fiecare decizie de proiectare contează.</p>
+
+<h3>Tendințe concrete</h3>
+<ul>
+<li><strong>Panouri CLT (Cross Laminated Timber)</strong> — alternativă la betonul armat, cu rezistență structurală comparabilă</li>
+<li><strong>Acoperișuri verzi</strong> — izolație termică naturală, retenție apă pluvială, biodiversitate urbană</li>
+<li><strong>Sisteme de ventilație cu recuperare de căldură</strong> — eficiență de 85-95% în recuperarea energiei termice</li>
+<li><strong>Beton reciclat</strong> — reducere de 30% a amprentei de carbon față de betonul tradițional</li>
+</ul>
+
+<h2>Impactul asupra peisajului urban</h2>
+<p>Aceste inovații transformă peisajul urban românesc. Clădiri de birouri cu fațade verzi în București, școli pasive în Cluj, cartiere rezidențiale cu energie solară în Timișoara — toate demonstrează că arhitectura sustenabilă funcționează și în România.</p>
+
+<p>Caută birouri de arhitectură specializate în proiectare sustenabilă pe <a href="/">BirouArhitect.ro</a>.</p>`,
+    date: "2026-02-15",
+    author: "Redacția",
+    views: 342,
+  },
+  {
+    id: "2",
+    slug: "premiile-arhitecturii-romanesti-2026",
+    title: "Premiile Arhitecturii Românești 2026 - Câștigătorii",
+    excerpt: "Au fost anunțați câștigătorii celei de-a XV-a ediții a Premiilor Arhitecturii Românești.",
+    content: `<h2>Ediția a XV-a — Cele mai bune proiecte din România</h2>
+<p>Au fost anunțați câștigătorii celei de-a XV-a ediții a Premiilor Arhitecturii Românești. Proiecte excepționale din întreaga țară au fost premiate pentru inovație, sustenabilitate și impact comunitar. Gala s-a desfășurat la Ateneul Român, cu participarea a peste 300 de arhitecți și profesioniști din industrie.</p>
+
+<h2>Categoriile premiate</h2>
+<p>Anul acesta, juriul a evaluat peste 180 de proiecte din toată țara, în categorii precum:</p>
+<ul>
+<li><strong>Rezidențial</strong> — case unifamiliale și ansambluri rezidențiale</li>
+<li><strong>Public și Civic</strong> — școli, biblioteci, centre comunitare</li>
+<li><strong>Comercial</strong> — birouri, spații comerciale, hoteluri</li>
+<li><strong>Restaurare</strong> — intervenții pe clădiri istorice</li>
+<li><strong>Sustenabilitate</strong> — proiecte cu impact ecologic pozitiv</li>
+</ul>
+
+<h2>De ce contează premiile</h2>
+<p>Premiile Arhitecturii Românești nu sunt doar trofee. Ele stabilesc direcția industriei, validează abordări inovatoare și oferă vizibilitate birourilor de arhitectură care excelează. Pentru clienți, un birou premiat oferă o garanție suplimentară de calitate.</p>
+
+<h2>Tendințe observate</h2>
+<p>Juriul a remarcat o creștere semnificativă a proiectelor care integrează sustenabilitatea și materialele locale. De asemenea, proiectele de restaurare au fost mai numeroase ca niciodată, reflectând interesul crescut pentru patrimoniul construit al României.</p>
+
+<p>Găsește birouri de arhitectură premiate pe <a href="/">BirouArhitect.ro</a>.</p>`,
+    date: "2026-02-12",
+    author: "Redacția",
+    views: 567,
+  },
+  {
+    id: "3",
+    slug: "cluj-napoca-plan-urbanistic-zona-centrala",
+    title: "Cluj-Napoca: Plan urbanistic nou pentru zona centrală",
+    excerpt: "Primăria Cluj-Napoca a aprobat un nou plan urbanistic zonal care va transforma centrul istoric.",
+    content: `<h2>Un plan ambițios pentru centrul Clujului</h2>
+<p>Primăria Cluj-Napoca a aprobat un nou plan urbanistic zonal care va transforma centrul istoric al orașului. Planul pune accent pe spații verzi, mobilitate urbană și protejarea patrimoniului arhitectural — o abordare modernă care ar putea deveni model pentru alte orașe din România.</p>
+
+<h2>Ce prevede planul</h2>
+<ul>
+<li><strong>Zone pietonale extinse</strong> — străzile din centrul istoric vor fi închise traficului auto, cu excepția vehiculelor de urgență și aprovizionare</li>
+<li><strong>Spații verzi noi</strong> — parcuri de buzunar, grădini urbane și coridoare verzi care conectează zonele existente</li>
+<li><strong>Restricții de înălțime</strong> — clădirile noi nu vor depăși regimul de înălțime al celor existente, protejând silueta istorică a orașului</li>
+<li><strong>Mobilitate alternativă</strong> — piste de biciclete, stații de încărcare electrică și transport public prioritar</li>
+</ul>
+
+<h2>Impactul asupra arhitecturii locale</h2>
+<p>Noul PUZ creează oportunități pentru arhitecți: proiecte de reconversie a clădirilor industriale abandonate, renovarea fațadelor istorice și integrarea funcțiunilor moderne în structuri vechi. Bilanțul între vechi și nou va fi cheia succesului.</p>
+
+<h3>Ce înseamnă pentru proprietari</h3>
+<p>Proprietarii de imobile din zona centrală vor beneficia de creșterea valorii proprietăților, dar vor trebui să respecte restricțiile mai stricte privind intervențiile pe fațade și modificările structurale. Consultarea cu un arhitect specializat în restaurare devine esențială.</p>
+
+<p>Găsește birouri de arhitectură din Cluj-Napoca pe <a href="/">BirouArhitect.ro</a>.</p>`,
+    date: "2026-02-10",
+    author: "Redacția",
+    views: 234,
+  },
+];

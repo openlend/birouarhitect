@@ -1,0 +1,43 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Next.js
+.next/
+out/
+.vercel
+
+# Build artifacts
+*.tar.gz
+deploy-*.tar.gz
+site-*.tar.gz
+out.tar.gz
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment
+.env
+.env.local
+.env.production
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Temp files
+*.tmp
+*.bak
+*~
+
+# cPanel scripts (temporary)
+extract_*.php
+purge_*.php
+clear_cache.php
+list_structure.php
+remove_nocache.php
