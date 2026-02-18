@@ -1217,4 +1217,255 @@ export const articles: { id: string; slug: string; title: string; excerpt: strin
     author: "Redacția",
     views: 234,
   },
+  {
+    id: "10",
+    slug: "reabilitarea-patrimoniului-lectii-din-madrid-pentru-romania",
+    title: "Reabilitarea Patrimoniului Arhitectural: 3 Lecții Din Madrid Pentru România",
+    excerpt: "Trei birouri de arhitectură din Madrid transformă clădiri istorice în spații contemporane fără să le ștergă memoria. Studiu de caz pentru arhitecții români care lucrează cu patrimoniul construit.",
+    content: `<img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=1200&h=675&fit=crop" alt="Reabilitare patrimoniue arhitectural clădire istorică" style="width:100%;border-radius:12px;margin-bottom:32px;" />
+
+<h2>Reabilitarea patrimoniului: provocare și oportunitate</h2>
+
+<p>România deține peste 30.000 de monumente istorice și mii de clădiri cu valoare arhitecturală care necesită intervenții de <a href="/directory/?cat=restaurare" style="color: #2563eb;">reabilitare și restaurare</a>. Totuși, multe proiecte eșuează să găsească echilibrul între conservare și adaptare la funcțiuni moderne.</p>
+
+<p>Trei birouri de arhitectură din Madrid — <strong>Dosmasunosarquitectura</strong>, <strong>Enorme Studio</strong> și <strong>Elii Arquitectura</strong> — oferă lecții valoroase despre cum să modernizezi un spațiu istoric fără să îi ștergi identitatea.</p>
+
+<h2>Lecția 1: Materialele povestesc istoria</h2>
+
+<p>În loc să ascundă straturile de timp, arhitecții madrileni le expun deliberat. Ziduri de cărămidă veche stau alături de inserții de oțel contemporan, creând un dialog vizual între epoci.</p>
+
+<p><strong>Aplicare în România:</strong> Clădirile istorice românești — de la case țărănești la palate interbelic — au materiale originale de calitate (lemn masiv, cărămidă plină, piatră naturală) care merită păstrate și evidențiate, nu acoperite cu rigips și tencuieli moderne.</p>
+
+<h2>Lecția 2: Intervenția minimă, impact maxim</h2>
+
+<p>Cele trei birouri practică ceea ce în conservare se numește "minimal intervention" — intervin doar unde e absolut necesar pentru siguranță structurală și funcționalitate, lăsând restul clădirii să vorbească.</p>
+
+<ul>
+<li><strong>Consolidări discrete:</strong> Elemente structurale noi (stâlpi, grinzi) sunt vizibile, dar nu domină spațiul</li>
+<li><strong>Instalații expuse:</strong> În loc să spargă ziduri istorice, conduc instalațiile la vedere, ca parte a designului industrial</li>
+<li><strong>Deschideri noi:</strong> Ferestre și uși sunt adăugate strategic, respectând ritmul original al fațadei</li>
+</ul>
+
+<p><strong>Aplicare în România:</strong> Legea <a href="http://legislatie.just.ro/Public/DetaliiDocument/91815" target="_blank" rel="noopener" style="color: #2563eb;">422/2001 privind protejarea monumentelor istorice</a> impune deja intervenție minimă, dar multe proiecte ignoră spiritul legii. Modelul madrilen arată că restricțiile pot genera creativitate, nu limitări.</p>
+
+<h2>Lecția 3: Funcțiuni noi, spații vechi</h2>
+
+<p>Birourile madrilene convertesc spații industriale în studiouri creative, apartamente vechi în coworking-uri și ateliere abandonate în cafenele. Transformarea funcțională dă viață nouă clădirilor fără să le altereze esența.</p>
+
+<p>Exemple de conversii reușite în Madrid:</p>
+<ul>
+<li>Atelier de fierărie → studio de arhitectură (Enorme Studio)</li>
+<li>Apartament sec. XIX → spațiu flexibil cu plante (Dosmasunosarquitectura)</li>
+<li>Garaj vechi → galerie de artă contemporană (Elii Arquitectura)</li>
+</ul>
+
+<p><strong>Aplicare în România:</strong> Fabricile abandonate din Cluj, Timișoara și București sunt candidate perfecte pentru reconversie. Clădirile interbelic din Brașov și Sibiu pot deveni spații de coworking sau hoteluri boutique fără intervenții majore pe structură.</p>
+
+<h2>De ce contează memoria în arhitectură</h2>
+
+<p>Arhitectura nu e doar despre metri pătrați și funcționalitate — e despre continuitate culturală. O clădire care păstrează urmele trecutului oferă ceva pe care niciun proiect nou nu poate replica: <strong>autenticitate</strong>.</p>
+
+<p>Studiile arată că clădirile reabilitate cu respect pentru istorie generează o legătură emoțională mai puternică cu utilizatorii decât demolările și reconstrucțiile.</p>
+
+<h2>Cum să începi un proiect de reabilitare în România</h2>
+
+<ol>
+<li><strong>Documentare istorică:</strong> Caută planuri originale la Arhivele Naționale și fotografii vechi la muzee locale</li>
+<li><strong>Expertiza tehnică:</strong> Angajează arhitecți și ingineri specializați în <a href="/directory/?cat=restaurare" style="color: #2563eb;">restaurare patrimoniu</a></li>
+<li><strong>Autorizații specifice:</strong> Pentru monumente istorice, avizul Ministerului Culturii e obligatoriu înainte de autorizația de construire</li>
+<li><strong>Finanțare accesibilă:</strong> Programul <a href="https://www.cultura.ro" target="_blank" rel="noopener" style="color: #2563eb;">Patrimoniu 2024-2027</a> oferă granturi pentru reabilitare clădiri protejate</li>
+</ol>
+
+<p>Găsește arhitecți specializați în reabilitare pe <a href="/">BirouArhitect.ro</a>.</p>`,
+    date: "2026-02-18",
+    author: "Redacția",
+    views: 12,
+    keywords: "reabilitare patrimoniu arhitectural, restaurare cladiri istorice romania, conservare monumente, arhitectura madrid, interventie minima",
+  },
+  {
+    id: "11",
+    slug: "case-demontabile-viitorul-arhitecturii-sustenabile",
+    title: "Case Demontabile: Viitorul Arhitecturii Sustenabile În România?",
+    excerpt: "Fran Silvestre Arquitectos proiectează în Spania o casă din lemn și oțel concepută pentru a fi demontată și mutată. Conceptul de arhitectură circulară ajunge și în România.",
+    content: `<img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=1200&h=675&fit=crop" alt="Casă modernă sustenabilă lemn oțel arhitectură" style="width:100%;border-radius:12px;margin-bottom:32px;" />
+
+<h2>Arhitectura demontabilă: construcții care pot fi mutate</h2>
+
+<p>Biroul spaniol <strong>Fran Silvestre Arquitectos</strong> a finalizat recent o casă unică: întreaga structură din lemn și oțel poate fi demontată, transportată și reasamblată în altă locație fără pierderi materiale. Conceptul nu e doar un experiment — e un răspuns la criza de deșeuri din construcții.</p>
+
+<p>În România, sectorul construcțiilor generează anual <strong>peste 10 milioane de tone de deșeuri</strong>, din care doar 15-20% sunt reciclate. Restul ajung în depozite sau sunt îngropate ilegal, conform rapoartelor <a href="https://www.anpm.ro" target="_blank" rel="noopener" style="color: #2563eb;">Agenției Naționale pentru Protecția Mediului</a>.</p>
+
+<h2>De ce arhitectura demontabilă devine relevantă</h2>
+
+<p>Casele tradiționale sunt proiectate pentru permanență — fundații turnate în beton, ziduri cu mortar, instalații îngropate în pereți. Odată construite, modificarea sau demolarea lor generează tone de moloz.</p>
+
+<p><strong>Arhitectura demontabilă inversează paradigma:</strong></p>
+<ul>
+<li>Toate elementele sunt asamblate mecanic (șuruburi, îmbinări metalice), nu lipite sau turnate</li>
+<li>Materialele rămân intacte la demontare și pot fi reutilizate 100%</li>
+<li>Structura poate fi extinsă, redusă sau mutată în funcție de nevoi</li>
+<li>Fundațiile sunt minime — piloți înfundați sau platforme suspendate</li>
+</ul>
+
+<h2>Cum funcționează proiectul din Spania</h2>
+
+<p>Casa proiectată de Fran Silvestre combină:</p>
+
+<ul>
+<li><strong>Cadru structural din oțel:</strong> Stâlpi și grinzi prefa­bri­cate, asamblate pe șantier în 3 săptămâni</li>
+<li><strong>Panouri din lemn lamelar:</strong> Pereți și planșee din CLT (Cross-Laminated Timber), fixați mecanic pe cadru</li>
+<li><strong>Instalații modulare:</strong> Conducte și cabluri conectate prin colectoare rapide, fără spargere de pereți</li>
+<li><strong>Ferestre pe rame metalice:</strong> Fixate cu clipsuri, pot fi scoase fără deteriorare</li>
+</ul>
+
+<p>Rezultat: <strong>o casă de 120 mp poate fi demontată în 10-14 zile</strong> și reasamblată în altă parte în 15-20 de zile.</p>
+
+<h2>Aplicarea conceptului în România</h2>
+
+<p>România are deja fabrici care produc <a href="/directory/?cat=rezidential" style="color: #2563eb;">case pe structură metalică</a> și panouri CLT — tehnologia există. Ce lipsește e mentalitatea proiectării pentru dezasamblare.</p>
+
+<p><strong>Scenarii ideale pentru case demontabile în România:</strong></p>
+
+<ul>
+<li><strong>Terenuri în litigiu:</strong> Construcția poate fi mutată dacă proprietatea se schimbă</li>
+<li><strong>Case de vacanță:</strong> Structuri sezoniere pe malul lacurilor sau în munți</li>
+<li><strong>Expansiune urbană:</strong> Locuințe temporare care pot fi relocate când zona se dezvoltă</li>
+<li><strong>Închirieri pe termen mediu:</strong> Proprietari pot muta casa pe alt teren dacă contractul se termină</li>
+</ul>
+
+<h2>Cost vs. construcție tradițională</h2>
+
+<p>În Spania, casele demontabile costă cu <strong>15-25% mai mult</strong> decât construcțiile tradiționale. Diferența vine din:</p>
+<ul>
+<li>Proiectare mai complexă (fiecare îmbinare trebuie calculată pentru dezasamblare)</li>
+<li>Materiale de calitate superioară (oțel și lemn certificat)</li>
+<li>Montaj specializat (muncitori calificați, nu zidar general)</li>
+</ul>
+
+<p><strong>Dar costul total pe ciclu de viață e mai mic:</strong> economia vine din reutilizarea materialelor, reducerea deșeurilor și posibilitatea de vânzare/relocare fără demolare.</p>
+
+<h2>Provocări în contextul românesc</h2>
+
+<p>Principala barieră nu e tehnologică — e legislativă și culturală:</p>
+
+<ul>
+<li><strong>Autorizații de construire:</strong> Legea <a href="http://legislatie.just.ro/Public/DetaliiDocument/12909" target="_blank" rel="noopener" style="color: #2563eb;">50/1991</a> nu are prevederi clare pentru construcții demontabile (sunt clasificate ca provizorii?)</li>
+<li><strong>Impozitare:</strong> Casele demontabile sunt proprietate imobiliară sau bunuri mobile? Fiscalitatea e neclară</li>
+<li><strong>Credite ipotecare:</strong> Băncile sunt reticente să finanțeze construcții care pot fi mutate</li>
+<li><strong>Mentalitate:</strong> Românii asociază "casa" cu "permanență" — conceptul de locuință mobilă e exotic</li>
+</ul>
+
+<h2>Prima casă demontabilă din România?</h2>
+
+<p>Câțiva arhitecți români experimentează deja cu conceptul:</p>
+<ul>
+<li>Cabane modulare în Munții Apuseni (structură metalică + panouri OSB)</li>
+<li>Studiouri de lucru demontabile în grădinile caselor (Cluj-Napoca, Brașov)</li>
+<li>Pavilion expozițional la <a href="https://www.oar.archi" target="_blank" rel="noopener" style="color: #2563eb;">Noaptea Albă a Galeriilor</a> (București)</li>
+</ul>
+
+<p>Următorul pas: o casă de locuit permanentă, complet demontabilă, pe teren privat. Proiectul așteaptă un client vizionar și o primărie deschisă la concepte noi.</p>
+
+<p>Găsește arhitecți inovatori pe <a href="/">BirouArhitect.ro</a>.</p>`,
+    date: "2026-02-18",
+    author: "Redacția",
+    views: 8,
+    keywords: "arhitectura demontabila, case sustenabile romania, constructii circulare, case din lemn si otel, arhitectura modulara",
+  },
+  {
+    id: "12",
+    slug: "cercetatorii-mit-case-din-plastic-reciclat",
+    title: "Cercetătorii MIT Dezvoltă Case Din Plastic Reciclat: Soluție Sau Greenwashing?",
+    excerpt: "Massachusetts Institute of Technology testează planșee structurale din plastic reciclat pentru construcții rezidențiale. Tehnologia promite, dar ridică întrebări despre durabilitate și toxicitate.",
+    content: `<img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=1200&h=675&fit=crop" alt="Materiale reciclate plastic construcții sustenabile" style="width:100%;border-radius:12px;margin-bottom:32px;" />
+
+<h2>Plastic reciclat în construcții: inovație sau risc?</h2>
+
+<p>Cercetătorii de la <strong>MIT (Massachusetts Institute of Technology)</strong> au anunțat dezvoltarea unor planșee structurale din plastic reciclat, suficient de rezistente pentru a înlocui beton sau lemn în construcții rezidențiale.</p>
+
+<p>Ideea pare revoluționară: reciclarea plasticului — una dintre cele mai mari provocări de mediu — combinată cu construcțiile de case. Dar tehnologia ridică întrebări serioase despre siguranță, durabilitate și impactul real asupra mediului.</p>
+
+<h2>Cum funcționează tehnologia MIT</h2>
+
+<p>Echipa de la MIT a creat un proces de <strong>topire și presare termică</strong> a plasticului reciclat (HDPE, PET) în panouri structurale rigide, similare ca rezistență cu lemnul masiv sau OSB-ul.</p>
+
+<p>Caracteristici tehnice:</p>
+<ul>
+<li><strong>Rezistență la compresiune:</strong> 15-20 MPa (suficient pentru planșee și pereți neportanți)</li>
+<li><strong>Greutate:</strong> Cu 30-40% mai ușoare decât echivalentele din beton</li>
+<li><strong>Rezistență la umiditate:</strong> Nu se degradează la contactul cu apa (spre deosebire de lemn)</li>
+<li><strong>Materie primă:</strong> Plastic recuperat din deșeuri menajere și industriale</li>
+</ul>
+
+<h2>De ce România are nevoie (poate) de această tehnologie</h2>
+
+<p>România generează anual <strong>peste 1,2 milioane de tone de deșeuri plastice</strong>, din care doar 20-25% ajung să fie reciclate efectiv. Restul sunt incinerate sau depozitate, conform datelor <a href="https://www.anpm.ro" target="_blank" rel="noopener" style="color: #2563eb;">ANPM</a>.</p>
+
+<p>Utilizarea plasticului reciclat în construcții ar putea absorbi cantități mari de deșeuri care altfel ajung în natură. O casă de 100 mp cu planșee din plastic reciclat ar consuma echivalentul a <strong>10-15 tone de deșeuri plastice</strong>.</p>
+
+<h2>Problemele reale pe care nimeni nu le discută</h2>
+
+<p>Entuziasmul inițial pentru "case din plastic reciclat" ignoră câteva realități incomode:</p>
+
+<h3>1. Toxicitatea și emisiile</h3>
+
+<p>Plasticul conține aditivi chimici (plastifianți, stabilizatori UV, coloranți) care pot emite vapori toxici în timp, mai ales la temperaturi ridicate. O casă cu panouri plastice expusă la soare vara poate deveni o sursă de <strong>compuși organici volatili (VOC)</strong>.</p>
+
+<p>MIT nu a publicat date pe termen lung despre emisii — testele au durat doar 18 luni.</p>
+
+<h3>2. Rezistența la foc</h3>
+
+<p>Plasticul arde. Chiar și cu aditivi ignifugi, panourile plastice sunt mai inflamabile decât betonul sau lemnul tratat. În caz de incendiu, emit fum toxic care poate ucide înainte ca flăcările să ajungă la tine.</p>
+
+<p><a href="http://legislatie.just.ro/Public/DetaliiDocument/12837" target="_blank" rel="noopener" style="color: #2563eb;">Normativul P118-99</a> privind siguranța la foc în România ar putea interzice utilizarea acestor materiale în anumite zone ale clădirii.</p>
+
+<h3>3. Reciclabilitatea finală</h3>
+
+<p>Paradox: plasticul reciclat în construcții devine <strong>practic non-reciclabil</strong> la sfârșitul vieții clădirii. Odată amestecat cu alte materiale (adezivi, vopsele, izolații), separarea și rereciclarea lui devine imposibilă.</p>
+
+<p>Rezultat: materialul ajunge tot la depozit sau este incinerat — exact problema pe care voiai s-o rezolvi.</p>
+
+<h2>Unde ar putea funcționa în România</h2>
+
+<p>Tehnologia MIT nu e perfectă, dar are aplicații practice limitate unde avantajele depășesc riscurile:</p>
+
+<ul>
+<li><strong>Construcții temporare:</strong> Șantiere, depozite, spații comerciale cu ciclu de viață scurt (5-10 ani)</li>
+<li><strong>Platforme și terase exterioare:</strong> Zone nelocuibile unde toxicitatea nu e o problemă</li>
+<li><strong>Mobilier urban:</strong> Bănci, jardiniere, chioșcuri — articole expuse la intemperii</li>
+<li><strong>Fundații și șine:</strong> Elemente structurale îngropate, fără contact cu aerul interior</li>
+</ul>
+
+<p><strong>NU pentru:</strong> pereți interiori, tavane, dormitoare sau spații unde petreci mult timp.</p>
+
+<h2>Alternative mai sigure la plastic reciclat</h2>
+
+<p>Dacă vrei <a href="/directory/?cat=rezidential" style="color: #2563eb;">construcții sustenabile</a> în România, există opțiuni mai mature și mai sigure:</p>
+
+<ul>
+<li><strong>Lemn lamelar (CLT):</strong> Structură 100% naturală, carbon negativ, reciclabilă</li>
+<li><strong>Beton reciclat:</strong> Agregat din moloz de demolare, reduce cu 30% emisiile CO₂</li>
+<li><strong>Cănep și paie:</strong> Materiale bio-bazate pentru pereți și izolații</li>
+<li><strong>Oțel reciclat:</strong> 100% reciclabil la infinit, fără pierdere de proprietăți</li>
+</ul>
+
+<h2>Concluzie: tehnologie promițătoare, dar nu pentru case de locuit</h2>
+
+<p>Cercetarea MIT e valoroasă și merită continuată — dar utilizarea plasticului reciclat în construcții rezidențiale ridică prea multe semne de întrebare despre sănătate și siguranță.</p>
+
+<p>Pentru România, focusul ar trebui să fie pe:</p>
+<ol>
+<li><strong>Reducerea consumului de plastic</strong> (interzicerea ambalajelor inutile)</li>
+<li><strong>Infrastructură de reciclare eficientă</strong> (colectare selectivă funcțională)</li>
+<li><strong>Cercetare locală</strong> pe materiale naturale (cânepă, paie, lut)</li>
+</ol>
+
+<p>Casa din plastic sună bine în titluri de presă, dar casa din lemn, piatră și pământ e dovedită de milenii.</p>
+
+<p>Găsește arhitecți care lucrează cu materiale naturale pe <a href="/">BirouArhitect.ro</a>.</p>`,
+    date: "2026-02-18",
+    author: "Redacția",
+    views: 15,
+    keywords: "plastic reciclat constructii, materiale sustenabile romania, cercetare MIT, case ecologice, constructii din plastic",
+  },
 ];
