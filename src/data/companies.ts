@@ -1468,4 +1468,245 @@ export const articles: { id: string; slug: string; title: string; excerpt: strin
     views: 15,
     keywords: "plastic reciclat constructii, materiale sustenabile romania, cercetare MIT, case ecologice, constructii din plastic",
   },
+  {
+    id: "13",
+    slug: "biblioteca-europeana-transformata-birou-modern-design-interior",
+    title: "Biblioteca Europeană Transformată în Birou Modern: Lecții de Design Interior",
+    excerpt: "Un birou compact din Florida reinterpretează biblioteca tradițională europeană prin culori saturate și mobilier personalizat. Descoperă cum stratificarea materialelor creează profunzime vizuală.",
+    content: `<p>Design-ul de interior poate transforma complet un spațiu modest într-un loc memorabil. Un proiect recent din Florida demonstrează cum o cameră standard devine un birou elegant inspirat de bibliotecile europene clasice.</p>
+
+<h2>Culoarea ca Element Structural</h2>
+
+<p>Designerul Andrei Subochev de la Interior Seasons Studio a ales o nuanță de roșu intens pentru rafturile din lemn, uși și pervazuri. Finisajul lucios amplifică reflexia luminii și creează iluzia unui spațiu mai amplu.</p>
+
+<p>Tonul de bordo profund se extinde pe tavan, formând un înveliș continuu care dă coerență vizuală întregului spațiu. Această tehnică este deosebit de eficientă în camerele compacte unde fiecare element contribuie la percepția generală.</p>
+
+<h2>Tapetul ca Contrast Strategic</h2>
+
+<p>Pereții sunt îmbrăcați cu tapetul "Great Ormond St." de la Little Greene, un motiv din secolul XVIII descoperit într-o casă din Londra. Papagalii și ramurile vegetale introduc mișcare vizuală, contrastând cu uniformitatea mobilierului vopsit.</p>
+
+<p>Această combinație între ornamentul tradițional și finisajele moderne creează un limbaj vizual stratificat – esența design-ului interior sofisticat.</p>
+
+<h2>Iluminatul ca Element Componistic</h2>
+
+<p>Două aplice cu dungi verticale încadrează perfect intrarea și susțin simetria verticală. O lampă de podea contemporană cu globuri sferice albe introduce un ritm secundar în cameră.</p>
+
+<p>Combinația între referințele tradiționale și corpurile de iluminat moderne stabilește un echilibru vizual rafinat.</p>
+
+<h2>Mobilierul: Funcție și Estetică</h2>
+
+<p>Banca din catifea bordo se aliniază cromatic cu rafturile, în timp ce comoda neagră cu feronerie cromată aduce reflectivitate și variație tonală. Fiecare piesă funcționează atât ca spațiu de depozitare, cât și ca element vizual integrat.</p>
+
+<h2>Lecții pentru Spații Rezidențiale Românești</h2>
+
+<p>Acest proiect oferă idei valoroase pentru apartamentele compacte din România:</p>
+
+<ul>
+<li>Culorile saturate pot amplifica percepția spațială</li>
+<li>Stratificarea materialelor adaugă profunzime vizuală</li>
+<li>Tapetul decorativ funcționează excelent cu mobilier minimalist</li>
+<li>Iluminatul strategic poate defini zonele funcționale</li>
+</ul>
+
+<p><strong>Concluzie:</strong> Un spațiu mic devine memorabil prin alegeri coerente de culoare, material și iluminat. Design-ul interior inteligent nu necesită metraje mari – doar viziune clară.</p>
+
+<p>Găsește <a href="/directory/" style="color: #2563eb;">arhitecți specializați în design interior</a> pe BirouArhitect.ro.</p>`,
+    date: "2026-02-19",
+    author: "Redacția BirouArhitect.ro",
+    views: 0,
+    imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&h=630&fit=crop",
+    keywords: "design interior birou, biblioteca moderna, amenajare spatii mici, design birou acasa",
+  },
+  {
+    id: "14",
+    slug: "economia-circulara-arhitectura-reutilizare-materiale-lemn",
+    title: "Economia Circulară în Arhitectură: Cum se Reutilizează Structurile Masive din Lemn",
+    excerpt: "Grand Ring-ul de la Expo Osaka 2025, cea mai mare structură din lemn din lume, devine model pentru economia circulară. Descoperă cum materialele arhitecturale pot avea multiple vieți.",
+    content: `<p>Expozițiile internaționale devin laboratoare pentru economia circulară. Expo Osaka 2025 a demonstrat cum structurile temporare pot fi reutilizate inteligent după închiderea evenimentului.</p>
+
+<h2>Grand Ring: Record Mondial din Lemn</h2>
+
+<p>Proiectat de Sou Fujimoto Architects, Grand Ring-ul a fost cea mai mare structură din lemn din lume:</p>
+
+<ul>
+<li>Diametru interior: 615 metri</li>
+<li>Diametru exterior: 675 metri</li>
+<li>Înălțime: 12-20 metri</li>
+<li>Suprafață acoperită: 60,000 mp</li>
+</ul>
+
+<p>Structura a folosit cedru și chiparos japonez, combinând inginerie modernă cu meșteșugul tradițional japonez.</p>
+
+<h2>Tehnica Îmbinărilor Nuki</h2>
+
+<p>Structura a fost construită folosind îmbinări nuki – o tehnică tradițională japoneză în care o grindă orizontală se fixează într-un stâlp vertical printr-o canelură precisă. Această metodă permite:</p>
+
+<ul>
+<li>Demontare ușoară a elementelor</li>
+<li>Înlocuirea pieselor deteriorate</li>
+<li>Transport și reasamblare simplă</li>
+<li>Durabilitate seculară (folosită în temple vechi de sute de ani)</li>
+</ul>
+
+<h2>A Doua Viață a Materialelor</h2>
+
+<p>După închiderea expoziției în octombrie 2025, lemnul este reutilizat strategic:</p>
+
+<p><strong>Namie, Fukushima Prefecture:</strong> Oraș afectat de cutremurul din 2011 folosește lemnul pentru reconstrucție post-seism.</p>
+
+<p><strong>Kansai University, Osaka:</strong> Material pentru reconstrucția clădirii studenților pe campusul Senriyama.</p>
+
+<p><strong>Suzu City, Ishikawa:</strong> Locuințe publice pentru recuperare după cutremur și ploi abundente.</p>
+
+<p><strong>Parte păstrată pe loc:</strong> Aproximativ 200 metri din inelul de 2 km rămâne ca parte a sitului Expo păstrat.</p>
+
+<h2>Lecții pentru Arhitectura Românească</h2>
+
+<p>România poate adopta principii similare:</p>
+
+<ul>
+<li>Proiectarea pentru demontare încă din faza de concept</li>
+<li>Documentarea detaliată a materialelor pentru reutilizare</li>
+<li>Marketplacuri de materiale arhitecturale reciclate</li>
+<li>Încurajarea tehnicilor de construcție reversibile</li>
+</ul>
+
+<h2>Economia Circulară în Practică</h2>
+
+<p>26 din 84 de pavilioane Expo au fost reutilizate, depășind ținta inițială. Exemple notabile:</p>
+
+<ul>
+<li>Pavilionul German (LAVA Architects): zero deșeuri</li>
+<li>Pavilionul Luxembourg: design modular pentru reutilizare</li>
+<li>Schelete de corali artificiali: donați universităților pentru restaurarea recifelor</li>
+</ul>
+
+<h2>Viitorul Construcțiilor Temporare</h2>
+
+<p>Expozițiile și evenimentele majore devin modele pentru:</p>
+
+<ul>
+<li>Reducerea amprentei de carbon</li>
+<li>Extinderea ciclului de viață al materialelor</li>
+<li>Conectarea între proiecte prin reutilizare</li>
+<li>Transformarea "temporarului" în "transferabil"</li>
+</ul>
+
+<p><strong>Concluzie:</strong> Arhitectura circulară nu este doar sustenabilă ecologic – este și economic eficientă. Structurile pot avea multiple vieți dacă sunt proiectate inteligent de la început.</p>
+
+<p>Găsește <a href="/directory/" style="color: #2563eb;">arhitecți specializați în construcții sustenabile</a> pe BirouArhitect.ro.</p>`,
+    date: "2026-02-19",
+    author: "Redacția BirouArhitect.ro",
+    views: 0,
+    imageUrl: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=1200&h=630&fit=crop",
+    keywords: "economia circulara arhitectura, structuri lemn reutilizabile, arhitectura sustenabila, constructii circulare",
+  },
+  {
+    id: "15",
+    slug: "ark-architects-monumentalitate-linistita-dialog-peisaj-spania",
+    title: "ARK Architects: Monumentalitate Liniștită și Dialog Constant cu Peisajul",
+    excerpt: "Biroul ARK Architects din Marbella și Sotogrande proiectează case unifamiliale care vorbesc cu teritoriul. 26 de ani de experiență în arhitectura rezidențială de lux integrată în natură.",
+    content: `<p>Casa unifamilială rămâne unul dintre cele mai complexe teritorii în arhitectura contemporană. ARK Architects, cu sediile în Marbella și Sotogrande, dezvoltă proiecte care pornesc dintr-o relație directă între arhitectură, lumină naturală și context ambiental.</p>
+
+<h2>Filosofia: Arhitectura ca Mediator</h2>
+
+<p>Sub direcția creativă a co-fondatorului Manuel Ruiz Moriche, studioul funcționează din premise clare:</p>
+
+<ul>
+<li>Casa este un sistem sensibil de relații, nu un obiect izolat</li>
+<li>Fiecare proiect începe cu citirea atentă a terenului</li>
+<li>Orientarea, climatul și modul de locuit ghidează forma</li>
+<li>Arhitectura operează între corp, peisaj și durată</li>
+</ul>
+
+<p>Cu peste 26 de ani de experiență, ARK Architects lucrează în contexte diverse: sudul Spaniei, Orientul Mijlociu, America de Nord și Australia.</p>
+
+<h2>Structură Integrată: Arhitectură + Construcție + Design Interior</h2>
+
+<p>"O caracteristică unică a ARK Architects este că suntem atât arhitecți, cât și constructori, specializați în crearea de case unifamiliale personalizate," spune Manuel Ruiz Moriche.</p>
+
+<p>Arhitectura, construcția și design-ul interior se dezvoltă ca o secvență continuă de decizii spațiale, tehnice și materiale. Acest proces integrat asigură coerență – intențiile inițiale sunt transpuse fidel în experiența construită.</p>
+
+<h2>Bioarhitectura ca Fundament</h2>
+
+<p>Principiile bioarhitecturii sunt încorporate din primele etape:</p>
+
+<ul>
+<li>Strategii bioclimatice</li>
+<li>Materiale naturale</li>
+<li>Relație directă cu peisajul</li>
+<li>Performanță ambientală ghidează forma</li>
+</ul>
+
+<h2>Villa NIWA: Sinteză a Principiilor</h2>
+
+<p>În construcție la The Seven, La Reserva de Sotogrande, Villa NIWA ocupă o poziție centrală în portofoliul ARK pentru claritatea cu care condensează principiile studioului.</p>
+
+<p><strong>Dimensiuni:</strong></p>
+<ul>
+<li>Teren: 10,126 mp</li>
+<li>Suprafață construită: 4,231 mp</li>
+</ul>
+
+<p><strong>Strategie de proiectare:</strong></p>
+<ul>
+<li>Citire atentă a topografiei și orientării</li>
+<li>Arhitectura organizată ca sistem continuu</li>
+<li>Clădire și natură articulate prin trasee, goluri, lumină</li>
+<li>Integrare graduală între interior și peisaj</li>
+</ul>
+
+<h2>Villa Geneve: Arhitectură care Încadrează Peisajul</h2>
+
+<p>Situată în La Zagaleta, această vilă explorează relația între arhitectură și vederi la distanță:</p>
+
+<ul>
+<li>Linii arhitecturale încadrează Marea Mediterană, Africa, munții Benahavís</li>
+<li>Orientarea și lumina naturală structurează tranziția interior-exterior</li>
+<li>Spa, piscină interioară, saună, pivniță de vinuri – integrate ca extensii ale spațiului domestic</li>
+</ul>
+
+<h2>Villa TAI: Topografie, Microclimat, Continuitate Spațială</h2>
+
+<p>La Reserva de Sotogrande, lângă terenul de golf:</p>
+
+<ul>
+<li>Sisteme aerotermale</li>
+<li>Ventilație cu recuperare de căldură</li>
+<li>Energie fotovoltaică</li>
+<li>Suprafețe vitrate extinse – continuitate între interior, grădină și orizont</li>
+</ul>
+
+<p>Proiectată pentru viața de familie, casa integrează strategii bioclimatice și sisteme eficiente energetic ca parte a logicii arhitecturale.</p>
+
+<h2>Villa Kaizen: Echilibru între Deschidere și Adăpost</h2>
+
+<p>La Zagaleta, explorând intimitate și deschidere:</p>
+
+<ul>
+<li>5 suite-uri</li>
+<li>Piscină interioară, spa, sală de gimnastică, pivniță</li>
+<li>Grădini, terase, zone exterioare – elemente constitutive ale experienței arhitecturale</li>
+</ul>
+
+<h2>Lecții pentru Arhitectura Românească</h2>
+
+<p>Abordarea ARK Architects oferă principii aplicabile în România:</p>
+
+<ul>
+<li><strong>Citirea contextului:</strong> terenul și orientarea dictează forma</li>
+<li><strong>Integrare profesii:</strong> arhitect + constructor = coerență deplină</li>
+<li><strong>Bioarhitectura early-stage:</strong> nu ca adaos, ci ca fundament</li>
+<li><strong>Monumentalitate liniștită:</strong> impact fără gesturi spectaculoase</li>
+</ul>
+
+<p><strong>Concluzie:</strong> Casa de lux nu înseamnă spectacol formal, ci relație profundă cu locul. Arhitectura rezidenţială de calitate operează mai mult prin modulare spaţială și control al tranziţiilor decât prin gesturi explicite.</p>
+
+<p>Găsește <a href="/directory/" style="color: #2563eb;">arhitecți specializați în case rezidențiale de lux</a> pe BirouArhitect.ro.</p>`,
+    date: "2026-02-19",
+    author: "Redacția BirouArhitect.ro",
+    views: 0,
+    imageUrl: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&h=630&fit=crop",
+    keywords: "arhitectura rezidentiala lux, case moderne peisaj, bioarhitectura, vile spania design",
+  },
 ];
