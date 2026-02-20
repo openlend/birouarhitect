@@ -22,5 +22,35 @@ export default async function CompanyPage({ params }: { params: Promise<{ slug: 
   
   if (!company) return notFound();
 
-  return <CompanyPageClient company={company} />;
+  // Schema.org JSON-LD for LocalBusiness / ProfessionalService
+  const businessSchema = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": company.name,
+    "description": company.shortDesc,
+    "url": `https://birouarhitect.ro/company/${company.slug}`,
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": company.city,
+      "addressCountry": "RO"
+    },
+    ...(company.website && { "sameAs": company.website }),
+    ...(company.foundedYear && { "foundingDate": company.foundedYear.toString() }),
+    "aggregateRating": company.rating ? {
+      "@type": "AggregateRating",
+      "ratingValue": company.rating,
+      "bestRating": "5",
+      "worstRating": "1"
+    } : undefined
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }}
+      />
+      <CompanyPageClient company={company} />
+    </>
+  );
 }

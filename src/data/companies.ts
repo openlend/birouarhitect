@@ -1709,4 +1709,155 @@ export const articles: { id: string; slug: string; title: string; excerpt: strin
     imageUrl: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&h=630&fit=crop",
     keywords: "arhitectura rezidentiala lux, case moderne peisaj, bioarhitectura, vile spania design",
   },
+  {
+    id: "16",
+    slug: "castigatorii-building-of-the-year-awards-2026",
+    title: "Câștigătorii Premiilor ArchDaily Building of the Year 2026",
+    excerpt: "Descoperă cele 15 proiecte câștigătoare ale celui mai mare premiu de arhitectură votat de comunitate. De la fabrici reconvertite în Portugalia la memoriale în Etiopia.",
+    content: `<p>Cele 15 proiecte câștigătoare ale <strong>ArchDaily Building of the Year Awards 2026</strong> au fost anunțate după trei săptămâni de vot public, reunind peste 120.000 de voturi din peste 100 de țări.</p>
+
+<h2>Ce Unește Proiectele Câștigătoare?</h2>
+
+<p>Christele Harrouk, Editor-șef ArchDaily: <em>"Proiectele se remarcă prin inteligența materialelor și substanță autentică. Votul public relevă nu doar cum arată arhitectura contemporană, ci și cum vrem să fie: o arhitectură la scară umană, atentă social și responsabilă față de context."</em></p>
+
+<h2>15 Proiecte din 14 Țări</h2>
+
+<p>Câștigătorii reprezintă: Brazilia, Canada, Chile, Columbia, Danemarca, Etiopia, Germania, India, Indonezia, Japonia, Portugalia, Coreea de Sud, SUA și Vietnam.</p>
+
+<h3>Proiecte Notabile</h3>
+
+<ul>
+<li><strong>Memorial ET-302, Etiopia</strong> - Parc memorial pentru 157 de victime, integrat în peisajul agricol</li>
+<li><strong>Neuhoff District, SUA</strong> - Complex 120.000 mp în Nashville, din fabrică abandonată</li>
+<li><strong>Pavilion Bahrain, Japonia</strong> - Pavilion 995 mp la Expo Osaka, inspirat din tradiția maritimă</li>
+<li><strong>Canning Factory, Portugalia</strong> - Fabrică de conserve transformată în complex mixt</li>
+<li><strong>Mom's House, Brazilia</strong> - Casă din tehnici adobe tradiționale, materiale locale</li>
+<li><strong>Lattice Garden, Indonezia</strong> - 4.800 kg plastic transformat în structură arhitecturală</li>
+</ul>
+
+<h2>Lecții pentru Arhitectura Românească</h2>
+
+<ul>
+<li><strong>Responsabilitate contextuală:</strong> Răspunsuri specifice la context local</li>
+<li><strong>Reconversii inteligente:</strong> Transformarea patrimoniului industrial</li>
+<li><strong>Materiale locale:</strong> Lemn, piatră, cărămidă artizanală</li>
+<li><strong>Scară umană:</strong> Experiența utilizatorului prioritară</li>
+<li><strong>Sustenabilitate autentică:</strong> Logică structurală fundamentală</li>
+</ul>
+
+<p>Relevanța arhitecturală se definește prin responsabilitate față de mediu, context social și viața cotidiană. Recunoașterea vine din răspunsuri oneste la provocări locale.</p>
+
+<p>Găsește <a href="/directory/" style="color: #2563eb;">arhitecți specializați în design contemporan</a> pe BirouArhitect.ro.</p>`,
+    date: "2026-02-20",
+    author: "Redacția BirouArhitect.ro",
+    views: 0,
+    imageUrl: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=1200&h=630&fit=crop",
+    keywords: "premii arhitectura 2026, building of the year awards, arhitectura contemporana, tendinte globale",
+  },
+  {
+    id: "17",
+    slug: "campus-educational-oberwart-austria",
+    title: "Campus Educațional Oberwart: Arhitectura Care Unește Comunitatea",
+    excerpt: "Proiectul Franz&Sue din Austria demonstrează cum arhitectura educațională devine pol comunitar: școală dimineața, lecții de pian după-amiaza, orchestră seara.",
+    content: `<p>Campusul Educațional din <strong>Oberwart, Austria</strong> (4.725 mp, finalizat 2025) proiectat de <strong>Franz&Sue</strong> demonstrează cum arhitectura educațională transcende programul școlar și devine spațiu viu pentru întreaga comunitate.</p>
+
+<h2>Conceptul: Educație Non-Stop</h2>
+
+<p><em>"Dimineața, copiii învață matematică. După-amiaza, lecții de pian. Seara, orchestra orașului repetă."</em></p>
+
+<p>Campusul funcționează 12-14 ore pe zi pentru diverse grupuri de vârstă.</p>
+
+<h2>Trei Funcții, O Structură</h2>
+
+<ul>
+<li><strong>Școala Primară</strong> - Săli flexibile, iluminat natural, conexiuni vizuale</li>
+<li><strong>Școala de Muzică</strong> - Săli insonorizate, studiouri repetiții, sală concert</li>
+<li><strong>Centru Comunitar</strong> - Spații pentru orchestră și evenimente, acces separat</li>
+</ul>
+
+<h2>Pentru Autoritățile Locale Românești</h2>
+
+<p>Multe orașe au școli subutilizate după program, lipsa spațiilor pentru educație artistică și centre culturale insuficiente.</p>
+
+<p><strong>Soluția Oberwart</strong> rezolvă simultan:</p>
+
+<ul>
+<li>✅ Educație formală</li>
+<li>✅ Educație artistică</li>
+<li>✅ Activități culturale</li>
+<li>✅ Utilizare eficientă resurse publice</li>
+</ul>
+
+<h2>Implementare în România</h2>
+
+<ul>
+<li><strong>Parteneriate public-privat</strong> pentru finanțare</li>
+<li><strong>Implicare comunitate</strong> din faza de proiectare</li>
+<li><strong>Proiectare modulară</strong> - etapizare conform buget</li>
+<li><strong>Certificare energetică</strong> - reducere costuri operaționale</li>
+</ul>
+
+<p>Campusul Oberwart demonstrează că arhitectura educațională excelentă generează activitate comunitară continuă, conectează generații și maximizează valoarea investiției publice.</p>
+
+<p>Găsește <a href="/directory/" style="color: #2563eb;">arhitecți specializați în clădiri publice și educaționale</a> pe BirouArhitect.ro.</p>`,
+    date: "2026-02-20",
+    author: "Redacția BirouArhitect.ro",
+    views: 0,
+    imageUrl: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1200&h=630&fit=crop",
+    keywords: "arhitectura educationala, campus scolar modern, scoala comunitara, spatii multifunctionale romania",
+  },
+  {
+    id: "18",
+    slug: "transformare-fabrica-vinuri-hotel-grecia",
+    title: "De la Fabrică de Vinuri la Hotel: Reconversia Dexamenes în Grecia",
+    excerpt: "K-Studio transformă o fabrică de vinuri din anii 1920 de pe coasta Greciei într-o destinație turistică care respectă patrimoniul industrial.",
+    content: `<p>Hotelul <strong>Dexamenes</strong> pe coasta Peloponezului, dezvoltat de <strong>K-Studio</strong>, demonstrează cum o fabrică de vinuri abandonată din 1920 devine hotel boutique de succes, păstrând memoria locului.</p>
+
+<h2>Contextul</h2>
+
+<p>Fabrica cu rezervoare cilindrice masive de beton (dexamenes = rezervoare în greacă) a fost părăsită decenii, expusă elementelor.</p>
+
+<h2>Reconversia Inițială</h2>
+
+<ul>
+<li><strong>Păstrarea autenticității</strong> - Rezervoare transformate în camere, beton expus păstrat</li>
+<li><strong>Integrare în peisaj</strong> - Terase spre Marea Ionică, vegetație naturală integrată</li>
+<li><strong>Experiență unică</strong> - Fiecare cameră diferită datorită geometriei originale</li>
+</ul>
+
+<h2>Extinderea 2026: dex.Silo.01</h2>
+
+<p>Silozul din anii 1920 transformat în restaurant experiențial cu arhitectură industrială ca fundal pentru gastronomie fine.</p>
+
+<h2>Lecții pentru România</h2>
+
+<p>România are patrimoniu industrial vast subutilizat: fabrici textile (Iași, Timișoara, București), mori și depozite cereale (zone rurale), hale industriale (centre siderurgice).</p>
+
+<h3>Principii de Reconversie</h3>
+
+<ul>
+<li><strong>Autenticitate</strong> - Patina timpului este narațiune valoroasă</li>
+<li><strong>Funcțiuni compatibile</strong> - Geometrii unice pentru experiențe turistice</li>
+<li><strong>Sustenabilitate</strong> - Evită demolare, păstrează energia înglobată</li>
+<li><strong>Narațiune ca marketing</strong> - "Dormi în rezervor de vin din 1920"</li>
+</ul>
+
+<h2>Oportunități Concrete</h2>
+
+<ul>
+<li><strong>Fabrica de Bere Azuga</strong> → hotel + muzeu berii</li>
+<li><strong>Mori apă Transilvania</strong> → agroturism premium</li>
+<li><strong>Hale Timișoara</strong> → hub-uri culturale</li>
+<li><strong>Depozite Constanța</strong> → restaurante evenimente</li>
+</ul>
+
+<p>Reconversia patrimoniului industrial este strategie inteligentă de dezvoltare. Arhitectura responsabilă începe cu întrebarea: <strong>Ce poate deveni ceea ce există deja?</strong></p>
+
+<p>Găsește <a href="/directory/" style="color: #2563eb;">arhitecți specializați în reconversii și renovări</a> pe BirouArhitect.ro.</p>`,
+    date: "2026-02-20",
+    author: "Redacția BirouArhitect.ro",
+    views: 0,
+    imageUrl: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&h=630&fit=crop",
+    keywords: "reconversie patrimoniu industrial, transformare fabrica hotel, arhitectura industriala romania, hotel boutique",
+  },
 ];
