@@ -1860,4 +1860,175 @@ export const articles: { id: string; slug: string; title: string; excerpt: strin
     imageUrl: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&h=630&fit=crop",
     keywords: "reconversie patrimoniu industrial, transformare fabrica hotel, arhitectura industriala romania, hotel boutique",
   },
+  {
+    id: "13",
+    slug: "ai-revolutioneaza-documentatie-arhitecturala-2026",
+    title: "Cum Inteligența Artificială Revoluționează Documentația Arhitecturală în 2026",
+    excerpt: "Dincolo de randări spectaculoase, AI transformă modul în care arhitecții gestionează specificații tehnice, verificări de conformitate și documentația de execuție.",
+    content: `<p>Când vorbim despre inteligența artificială în arhitectură, conversația gravitează adesea în jurul imaginilor generate în secunde: randări stilistice, variații conceptuale, experimentări vizuale. Dar practica zilnică se desfășoară într-un ritm diferit. Departe de strălucirea imaginilor, mare parte din muncă se concentrează pe producerea, revizuirea și coordonarea straturilor multiple de informații.</p>
+
+<h2>AI Dincolo de Generarea de Imagini</h2>
+
+<p>În acest teritoriu mai puțin vizibil, unde deciziile se acumulează în documente, versiuni și revizii, apar platforme precum <strong>Avoice</strong> care se concentrează pe organizarea inteligentă a documentației tehnice. Platforma interpretează planuri, specificații, tabele, materiale și coduri în contextul proiectului.</p>
+
+<h3>De la Arhivă la Cunoaștere Activă</h3>
+
+<p>Procesele de documentare sunt sisteme interdependente. O decizie de material reverberează prin specificații, angajează cerințe de reglementare, impactează detaliile și generează revizii ulterioare. Când aceste straturi devin dispersate în dosare, email-uri și platforme deconectate, cunoștințele acumulate încetează să funcționeze ca memorie activă.</p>
+
+<p>Prin consolidarea acestor fluxuri de lucru într-un mediu unificat și căutabil, platforma permite ca fiecare specificație redactată, verificare de conformitate și interpretare a reglementărilor să devină parte a unei baze de cunoștințe structurate.</p>
+
+<h2>Spre Fluxuri Autonome</h2>
+
+<p>În viitor, ambiția se extinde dincolo de organizarea documentației către grade crescânde de autonomie în fluxurile de lucru. Următoarea etapă explorează utilizarea agenților autonomi de cercetare capabili să gestioneze porțiuni din sarcinile manuale și repetitive.</p>
+
+<p>O sarcină precum identificarea furnizorilor pentru un sistem specific de plăci ceramice, solicitarea de oferte, colectarea fișelor tehnice, organizarea informațiilor și rezumarea concluziilor ar putea fi delegată unui agent care efectuează sistematic aceste acțiuni.</p>
+
+<h2>Lecții pentru Arhitectura din România</h2>
+
+<ul>
+<li><strong>Centralizare documentație</strong> - O singură platformă pentru proiecte complete</li>
+<li><strong>Biblioteci materiale</strong> - Specificații locale standardizate</li>
+<li><strong>Sisteme colaborative</strong> - Echipe sincronizate pe versiune unică</li>
+<li><strong>Backup automat</strong> - Arhive structurate pentru referință viitoare</li>
+<li><strong>Șabloane inteligente</strong> - Documentație de bază adaptabilă</li>
+</ul>
+
+<p>Prin reorganizarea documentației ca infrastructură de cunoaștere activă, se reduce fricțiunea cognitivă implicată în luarea deciziilor tehnice. Mai puțin timp petrecut căutând, rescriind conținut repetitiv și verificând manual inconsistențele creează mai mult spațiu pentru reflecție strategică.</p>
+
+<p>Descoperă <a href="/directory/" style="color: #2563eb;">birouri de arhitectură</a> care adoptă tehnologii moderne pe BirouArhitect.ro.</p>`,
+    date: "2026-02-22",
+    author: "Redacția BirouArhitect.ro",
+    views: 0,
+    imageUrl: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=630&fit=crop",
+    keywords: "inteligenta artificiala arhitectura, documentatie tehnica AI, management proiect arhitectural, software arhitectura 2026",
+  },
+  {
+    id: "14",
+    slug: "renasterea-acoperisurilor-din-stuf-arhitectura-contemporana",
+    title: "Renașterea Acoperișurilor din Stuf în Arhitectura Contemporană",
+    excerpt: "De la colibe rusești la hoteluri de lux în Mexic: cum arhitecții contemporani readuc în scenă o tehnică milenară de acoperiș pentru eficiență termică și estetică naturală.",
+    content: `<p>Acoperișurile din stuf pot fi sinonime cu arhitectura tradițională, dar această selecție de 9 proiecte globale demonstrează revigorarea unui meșteșug vechi în clădiri contemporane.</p>
+
+<p>Folosită pentru crearea adăposturilor groase și izolante, acoperirea cu stuf este o metodă ancestrală obținută prin stratificarea snopurilor de vegetație uscată precum stuf, paie sau trestie.</p>
+
+<h2>Proiecte Emblematice Globale</h2>
+
+<h3>Thread, Senegal - Toshiko Mori</h3>
+
+<p>Arhitectul japonez Toshiko Mori s-a concentrat exclusiv pe materialele și tehnicile de construcție locale pentru designul Thread, un centru cultural în satul îndepărtat Sinthian. Acoperișul contemporan din stuf prezintă ondulații pentru colectarea apei de ploaie pentru culturi.</p>
+
+<h3>Dune House, Letonia - Archispektras</h3>
+
+<p>Acest acoperiș asimetric din stuf protejează Dune House, creat pentru un pasionat de kitesurfing în Rezervația Naturală Pape din Letonia. "Am luat materialul și l-am exploatat la efect maxim creând o formă modernă și acoperind-o într-o manieră sculpturală," a declarat studioul.</p>
+
+<h3>El Perdido Hotel, Mexic - Estudio ALA</h3>
+
+<p>O serie de clădiri anexe acoperite cu stuf sunt presărate peste acest hotel de pe vârful sudic al peninsulei Baja California. Estudio ALA a proiectat acoperișurile cu paie lungi vizibile, rezultând o aspecte ciufulit care completează pereții din pământ bătut.</p>
+
+<h2>Lecții pentru Arhitectura Românească</h2>
+
+<p>România are tradiție bogată în acoperiri vegetale: Delta Dunării (stuf în abundență), zone montane (șindrilă tradițională), Maramureș (structuri de lemn + stuf).</p>
+
+<h3>Oportunități de Aplicare</h3>
+
+<ul>
+<li><strong>Agroturism Premium</strong> - Cazare autentică cu confort modern</li>
+<li><strong>Structuri Eco-friendly</strong> - Certificări verzi facilitate</li>
+<li><strong>Izolație Naturală</strong> - Stufuri de 30-40 cm = eficiență termică excelentă</li>
+<li><strong>Turism Cultural</strong> - Autenticitate atrăgătoare pentru vizitatori străini</li>
+<li><strong>Reducere Amprentă Carbon</strong> - Material local, regenerabil, biodegradabil</li>
+</ul>
+
+<h2>Provocări România</h2>
+
+<ul>
+<li><strong>Cost inițial</strong> - Acoperire cu stuf costă mai mult decât țiglă standard</li>
+<li><strong>Forță de muncă</strong> - Meseriași calificați rari</li>
+<li><strong>Întreținere</strong> - Durată viață 25-40 ani, necesită cunoștințe</li>
+<li><strong>Reglementări</strong> - Risc incendiu = asigurare/aprobare complexă</li>
+</ul>
+
+<h3>Soluții Practice</h3>
+
+<p>Parteneriate cu comunități locale (meșteri Delta Dunării), tratamente ignifuge moderne (reducere risc incendiu), asociații meșteșugari (recertificare tradiții locale), proiecte pilot (demonstrații pentru autorități locale).</p>
+
+<p>Acoperirea cu stuf nu este nostalgie, ci tehnologie sustenabilă viabilă pentru arhitectura contemporană. Cu meșteșugul corect și adaptare modernă, România poate reintegra această tradiție în proiecte ecologice de impact.</p>
+
+<p>Caută <a href="/directory/" style="color: #2563eb;">arhitecți specializați în construcții ecologice</a> pe BirouArhitect.ro.</p>`,
+    date: "2026-02-22",
+    author: "Redacția BirouArhitect.ro",
+    views: 0,
+    imageUrl: "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=1200&h=630&fit=crop",
+    keywords: "acoperis din stuf, arhitectura traditionala, constructii ecologice, acoperire vegetala romania",
+  },
+  {
+    id: "15",
+    slug: "biomateriale-calde-scoli-franta-lemn-piatra-pamant",
+    title: "Biomateriale Calde și Primitoare în Școlile din Franța: Lecții pentru România",
+    excerpt: "Școala Groupe Scolaire Simone Veil din Franța demonstrează cum lemnul, piatra locală și cărămizile din pământ pot crea spații educaționale calde, sustenabile și inspiraționale.",
+    content: `<p>O sală de sport în formă de lanternă stă pe acoperișul acestei școli din piatră și lemn structural în Franța, proiectată de studioul local <strong>Le Penhuel & Associés</strong>.</p>
+
+<p>Situat în suburbia pariziană Tremblay-en-France, Groupe Scolaire Simone Veil de 2.400 mp conține opt săli de clasă, o cantină și zone administrative, precum și o sală de sport partajată cu grupuri comunitare locale.</p>
+
+<h2>Filozofia: Educație prin Exemplu</h2>
+
+<p>"Credem că o clădire școlară trebuie să își exprime clar angajamentul de mediu," a declarat arhitectul asociat Warren Lepolard. "Alegerile de materiale s-au concentrat pe materiale geo-surse și bio-bazate."</p>
+
+<h3>Paletă Materială Integrată</h3>
+
+<ul>
+<li><strong>Piatră Locală Portantă</strong> (Bonneuil-en-Valois) - Inerție termică excelentă, durabilitate seculară</li>
+<li><strong>Structură din Lemn</strong> - Atmosferă caldă, reducere amprentă carbon, produs local certificat</li>
+<li><strong>Cărămizi din Pământ Cru</strong> - Între săli de clasă, reglare umiditate naturală, zero emisii</li>
+</ul>
+
+<p>Lepolard adaugă: "Utilizarea extinsă a structurii de lemn creează o atmosferă caldă și primitoare. Adăugarea de cărămizi din pământ cru între săli de clasă îmbunătățește vizibilitatea materialelor naturale folosite în toată clădirea."</p>
+
+<h2>Organizare Spațială</h2>
+
+<p>Respectând scala mai mică a proprietăților rezidențiale vecine, școala este organizată predominant pe un singur nivel. Două axe formează o cruce în centrul planului: ax Nord-Sud (hol intrare elongat) și ax Est-Vest ("stradă săli de clasă").</p>
+
+<h3>Spații de Învățare Fluidă</h3>
+
+<p>Strada internă este îngrădită de alcove și zone de depozitare colorate în formă de arc care dau spre patiouri externe mici prin ferestre înalte cu rame din lemn.</p>
+
+<p>"Una dintre gesturile cheie ale proiectului constă în designul numeroaselor 'spații-mobilier' integrate în zonele de circulație," a explicat Lepolard. "Aceste elemente permit copiilor să își însușească spațiile de tranziție ca locuri jucăușe pentru învățare și relaxare."</p>
+
+<h2>Lecții pentru Proiectele Școlare din România</h2>
+
+<h3>Principii Aplicabile</h3>
+
+<ul>
+<li><strong>Materiale Locale = Identitate + Sustenabilitate</strong> - Piatră calcar din cariere locale, lemn certificat FSC</li>
+<li><strong>Structură Vizibilă = Lecție Arhitecturală</strong> - Grinzi lemn expuse, îmbinări tradiționale vizibile</li>
+<li><strong>Spații de Tranziție ca Zone de Învățare</strong> - Coridoare transformate în alcove lecturăși zone de studiu</li>
+<li><strong>Partajare Comunitară = Utilizare Eficientă</strong> - Sală sport folosită seara de comunitate</li>
+</ul>
+
+<h3>Provocări Specifice România</h3>
+
+<ul>
+<li>Reglementări rigide - cerințe seismice stricte</li>
+<li>Mentalitate conservatoare - preferință pentru beton</li>
+<li>Forță de muncă limitată - meseriași construcție lemn rari</li>
+<li>Costuri inițiale - lemn + piatră aparent mai scump</li>
+</ul>
+
+<h3>Soluții Aplicabile</h3>
+
+<p>Proiecte pilot în orașe mici, parteneriate cu școli de meserii, fonduri europene (PNRR 2024-2027), certificări BREEAM/LEED, colaborări școli de arhitectură.</p>
+
+<h2>Concluzie</h2>
+
+<p>Groupe Scolaire Simone Veil demonstrează: biomaterialele în educație nu sunt lux, ci investiție înțeleaptă în sănătate, confort termic, amprentă carbon redusă și educație prin exemplu.</p>
+
+<p>Pentru România, cu resurse naturale abundente și tradiții constructive bogate, integrarea lemnului, pietrei și pământului în arhitectura școlară este oportunitate strategică de conectare între patrimoniu și inovație sustenabilă.</p>
+
+<p>Găsește <a href="/directory/" style="color: #2563eb;">arhitecți specializați în construcții sustenabile</a> pe BirouArhitect.ro.</p>`,
+    date: "2026-02-22",
+    author: "Redacția BirouArhitect.ro",
+    views: 0,
+    imageUrl: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1200&h=630&fit=crop",
+    keywords: "biomateriale scoli, arhitectura educationala sustenabila, constructii lemn romania, scoala ecologica",
+  },
 ];

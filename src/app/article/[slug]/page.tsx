@@ -1,4 +1,4 @@
-import { articles } from "@/data/companies";
+import { newArticles as articles } from "@/data/new-articles";
 import { notFound } from "next/navigation";
 import ArticlePageClient from "./ArticlePageClient";
 

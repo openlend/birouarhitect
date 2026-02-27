@@ -1,0 +1,271 @@
+<!-- OFFICE TAB - Virtual Office Style -->
+<div id="office" class="tab-content">
+    <h2 class="section-title" style="margin-bottom: var(--space-md);">
+        <span style="margin-right: var(--space-xs);">🏢</span>
+        Office - Agent Team
+    </h2>
+
+    <!-- Cost Summary at top -->
+    <div style="display: flex; justify-content: space-between; align-items: center; padding: var(--space-md); background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(5, 150, 105, 0.05)); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: var(--radius-md); margin-bottom: var(--space-xl);">
+        <div>
+            <div style="font-size: 1rem; font-weight: 600; color: var(--success);">💰 Monthly Cost: $231</div>
+            <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.25rem;">Optimized by Kai (19% savings from $286)</div>
+        </div>
+        <div style="text-align: right;">
+            <div style="font-size: 1.5rem; font-weight: 700; color: var(--success);">6 Agents</div>
+            <div style="font-size: 0.75rem; color: var(--text-secondary);">All Systems Active</div>
+        </div>
+    </div>
+
+    <!-- Virtual Office Space -->
+    <div style="background: linear-gradient(135deg, rgba(15, 15, 20, 0.8), rgba(5, 5, 8, 0.9)); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: var(--space-xl); min-height: 600px; position: relative; overflow: hidden;">
+        
+        <!-- Office Grid Background -->
+        <div style="position: absolute; inset: 0; background-image: repeating-linear-gradient(0deg, rgba(255,255,255,0.02) 0px, transparent 1px, transparent 40px), repeating-linear-gradient(90deg, rgba(255,255,255,0.02) 0px, transparent 1px, transparent 40px); opacity: 0.3;"></div>
+
+        <!-- Build Council Room (Center) -->
+        <div style="position: relative; z-index: 1;">
+            <div style="text-align: center; margin-bottom: var(--space-xl);">
+                <div style="display: inline-block; padding: 0.5rem 1.5rem; background: rgba(14, 165, 233, 0.2); border: 1px solid rgba(14, 165, 233, 0.4); border-radius: 999px; font-weight: 600; color: var(--accent); margin-bottom: var(--space-md);">
+                    🏛️ Build Council
+                </div>
+            </div>
+
+            <!-- Council Table (Center Oval) -->
+            <div style="margin: 0 auto var(--space-xl); width: 400px; height: 200px; background: linear-gradient(135deg, rgba(100, 100, 100, 0.3), rgba(80, 80, 80, 0.2)); border: 2px solid rgba(255, 255, 255, 0.1); border-radius: 50%; box-shadow: 0 10px 30px rgba(0,0,0,0.3); position: relative;">
+                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 0.875rem; color: var(--text-tertiary); text-align: center;">
+                    Daily Standup<br/>
+                    <span style="font-size: 0.75rem; color: var(--text-tertiary);">7:00 AM</span>
+                </div>
+            </div>
+
+            <!-- Agents Around Table -->
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-xl); max-width: 900px; margin: 0 auto;">
+                
+                <!-- Atlas (Top Center) -->
+                <div style="grid-column: 2; text-align: center; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" onclick="showAgentInfo('atlas')">
+                    <div style="width: 80px; height: 80px; margin: 0 auto var(--space-sm); background: linear-gradient(135deg, var(--accent), #06b6d4); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; box-shadow: 0 0 20px rgba(14, 165, 233, 0.5); border: 3px solid rgba(14, 165, 233, 0.3);">
+                        🗺️
+                    </div>
+                    <div style="font-weight: 600; font-size: 0.875rem; margin-bottom: 0.25rem;">Atlas</div>
+                    <div style="font-size: 0.75rem; color: var(--text-tertiary);">Orchestrator</div>
+                    <div style="display: inline-block; margin-top: 0.25rem; padding: 0.125rem 0.5rem; background: rgba(14, 165, 233, 0.2); border-radius: 999px; font-size: 0.625rem; color: var(--accent);">Sonnet 4.5</div>
+                </div>
+
+                <!-- Research (Left Top) -->
+                <div style="grid-column: 1; text-align: center; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" onclick="showAgentInfo('research')">
+                    <div style="width: 70px; height: 70px; margin: 0 auto var(--space-sm); background: linear-gradient(135deg, #8b5cf6, #6366f1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; box-shadow: 0 0 15px rgba(139, 92, 246, 0.4); border: 3px solid rgba(139, 92, 246, 0.3);">
+                        🔍
+                    </div>
+                    <div style="font-weight: 600; font-size: 0.875rem; margin-bottom: 0.25rem;">Research</div>
+                    <div style="font-size: 0.75rem; color: var(--text-tertiary);">Market Intel</div>
+                    <div style="display: inline-block; margin-top: 0.25rem; padding: 0.125rem 0.5rem; background: rgba(139, 92, 246, 0.2); border-radius: 999px; font-size: 0.625rem; color: #8b5cf6;">DeepSeek</div>
+                </div>
+
+                <!-- Content (Right Top) -->
+                <div style="grid-column: 3; text-align: center; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" onclick="showAgentInfo('content')">
+                    <div style="width: 70px; height: 70px; margin: 0 auto var(--space-sm); background: linear-gradient(135deg, #f59e0b, #f97316); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; box-shadow: 0 0 15px rgba(245, 158, 11, 0.4); border: 3px solid rgba(245, 158, 11, 0.3);">
+                        ✍️
+                    </div>
+                    <div style="font-weight: 600; font-size: 0.875rem; margin-bottom: 0.25rem;">Content</div>
+                    <div style="font-size: 0.75rem; color: var(--text-tertiary);">Writer</div>
+                    <div style="display: inline-block; margin-top: 0.25rem; padding: 0.125rem 0.5rem; background: rgba(245, 158, 11, 0.2); border-radius: 999px; font-size: 0.625rem; color: #f59e0b;">Kimi 2.5</div>
+                </div>
+
+                <!-- Dev (Left Bottom) -->
+                <div style="grid-column: 1; text-align: center; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" onclick="showAgentInfo('dev')">
+                    <div style="width: 70px; height: 70px; margin: 0 auto var(--space-sm); background: linear-gradient(135deg, #10b981, #059669); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; box-shadow: 0 0 15px rgba(16, 185, 129, 0.4); border: 3px solid rgba(16, 185, 129, 0.3);">
+                        🛠️
+                    </div>
+                    <div style="font-weight: 600; font-size: 0.875rem; margin-bottom: 0.25rem;">Dev</div>
+                    <div style="font-size: 0.75rem; color: var(--text-tertiary);">Builder</div>
+                    <div style="display: inline-block; margin-top: 0.25rem; padding: 0.125rem 0.5rem; background: rgba(16, 185, 129, 0.2); border-radius: 999px; font-size: 0.625rem; color: var(--success);">Sonnet 4.5</div>
+                </div>
+
+                <!-- Kai (Center Bottom) -->
+                <div style="grid-column: 2; text-align: center; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" onclick="showAgentInfo('kai')">
+                    <div style="width: 70px; height: 70px; margin: 0 auto var(--space-sm); background: linear-gradient(135deg, #ec4899, #db2777); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; box-shadow: 0 0 15px rgba(236, 72, 153, 0.4); border: 3px solid rgba(236, 72, 153, 0.3);">
+                        🧠
+                    </div>
+                    <div style="font-weight: 600; font-size: 0.875rem; margin-bottom: 0.25rem;">Kai</div>
+                    <div style="font-size: 0.75rem; color: var(--text-tertiary);">Optimizer</div>
+                    <div style="display: inline-block; margin-top: 0.25rem; padding: 0.125rem 0.5rem; background: rgba(236, 72, 153, 0.2); border-radius: 999px; font-size: 0.625rem; color: #ec4899;">Kimi 2.5</div>
+                </div>
+
+                <!-- Cold Rich (Right Bottom) -->
+                <div style="grid-column: 3; text-align: center; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" onclick="showAgentInfo('coldrich')">
+                    <div style="width: 70px; height: 70px; margin: 0 auto var(--space-sm); background: linear-gradient(135deg, #06b6d4, #0891b2); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; box-shadow: 0 0 15px rgba(6, 182, 212, 0.4); border: 3px solid rgba(6, 182, 212, 0.3);">
+                        🧊
+                    </div>
+                    <div style="font-weight: 600; font-size: 0.875rem; margin-bottom: 0.25rem;">Cold Rich</div>
+                    <div style="font-size: 0.75rem; color: var(--text-tertiary);">Email Specialist</div>
+                    <div style="display: inline-block; margin-top: 0.25rem; padding: 0.125rem 0.5rem; background: rgba(6, 182, 212, 0.2); border-radius: 999px; font-size: 0.625rem; color: #06b6d4;">Haiku 4.5</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Agent Details Panel (Hidden by default, shows on click) -->
+    <div id="agentDetailsPanel" style="display: none; margin-top: var(--space-lg); padding: var(--space-lg); background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-subtle); border-radius: var(--radius-md);">
+        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: var(--space-md);">
+            <h3 id="agentDetailName" style="font-size: 1.25rem; font-weight: 600;"></h3>
+            <button onclick="hideAgentInfo()" style="background: transparent; border: none; color: var(--text-secondary); cursor: pointer; font-size: 1.5rem;">&times;</button>
+        </div>
+        <div id="agentDetailContent"></div>
+    </div>
+
+    <!-- Daily Schedule -->
+    <div style="margin-top: var(--space-xl); padding: var(--space-lg); background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-subtle); border-radius: var(--radius-md);">
+        <h3 style="font-size: 1rem; font-weight: 600; margin-bottom: var(--space-md);">⏰ Daily Automation Schedule</h3>
+        <div style="display: grid; gap: var(--space-sm);">
+            <div style="display: flex; align-items: center; padding: var(--space-sm); background: rgba(255, 255, 255, 0.02); border-radius: var(--radius-sm);">
+                <span style="font-weight: 600; width: 80px; color: var(--accent);">5:30 AM</span>
+                <span style="color: var(--text-secondary); font-size: 0.875rem;">Health Check - All agents responsive?</span>
+            </div>
+            <div style="display: flex; align-items: center; padding: var(--space-sm); background: rgba(255, 255, 255, 0.02); border-radius: var(--radius-sm);">
+                <span style="font-weight: 600; width: 80px; color: var(--accent);">6:00 AM</span>
+                <span style="color: var(--text-secondary); font-size: 0.875rem;">🧠 Kai Security Audit - API keys, credentials</span>
+            </div>
+            <div style="display: flex; align-items: center; padding: var(--space-sm); background: rgba(255, 255, 255, 0.02); border-radius: var(--radius-sm);">
+                <span style="font-weight: 600; width: 80px; color: var(--accent);">7:00 AM</span>
+                <span style="color: var(--text-secondary); font-size: 0.875rem;">🔍 Research Brief - Market trends, competitor updates</span>
+            </div>
+            <div style="display: flex; align-items: center; padding: var(--space-sm); background: rgba(255, 255, 255, 0.02); border-radius: var(--radius-sm);">
+                <span style="font-weight: 600; width: 80px; color: var(--accent);">8:00 AM</span>
+                <span style="color: var(--text-secondary); font-size: 0.875rem;">✍️ Content Deploy - Auto-publish articles to birouarhitect.ro</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// Agent info database
+const agentInfo = {
+    atlas: {
+        name: '🗺️ Atlas',
+        role: 'Orchestrator & Strategic Lead',
+        model: 'Claude Sonnet 4.5',
+        cost: '$120/month',
+        capabilities: [
+            '🎯 Oversees all sub-agents and delegates tasks',
+            '📊 Makes strategic decisions for business priorities',
+            '✅ Final quality review and approval before deployment',
+            '🔄 Coordinates workflow between Research, Content, Dev teams'
+        ],
+        example: 'Daily: Reviews Research brief → Assigns Content task → QA checks Dev output'
+    },
+    research: {
+        name: '🔍 Research',
+        role: 'Market Intelligence Specialist',
+        model: 'DeepSeek Chat',
+        cost: '$9/month (75% cheaper than Atlas)',
+        capabilities: [
+            '📈 Daily market trend analysis (lend.ro, birouarhitect.ro niches)',
+            '🔎 Competitor tracking (blog posts, pricing, features)',
+            '📊 Google Trends monitoring',
+            '⚡ Ultra-cheap: ~$0.0007 per research task'
+        ],
+        example: 'Morning: Scans 12 competitor blogs → Identifies 3 trending topics → Reports to Atlas'
+    },
+    content: {
+        name: '✍️ Content',
+        role: 'Content Generation Specialist',
+        model: 'Kimi 2.5 (Moonshot)',
+        cost: '$6/month (88% cheaper than Atlas)',
+        capabilities: [
+            '📝 Writes 1800-word SEO-optimized articles',
+            '🌍 Romanian language fluent (native-level quality)',
+            '🔍 200K context window (can read entire competitor sites)',
+            '⚡ Ultra-cheap: ~$0.0028 per article'
+        ],
+        example: 'Daily 8 AM: Generates architect article → Deploys to birouarhitect.ro automatically'
+    },
+    dev: {
+        name: '🛠️ Dev',
+        role: 'Production Code Specialist',
+        model: 'Claude Sonnet 4.5',
+        cost: '$35/month (quality > cost)',
+        capabilities: [
+            '🔒 Production-ready WordPress plugins (zero bugs tolerance)',
+            '⚙️ Security hardened (SQL injection, XSS, CSRF prevention)',
+            '✅ Financial calculator precision (MillionPlus 13 calculators)',
+            '📦 2,500+ lines of code in 2h 20min'
+        ],
+        example: 'MillionPlus project: Built 13 calculators → Security 5-star → Delivered in $3.70'
+    },
+    kai: {
+        name: '🧠 Kai',
+        role: 'Meta-Learning & Optimization',
+        model: 'Kimi 2.5 (Moonshot)',
+        cost: '$20/month',
+        capabilities: [
+            '🔍 Studies OpenClaw documentation deeply',
+            '💡 Finds cost optimization opportunities (found $55/month savings)',
+            '🛡️ Daily security audits (6 AM - API keys, credentials)',
+            '⚡ Weekly system health reports'
+        ],
+        example: 'Feb 2026 audit: Found Dev on Haiku (weak) → Switched to Sonnet → Saved $55/mo'
+    },
+    coldrich: {
+        name: '🧊 Cold Rich',
+        role: 'Email Campaign Specialist',
+        model: 'Claude Haiku 4.5',
+        cost: '$41/month',
+        capabilities: [
+            '📧 Manages 100k+ emails via Instantly.ai',
+            '📈 Tracks open/click/reply rates',
+            '🎯 Engagement-based follow-up sequences',
+            '⚡ Reply rate optimization (15% target vs 3% industry avg)'
+        ],
+        example: 'theflyingengineer.com: 100k emails sent → 25k opens → 3,750 targeted follow-ups'
+    }
+};
+
+function showAgentInfo(agentKey) {
+    const agent = agentInfo[agentKey];
+    const panel = document.getElementById('agentDetailsPanel');
+    const nameEl = document.getElementById('agentDetailName');
+    const contentEl = document.getElementById('agentDetailContent');
+    
+    nameEl.textContent = agent.name;
+    contentEl.innerHTML = `
+        <div style="display: grid; gap: var(--space-md);">
+            <div>
+                <div style="font-size: 0.875rem; color: var(--text-tertiary); margin-bottom: 0.25rem;">Role</div>
+                <div style="font-size: 1rem; font-weight: 500;">${agent.role}</div>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md);">
+                <div>
+                    <div style="font-size: 0.875rem; color: var(--text-tertiary); margin-bottom: 0.25rem;">Model</div>
+                    <div style="font-size: 0.875rem; font-weight: 500;">${agent.model}</div>
+                </div>
+                <div>
+                    <div style="font-size: 0.875rem; color: var(--text-tertiary); margin-bottom: 0.25rem;">Cost</div>
+                    <div style="font-size: 0.875rem; font-weight: 500; color: var(--success);">${agent.cost}</div>
+                </div>
+            </div>
+            <div>
+                <div style="font-size: 0.875rem; color: var(--text-tertiary); margin-bottom: var(--space-sm);">Capabilities</div>
+                <div style="display: flex; flex-direction: column; gap: var(--space-xs);">
+                    ${agent.capabilities.map(cap => `
+                        <div style="padding: var(--space-xs); background: rgba(255, 255, 255, 0.02); border-radius: var(--radius-sm); font-size: 0.875rem;">
+                            ${cap}
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+            <div style="padding: var(--space-md); background: rgba(14, 165, 233, 0.1); border-left: 3px solid var(--accent); border-radius: var(--radius-sm);">
+                <div style="font-size: 0.75rem; color: var(--text-tertiary); margin-bottom: 0.25rem;">Example Workflow</div>
+                <div style="font-size: 0.875rem;">${agent.example}</div>
+            </div>
+        </div>
+    `;
+    
+    panel.style.display = 'block';
+    panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function hideAgentInfo() {
+    document.getElementById('agentDetailsPanel').style.display = 'none';
+}
+</script>

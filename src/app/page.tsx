@@ -163,7 +163,7 @@ export default function Home() {
       {/* CTA Section */}
       <section className="section-padding-lg relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-blue-900" />
-        <div className="absolute inset-0 opacity-10 bg-[url('/grid.svg')]" />
+        <div className="absolute inset-0 opacity-10" style={{backgroundImage: "url('/grid.svg')"}} />
         
         <div className="container-premium relative z-10">
           <div className="max-w-3xl mx-auto text-center text-white">

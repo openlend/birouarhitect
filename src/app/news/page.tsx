@@ -5,6 +5,11 @@ import Hero from '@/components/Hero';
 import { articles } from "@/data/companies";
 
 export default function NewsPage() {
+  // Sort articles by date (newest first)
+  const sortedArticles = [...articles].sort((a, b) => 
+    new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
+
   return (
     <>
       <Hero
@@ -19,7 +24,7 @@ export default function NewsPage() {
       <section className="section-padding-lg bg-slate-50">
         <div className="container-premium">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {articles.map((art) => (
+            {sortedArticles.map((art) => (
               <div key={art.id}>
                 <Link
                   href={`/article/${art.slug}`}

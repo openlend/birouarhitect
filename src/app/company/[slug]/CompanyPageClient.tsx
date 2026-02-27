@@ -10,7 +10,7 @@ export default function CompanyPageClient({ company }: { company: Company }) {
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
         {/* Background with Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-blue-900" />
-        <div className="absolute inset-0 opacity-10 bg-[url('/grid.svg')]" />
+        <div className="absolute inset-0 opacity-10" style={{backgroundImage: "url('/grid.svg')"}} />
 
         {/* Content */}
         <div className="container-premium relative z-10 py-16">

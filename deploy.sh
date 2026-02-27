@@ -68,9 +68,12 @@ echo "SUCCESS: Extracted and cleaned up $archive";
 ?>
 EOF
 
-curl -s -F "file=@/tmp/extract.php" \
+curl -s -X POST \
+  "${CPANEL_URL}/execute/Fileman/upload_files" \
   -u "${CPANEL_USER}:${CPANEL_PASS}" \
-  "${CPANEL_URL}/execute/Fileman/upload_files?dir=/home/birouarhitect/public_html" > /dev/null
+  -F "dir=/home/birouarhitect/public_html" \
+  -F "file-1=@/tmp/extract.php" \
+  -F "overwrite=1" > /tmp/upload-extract.json
 
 sleep 2
 
@@ -97,9 +100,12 @@ echo "Cache purged";
 ?>
 EOF
 
-curl -s -F "file=@/tmp/purge.php" \
+curl -s -X POST \
+  "${CPANEL_URL}/execute/Fileman/upload_files" \
   -u "${CPANEL_USER}:${CPANEL_PASS}" \
-  "${CPANEL_URL}/execute/Fileman/upload_files?dir=/home/birouarhitect/public_html" > /dev/null
+  -F "dir=/home/birouarhitect/public_html" \
+  -F "file-1=@/tmp/purge.php" \
+  -F "overwrite=1" > /tmp/upload-purge.json
 
 sleep 1
 curl -s "${SITE_URL}/purge.php" > /dev/null
@@ -118,7 +124,7 @@ if [ -n "$1" ]; then
 fi
 
 # Cleanup
-rm -f "$ARCHIVE" /tmp/extract.php /tmp/purge.php /tmp/upload-result.json
+rm -f "$ARCHIVE" /tmp/extract.php /tmp/purge.php /tmp/upload-result.json /tmp/upload-extract.json /tmp/upload-purge.json
 
 echo -e "\n${GREEN}✅ Deployment complete!${NC}"
 echo -e "🌐 Site: ${SITE_URL}"
