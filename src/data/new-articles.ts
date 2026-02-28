@@ -1,4 +1,5 @@
-// Auto-generated articles with Unsplash images (updated 2026-02-27)
+// Auto-generated articles with Unsplash images (updated 2026-02-28)
+import { newArticles20260228 } from './new-articles-2026-02-28';
 import { newArticles20260227 } from './new-articles-2026-02-27';
 import { newArticles20260226 } from './new-articles-2026-02-26';
 
@@ -1493,6 +1494,7 @@ Da, dacă sunt folosite cărămizi de calitate (rezistență îngheț-dezgheț >
 
 // Merge arrays: new articles first
 export const newArticles = [
+  ...newArticles20260228,
   ...newArticles20260227,
   ...newArticles20260226,
   ...existingArticles,
