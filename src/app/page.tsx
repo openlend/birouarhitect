@@ -1,188 +1,376 @@
-'use client';
-
 import Link from "next/link";
-import Hero from "@/components/Hero";
-import SectionTitle from "@/components/SectionTitle";
 import CompanyCardPremium from "@/components/CompanyCardPremium";
-import { companies, categories, articles } from "@/data/companies";
+import { companies, categories } from "@/data/companies";
+import { newArticles } from "@/data/new-articles";
+
+type ArticlePreview = (typeof newArticles)[number] & { category?: string };
+
+const featuredCompanies = companies
+  .filter((c) => c.isPremium || c.isVerified)
+  .slice(0, 6);
+
+const quickFilters = [
+  {
+    label: "Case moderne",
+    description: "Autorizare completă + structură în 90 de zile",
+    href: "/directory?cat=rezidential",
+  },
+  {
+    label: "Spații comerciale",
+    description: "Birouri și retail cu livrare la cheie",
+    href: "/directory?cat=comercial",
+  },
+  {
+    label: "Reconversii industriale",
+    description: "Echipe cu expertiză în monumente & PUZ",
+    href: "/directory?cat=urbanism",
+  },
+];
+
+const curatedPlaybooks = [
+  {
+    title: "Renovezi un spațiu comercial?",
+    description: "Selectăm doar birourile care au livrat retail și hospitality în ultimele 12 luni.",
+    actions: ["Due diligence rapid", "Vendor list verificat"],
+  },
+  {
+    title: "Construiești o casă pe teren dificil?",
+    description: "Găsești studiouri cu expertiză în fundații speciale, soluri umede și zone lacustre.",
+    actions: ["Studiu geotehnic", "Coordonare autorizații"],
+  },
+  {
+    title: "Upgrade pentru clădiri existente",
+    description: "Birouri cu portofoliu în reconversii industriale și restaurare de patrimoniu.",
+    actions: ["Audit energetic", "Plan etapizat"],
+  },
+];
 
 export default function Home() {
-  const featured = companies.filter((c) => c.isPremium || c.isVerified).slice(0, 6);
-  const topArticles = articles.slice(0, 3);
+  const totalCities = new Set(companies.map((c) => c.city)).size;
+  const totalSpecialties = new Set(companies.map((c) => c.category)).size;
+  const premiumStudios = companies.filter((c) => c.isPremium).length;
+  const verifiedStudios = companies.filter((c) => c.isVerified).length;
+  const latestArticles: ArticlePreview[] = newArticles.slice(0, 3).map((article) => ({
+    ...article,
+    category: (article as { category?: string }).category ?? 'Insight',
+  }));
+
+  const heroStats = [
+    {
+      label: "Birouri verificate",
+      value: `${verifiedStudios}+`,
+      detail: "Audit editorial & portofolii reale",
+    },
+    {
+      label: "Orașe acoperite",
+      value: `${totalCities}+`,
+      detail: "Rețea din Cluj până la Constanța",
+    },
+    {
+      label: "Specialități",
+      value: `${totalSpecialties}+`,
+      detail: "Rezidențial, industrial, urbanism, retail",
+    },
+  ];
 
   return (
     <>
       {/* Hero Section */}
-      <Hero
-        subtitle="BirouArhitect.ro"
-        title="Găsește Arhitectul Perfect Pentru Proiectul Tău"
-        description="Cel mai mare director premium de birouri de arhitectură din România. Conectăm clienții cu profesioniști verificați pentru proiecte excepționale."
-        ctaText="Explorează Director"
-        ctaHref="/directory"
-        height="full"
-      />
+      <section className="relative mt-6">
+        <div className="container-premium">
+          <div className="relative overflow-hidden rounded-[32px] bg-gradient-to-br from-slate-900 via-blue-900 to-slate-950 px-6 py-12 md:px-12 md:py-16">
+            <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "radial-gradient(circle at top, #38bdf8 0%, transparent 55%)" }} />
+            <div className="relative grid gap-12 lg:grid-cols-[1.2fr_0.8fr]">
+              <div>
+                <p className="text-sm uppercase tracking-[0.3em] text-blue-200">Director premium · România</p>
+                <h1 className="mt-4 font-serif text-4xl leading-tight text-white sm:text-5xl lg:text-6xl">
+                  Descoperă biroul de arhitectură potrivit înainte să înceapă licitația
+                </h1>
+                <p className="mt-6 text-lg text-slate-200 sm:text-xl">
+                  Vezi capacitatea reală a echipelor, tipurile de proiecte livrate și disponibilitatea lor în următoarele 90 de zile.
+                </p>
 
-      {/* Stats Section */}
+                <form action="/directory" className="mt-8 rounded-2xl bg-white/10 p-4 backdrop-blur-sm">
+                  <div className="grid gap-4 sm:grid-cols-[minmax(0,1fr)_200px]">
+                    <input
+                      name="q"
+                      type="text"
+                      placeholder="Ex: casă lac Colibița, spațiu retail București"
+                      className="h-12 rounded-xl border border-white/20 bg-white/80 px-4 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-200"
+                    />
+                    <button type="submit" className="btn-premium bg-white text-slate-900 hover:bg-blue-50">
+                      Caută în director
+                    </button>
+                  </div>
+                  <p className="mt-3 text-xs text-slate-200">
+                    Filtrăm doar birourile care lucrează proiecte active în 2026.
+                  </p>
+                </form>
+
+                <div className="mt-10 flex flex-col gap-4">
+                  {quickFilters.map((filter) => (
+                    <Link
+                      key={filter.label}
+                      href={filter.href}
+                      className="flex flex-col rounded-2xl border border-white/10 bg-white/5 p-4 transition hover:border-white/30"
+                    >
+                      <div className="flex items-center justify-between text-white">
+                        <span className="font-medium">{filter.label}</span>
+                        <span className="text-sm text-blue-200">Vezi studiouri →</span>
+                      </div>
+                      <p className="text-sm text-slate-200">{filter.description}</p>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              <div className="relative">
+                <div className="absolute inset-0 rounded-[32px] border border-white/5" />
+                <div className="relative grid gap-6">
+                  <div className="rounded-3xl bg-white/10 p-6 text-white shadow-2xl backdrop-blur-xl">
+                    <p className="text-sm text-blue-200">Focus săptămânal</p>
+                    <h3 className="mt-3 font-serif text-3xl">Birouri cu rezultate măsurabile</h3>
+                    <p className="mt-3 text-sm text-slate-200">
+                      Rulăm interviuri lunare cu echipele și verificăm stadiul proiectelor publicate.
+                    </p>
+                    <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                      <div className="rounded-2xl bg-white/10 p-4">
+                        <p className="text-xs uppercase tracking-widest text-blue-200">Livrări Q1</p>
+                        <p className="mt-2 text-3xl font-semibold">17</p>
+                        <p className="text-xs text-slate-200">clădiri finalizate în ultimele 90 de zile</p>
+                      </div>
+                      <div className="rounded-2xl bg-white/10 p-4">
+                        <p className="text-xs uppercase tracking-widest text-blue-200">Timp mediu estimări</p>
+                        <p className="mt-2 text-3xl font-semibold">48h</p>
+                        <p className="text-xs text-slate-200">până la răspuns cu ofertă preliminară</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="rounded-3xl bg-white/10 p-6 text-white shadow-2xl backdrop-blur-xl">
+                    <p className="text-xs uppercase tracking-[0.4em] text-blue-200">Indicatori</p>
+                    <div className="mt-4 space-y-4">
+                      {heroStats.map((stat) => (
+                        <div key={stat.label} className="flex items-start justify-between">
+                          <div>
+                            <p className="text-sm text-slate-200">{stat.label}</p>
+                            <p className="text-xs text-slate-300">{stat.detail}</p>
+                          </div>
+                          <p className="text-2xl font-semibold text-white">{stat.value}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Metrics Strip */}
+      <section className="section-padding pb-10">
+        <div className="container-premium">
+          <div className="grid gap-6 rounded-3xl border border-slate-100 bg-white p-6 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                label: "Studii de fezabilitate",
+                value: "+60", 
+                detail: "în execuție acum",
+              },
+              {
+                label: "Firme premium",
+                value: `${premiumStudios}+`,
+                detail: "abonate la audit trimestrial",
+              },
+              {
+                label: "Proiecte listate",
+                value: "1000+",
+                detail: "documentate în ultimii 3 ani",
+              },
+              {
+                label: "Timp mediu introducere",
+                value: "4 zile",
+                detail: "de la solicitare la call tehnic",
+              },
+            ].map((item) => (
+              <div key={item.label} className="rounded-2xl bg-slate-50 p-4">
+                <p className="text-sm text-slate-500">{item.label}</p>
+                <p className="mt-1 text-3xl font-semibold text-slate-900">{item.value}</p>
+                <p className="text-sm text-slate-500">{item.detail}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Categories */}
+      <section className="section-padding bg-slate-50">
+        <div className="container-premium">
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+            <div>
+              <p className="text-sm uppercase tracking-[0.4em] text-slate-500">Categorii</p>
+              <h2 className="mt-4 font-serif text-4xl text-slate-900">Scanează piața pe specialități reale</h2>
+              <p className="mt-3 max-w-2xl text-lg text-slate-600">
+                Fiecare categorie include doar birouri care au cel puțin 2 proiecte finalizate în ultimii 24 de luni.
+              </p>
+            </div>
+            <Link href="/directory" className="btn-premium btn-premium-outline self-start">
+              Toate serviciile
+            </Link>
+          </div>
+
+          <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {categories.map((cat) => (
+              <Link
+                key={cat.slug}
+                href={`/directory?cat=${cat.slug}`}
+                className="group rounded-3xl border border-slate-100 bg-white p-6 transition hover:-translate-y-1 hover:border-slate-200"
+              >
+                <div className="flex items-center justify-between">
+                  <div className="text-4xl">{cat.icon}</div>
+                  <span className="rounded-full border border-slate-200 px-3 py-1 text-xs font-medium text-slate-500">
+                    {companies.filter((c) => c.category === cat.name).length} birouri
+                  </span>
+                </div>
+                <h3 className="mt-6 font-serif text-2xl text-slate-900">{cat.name}</h3>
+                <p className="mt-2 text-slate-600">{cat.desc}</p>
+                <span className="mt-4 inline-flex items-center text-sm font-semibold text-blue-600">
+                  Deschide categoria
+                  <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Companies */}
       <section className="section-padding bg-white">
         <div className="container-premium">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
-            {[
-              { value: "500+", label: "Birouri Verificate", icon: "🏢" },
-              { value: "40+", label: "Orașe Acoperite", icon: "📍" },
-              { value: "15+", label: "Specialități", icon: "🎯" },
-              { value: "1000+", label: "Proiecte Realizate", icon: "✨" },
-            ].map((stat) => (
-              <div key={stat.label} className="text-center">
-                <div className="text-4xl mb-2">{stat.icon}</div>
-                <div className="text-4xl md:text-5xl font-serif font-bold text-slate-900 mb-2">
-                  {stat.value}
-                </div>
-                <div className="text-slate-600 text-sm md:text-base">{stat.label}</div>
-              </div>
-            ))}
+          <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+            <div>
+              <p className="text-sm uppercase tracking-[0.4em] text-slate-500">Selecție editorială</p>
+              <h2 className="mt-3 font-serif text-4xl text-slate-900">Birouri premium înregistrate recent</h2>
+            </div>
+            <Link href="/directory" className="btn-premium btn-premium-primary">
+              Vezi directorul complet
+            </Link>
           </div>
-        </div>
-      </section>
 
-      {/* Categories Section */}
-      <section className="section-padding-lg bg-slate-50">
-        <div className="container-premium">
-          <SectionTitle
-            subtitle="Explorează"
-            title="Categorii de Servicii"
-            align="center"
-          />
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-            {categories.map((cat) => (
-              <div key={cat.slug}>
-                <Link
-                  href={`/directory?cat=${cat.slug}`}
-                  className="group block text-center p-8 md:p-10 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 h-full"
-                >
-                  <span className="text-5xl md:text-6xl block mb-4 transition-transform group-hover:scale-110">
-                    {cat.icon}
-                  </span>
-                  <h3 className="font-serif font-semibold text-lg md:text-xl text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
-                    {cat.name}
-                  </h3>
-                  <p className="text-sm text-slate-600">{cat.desc}</p>
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Companies Section */}
-      <section className="section-padding-lg bg-white">
-        <div className="container-premium">
-          <SectionTitle
-            subtitle="Recomandate"
-            title="Birouri Premium Verificate"
-            align="center"
-          />
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {featured.map((company, index) => (
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+            {featuredCompanies.map((company, index) => (
               <CompanyCardPremium key={company.id} company={company} index={index} />
             ))}
           </div>
-
-          <div className="text-center mt-12">
-            <Link href="/directory" className="btn-premium btn-premium-primary">
-              Vezi Toate Birourile
-              <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
-          </div>
         </div>
       </section>
 
-      {/* Articles Section */}
-      <section className="section-padding-lg bg-slate-50">
+      {/* Playbooks */}
+      <section className="section-padding bg-slate-900 text-white">
         <div className="container-premium">
-          <SectionTitle
-            subtitle="Blog"
-            title="Articole Recente & Inspirație"
-            align="center"
-          />
+          <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+            <div>
+              <p className="text-sm uppercase tracking-[0.4em] text-blue-200">Playbooks</p>
+              <h2 className="mt-3 font-serif text-4xl">Scenarii curate pentru proiectele critice</h2>
+              <p className="mt-3 max-w-2xl text-slate-200">
+                Pre-filtrăm echipele după buget, complexitate și experiența reală astfel încât să ajungi direct la discuții tehnice.
+              </p>
+            </div>
+            <Link href="/contact" className="btn-premium bg-white text-slate-900 hover:bg-blue-50">
+              Cere o recomandare
+            </Link>
+          </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {topArticles.map((art) => (
-              <div key={art.id}>
-                <Link
-                  href={`/article/${art.slug}`}
-                  className="group block bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 h-full card-hover-lift"
-                >
-                  {/* Article Image Placeholder */}
-                  <div className="relative h-56 bg-gradient-to-br from-blue-100 via-slate-100 to-slate-200 overflow-hidden">
-                    <div className="absolute inset-0 bg-slate-900/0 group-hover:bg-slate-900/10 transition-all duration-500" />
-                  </div>
-
-                  <div className="p-6">
-                    <div className="flex items-center gap-3 text-sm text-slate-500 mb-3">
-                      <time>
-                        {new Date(art.date).toLocaleDateString("ro-RO", {
-                          day: "numeric",
-                          month: "long",
-                          year: "numeric",
-                        })}
-                      </time>
-                    </div>
-
-                    <h3 className="font-serif font-semibold text-xl text-slate-900 mb-3 line-clamp-2 group-hover:text-blue-600 transition-colors">
-                      {art.title}
-                    </h3>
-
-                    <p className="text-slate-600 text-sm line-clamp-3 mb-4">
-                      {art.excerpt}
-                    </p>
-
-                    <div className="flex items-center text-blue-600 font-medium text-sm group-hover:gap-2 transition-all">
-                      <span>Citește mai mult</span>
-                      <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                      </svg>
-                    </div>
-                  </div>
-                </Link>
+          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {curatedPlaybooks.map((playbook) => (
+              <div key={playbook.title} className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl">
+                <h3 className="font-serif text-2xl">{playbook.title}</h3>
+                <p className="mt-3 text-sm text-slate-200">{playbook.description}</p>
+                <ul className="mt-6 space-y-2 text-sm text-blue-100">
+                  {playbook.actions.map((action) => (
+                    <li key={action} className="flex items-center gap-2">
+                      <span className="h-1.5 w-1.5 rounded-full bg-blue-300" />
+                      {action}
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
+        </div>
+      </section>
 
-          <div className="text-center mt-12">
+      {/* Articles */}
+      <section className="section-padding bg-slate-50">
+        <div className="container-premium">
+          <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+            <div>
+              <p className="text-sm uppercase tracking-[0.4em] text-slate-500">Field notes</p>
+              <h2 className="mt-3 font-serif text-4xl text-slate-900">Analize și studii de caz proaspete</h2>
+            </div>
             <Link href="/news" className="btn-premium btn-premium-outline">
-              Toate Articolele
+              Toate articolele
             </Link>
+          </div>
+
+          <div className="mt-10 grid gap-6 lg:grid-cols-3">
+            {latestArticles.map((article, idx) => (
+              <Link
+                key={article.slug}
+                href={`/article/${article.slug}`}
+                className={`group rounded-3xl border border-slate-100 bg-white p-6 transition hover:-translate-y-1 hover:border-slate-200 ${
+                  idx === 0 ? 'lg:col-span-2 lg:grid lg:grid-cols-[1.2fr_0.8fr] lg:items-center' : ''
+                }`}
+              >
+                <div>
+                  <p className="text-xs uppercase tracking-[0.4em] text-slate-500">
+                    {article.category ?? 'Insight'} · {new Date(article.date).toLocaleDateString('ro-RO', { month: 'short', day: 'numeric' })}
+                  </p>
+                  <h3 className="mt-3 font-serif text-2xl text-slate-900 group-hover:text-blue-600">
+                    {article.title}
+                  </h3>
+                  <p className="mt-2 text-slate-600">{article.excerpt}</p>
+                  <span className="mt-4 inline-flex items-center text-sm font-semibold text-blue-600">
+                    Citește articolul
+                    <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </span>
+                </div>
+                {idx === 0 && article.imageUrl && (
+                  <div className="mt-6 overflow-hidden rounded-2xl lg:mt-0">
+                    <div
+                      className="h-56 rounded-2xl bg-cover bg-center"
+                      style={{ backgroundImage: `url(${article.imageUrl})` }}
+                    />
+                  </div>
+                )}
+              </Link>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="section-padding-lg relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-blue-900" />
-        <div className="absolute inset-0 opacity-10" style={{backgroundImage: "url('/grid.svg')"}} />
-        
-        <div className="container-premium relative z-10">
-          <div className="max-w-3xl mx-auto text-center text-white">
-            <h2 className="font-serif font-bold text-4xl md:text-5xl mb-6">
-              Ești Arhitect?<br />Adaugă Biroul Tău
-            </h2>
-            <p className="text-xl text-slate-300 mb-8">
-              Înregistrează-te gratuit și fii vizibil pentru mii de clienți potențiali.
-              Dezvoltă-ți afacerea cu BirouArhitect.ro
+      {/* CTA */}
+      <section className="section-padding">
+        <div className="container-premium">
+          <div className="rounded-[32px] border border-slate-100 bg-white p-10 text-center shadow-2xl">
+            <p className="text-sm uppercase tracking-[0.4em] text-slate-500">Ai un proiect urgent?</p>
+            <h2 className="mt-4 font-serif text-4xl text-slate-900">Primești 3 recomandări de birouri în maximum 48 de ore</h2>
+            <p className="mt-3 text-lg text-slate-600">
+              Ne ocupăm de shortlist, introduceri și calendarul call-urilor tehnice. Tu te concentrezi pe decizii.
             </p>
-            <Link
-              href="/submit"
-              className="btn-premium btn-premium-primary inline-flex items-center space-x-2"
-            >
-              <span>Înregistrează-te Gratuit</span>
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
+            <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+              <Link href="/contact" className="btn-premium btn-premium-primary">
+                Trimite detalii proiect
+              </Link>
+              <Link href="/about" className="btn-premium btn-premium-outline">
+                Află cum selectăm birourile
+              </Link>
+            </div>
           </div>
         </div>
       </section>

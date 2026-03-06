@@ -13,6 +13,7 @@ interface Article {
   category?: string;
   views: number;
   tags?: string[];
+  imageUrl?: string;
 }
 
 interface ArticlePageClientProps {
@@ -21,154 +22,93 @@ interface ArticlePageClientProps {
 }
 
 export default function ArticlePageClient({ article, relatedArticles }: ArticlePageClientProps) {
+  const words = article.content.replace(/<[^>]+>/g, '').split(/\s+/).length;
+  const readingMinutes = Math.max(4, Math.round(words / 220));
+
   return (
     <>
-      {/* Article Header */}
-      <article className="pt-24 md:pt-32 pb-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4">
-          <div>
-            {/* Category & Meta */}
-            <div className="flex flex-wrap items-center gap-3 text-sm text-slate-600 mb-6">
-              {article.category && (
-                <>
-                  <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full font-medium">
-                    {article.category}
-                  </span>
-                  <span>•</span>
-                </>
-              )}
-              <time>
-                {new Date(article.date).toLocaleDateString("ro-RO", {
-                  day: "numeric",
-                  month: "long",
-                  year: "numeric",
-                })}
-              </time>
-              <span>•</span>
-              <span>{article.views} vizualizări</span>
-            </div>
-
-            {/* Title */}
-            <h1 className="font-serif font-bold text-4xl md:text-5xl lg:text-6xl text-slate-900 mb-6 leading-tight text-balance">
-              {article.title}
-            </h1>
-
-            {/* Excerpt */}
-            <p className="text-xl text-slate-600 leading-relaxed mb-8">
-              {article.excerpt}
-            </p>
-
-            {/* Author */}
-            <div className="flex items-center gap-4 pb-8 border-b border-slate-200">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-600 to-slate-900 flex items-center justify-center text-white font-serif font-bold text-xl">
-                {article.author.charAt(0)}
-              </div>
-              <div>
-                <div className="font-semibold text-slate-900">{article.author}</div>
-                <div className="text-sm text-slate-600">Autor</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      {/* Article Content */}
-      <section className="pb-16 bg-white">
-        <div className="max-w-3xl mx-auto px-4">
+      <section className="relative isolate overflow-hidden bg-slate-900 pt-24 text-white">
+        {article.imageUrl && (
           <div
-            className="prose prose-lg prose-slate max-w-none"
-            style={{
-              fontSize: '1.125rem',
-              lineHeight: '1.8',
-            }}
-          >
-            <div
-              className="article-content"
-              dangerouslySetInnerHTML={{ __html: article.content }}
-              style={{
-                color: '#475569',
-              }}
-            />
-          </div>
-
-          {/* Article Footer - Tags */}
-          {article.tags && article.tags.length > 0 && (
-            <div className="mt-12 pt-8 border-t border-slate-200">
-              <h3 className="text-sm font-semibold text-slate-900 mb-3">Taguri</h3>
-              <div className="flex flex-wrap gap-2">
-                {article.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="px-4 py-2 bg-slate-100 text-slate-700 rounded-lg text-sm font-medium hover:bg-slate-200 transition-colors"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* Back to Articles */}
-          <div className="mt-12">
-            <Link
-              href="/news"
-              className="inline-flex items-center gap-2 text-slate-600 hover:text-slate-900 font-medium transition-colors group"
-            >
-              <svg
-                className="w-5 h-5 transition-transform group-hover:-translate-x-1"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-              </svg>
-              Înapoi la Articole
-            </Link>
+            className="absolute inset-0 opacity-30"
+            style={{ backgroundImage: `url(${article.imageUrl})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+          />
+        )}
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-900/90 to-slate-950" />
+        <div className="container-premium relative z-10 py-16">
+          <p className="text-xs uppercase tracking-[0.4em] text-blue-200">
+            {article.category ?? 'Insight'} · {new Date(article.date).toLocaleDateString('ro-RO', { month: 'long', day: 'numeric', year: 'numeric' })}
+          </p>
+          <h1 className="mt-6 font-serif text-4xl leading-tight sm:text-5xl lg:text-6xl">{article.title}</h1>
+          <p className="mt-6 max-w-3xl text-lg text-slate-200">{article.excerpt}</p>
+          <div className="mt-8 flex flex-wrap gap-4 text-sm text-blue-100">
+            <span>Autor: {article.author}</span>
+            <span>•</span>
+            <span>{readingMinutes} min de citit</span>
+            <span>•</span>
+            <span>{article.views ?? 0} vizualizări</span>
           </div>
         </div>
       </section>
 
-      {/* Related Articles */}
+      <section className="pb-16">
+        <div className="container-premium">
+          <div className="relative -mt-20 rounded-[32px] border border-slate-100 bg-white p-8 shadow-xl">
+            <div className="prose prose-lg prose-slate max-w-none">
+              <div className="article-content" dangerouslySetInnerHTML={{ __html: article.content }} />
+            </div>
+
+            {article.tags && article.tags.length > 0 && (
+              <div className="mt-12 border-t border-slate-100 pt-8">
+                <h3 className="text-sm font-semibold text-slate-900">Taguri</h3>
+                <div className="mt-4 flex flex-wrap gap-3">
+                  {article.tags.map((tag) => (
+                    <span key={tag} className="rounded-full bg-slate-100 px-4 py-2 text-sm text-slate-700">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            <div className="mt-10 flex flex-wrap gap-4 text-sm">
+              <Link
+                href="/news"
+                className="inline-flex items-center gap-2 text-slate-600 hover:text-slate-900"
+              >
+                <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Înapoi la articole
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {relatedArticles.length > 0 && (
         <section className="section-padding bg-slate-50">
           <div className="container-premium">
-            <div>
-              <h2 className="font-serif font-bold text-3xl text-slate-900 mb-8 text-center">
-                Articole Similare
-              </h2>
-
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {relatedArticles.map((related) => (
-                  <div key={related.id}>
-                    <Link
-                      href={`/article/${related.slug}`}
-                      className="group block bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 h-full card-hover-lift"
-                    >
-                      <div className="relative h-48 bg-gradient-to-br from-blue-100 via-slate-100 to-slate-200 overflow-hidden">
-                        <div className="absolute inset-0 bg-slate-900/0 group-hover:bg-slate-900/10 transition-all duration-500" />
-                      </div>
-
-                      <div className="p-6">
-                        <div className="text-sm text-slate-500 mb-2">
-                          {new Date(related.date).toLocaleDateString("ro-RO", {
-                            day: "numeric",
-                            month: "long",
-                            year: "numeric",
-                          })}
-                        </div>
-
-                        <h3 className="font-serif font-semibold text-xl text-slate-900 mb-2 line-clamp-2 group-hover:text-blue-600 transition-colors">
-                          {related.title}
-                        </h3>
-
-                        <p className="text-slate-600 text-sm line-clamp-2">
-                          {related.excerpt}
-                        </p>
-                      </div>
-                    </Link>
-                  </div>
-                ))}
-              </div>
+            <div className="flex items-center justify-between">
+              <h2 className="font-serif text-3xl text-slate-900">Articole similare</h2>
+              <Link href="/news" className="text-sm font-semibold text-blue-600">
+                Vezi toate
+              </Link>
+            </div>
+            <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {relatedArticles.map((related) => (
+                <Link
+                  key={related.id}
+                  href={`/article/${related.slug}`}
+                  className="group rounded-3xl border border-slate-100 bg-white p-6 transition hover:-translate-y-1 hover:border-slate-200"
+                >
+                  <p className="text-xs uppercase tracking-[0.4em] text-slate-500">
+                    {related.category ?? 'Insight'} · {new Date(related.date).toLocaleDateString('ro-RO', { month: 'short', day: 'numeric' })}
+                  </p>
+                  <h3 className="mt-3 font-serif text-2xl text-slate-900 group-hover:text-blue-600">{related.title}</h3>
+                  <p className="mt-2 text-slate-600">{related.excerpt}</p>
+                </Link>
+              ))}
             </div>
           </div>
         </section>
