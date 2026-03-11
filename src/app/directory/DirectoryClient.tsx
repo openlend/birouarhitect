@@ -164,25 +164,25 @@ export default function DirectoryClient() {
   );
 
   return (
-    <section className="bg-slate-50 pb-20 pt-8">
+    <section className="bg-white pb-20 pt-10">
       <div className="container-premium space-y-10">
         <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
-          <div className="relative overflow-hidden rounded-[32px] bg-gradient-to-br from-slate-900 via-slate-800 to-blue-900 p-8 text-white shadow-2xl">
-            <div className="absolute inset-0 opacity-40" style={{ backgroundImage: 'radial-gradient(circle at 20% 20%, rgba(59,130,246,0.5), transparent 55%)' }} />
+          <div className="relative overflow-hidden rounded-[32px] bg-white p-8 text-slate-900 shadow-[0_20px_60px_rgba(15,23,42,0.12)] ring-1 ring-slate-200">
+            <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-slate-50" />
             <div className="relative space-y-6">
-              <p className="text-xs font-semibold uppercase tracking-[0.4em] text-blue-200">Director premium · România</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.4em] text-slate-500">Director premium · România</p>
               <h1 className="font-serif text-3xl leading-snug sm:text-4xl">
                 Selectezi arhitecți real disponibili, cu proiecte livrate în ultimele 90 de zile.
               </h1>
-              <p className="text-base text-slate-200">
+              <p className="text-base text-slate-600">
                 Filtrează instant după tip de proiect, oraș și statut premium. Echipa editorială verifică manual fiecare birou.
               </p>
               <div className="grid gap-4 sm:grid-cols-2">
                 {heroStats.map((stat) => (
-                  <div key={stat.label} className="rounded-2xl border border-white/10 bg-white/10 p-4 backdrop-blur">
-                    <p className="text-xs uppercase tracking-[0.3em] text-blue-100">{stat.label}</p>
+                  <div key={stat.label} className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                    <p className="text-xs uppercase tracking-[0.3em] text-slate-500">{stat.label}</p>
                     <p className="mt-1 text-3xl font-semibold">{stat.value}</p>
-                    <p className="text-sm text-slate-200">{stat.helper}</p>
+                    <p className="text-sm text-slate-600">{stat.helper}</p>
                   </div>
                 ))}
               </div>
