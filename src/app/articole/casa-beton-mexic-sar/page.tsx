@@ -44,7 +44,7 @@ export default function CasaBetonMexicArticle() {
       </header>
 
       {/* Introduction */}
-      <div className="prose prose-lg max-w-none">
+      <div className="ba-article">
         <p className="text-xl text-gray-700 leading-relaxed mb-6">
           <strong>Cum creezi o rezidență de weekend care dialoghează cu peisajul muntos fără să îl domine?</strong> 
           Arhitecții de la <strong>S-AR (Stación Arquitectura)</strong> din Mexico City și Monterrey răspund prin 

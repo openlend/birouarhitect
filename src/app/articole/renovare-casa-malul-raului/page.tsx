@@ -44,7 +44,7 @@ export default function RenovareCasaMalArticle() {
       </header>
 
       {/* Introduction */}
-      <div className="prose prose-lg max-w-none">
+      <div className="ba-article">
         <p className="text-xl text-gray-700 leading-relaxed mb-6">
           <strong>Cum transformi o clădire abandonată care blochează accesul comunității la apă într-un spațiu public vibrant?</strong> 
           Arhitecții de la <strong>Ref Architects</strong> și <strong>0.5m Studio</strong> au răspuns acestei întrebări prin renovarea 

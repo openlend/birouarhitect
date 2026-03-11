@@ -54,7 +54,7 @@ export default function ArticlePageClient({ article, relatedArticles }: ArticleP
       <section className="pb-16">
         <div className="container-premium">
           <div className="relative -mt-20 rounded-[32px] border border-slate-100 bg-white p-8 shadow-xl">
-            <div className="prose prose-lg prose-slate max-w-none">
+            <div className="ba-article">
               <div className="article-content" dangerouslySetInnerHTML={{ __html: article.content }} />
             </div>
 

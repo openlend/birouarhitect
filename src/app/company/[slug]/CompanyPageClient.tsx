@@ -117,7 +117,9 @@ export default function CompanyPageClient({ company }: { company: Company }) {
             <div className="space-y-8">
               <div className="rounded-3xl border border-slate-100 bg-white p-8">
                 <h2 className="font-serif text-3xl text-slate-900">Despre studio</h2>
-                <p className="mt-4 text-lg text-slate-600 whitespace-pre-line">{company.description}</p>
+                <div className="mt-4 ba-article">
+                  <p className="whitespace-pre-line">{company.description}</p>
+                </div>
               </div>
 
               {company.tags.length > 0 && (

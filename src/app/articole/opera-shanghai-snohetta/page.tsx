@@ -43,7 +43,7 @@ export default function ShanghaiOperaArticle() {
       </header>
 
       {/* Introduction */}
-      <div className="prose prose-lg max-w-none">
+      <div className="ba-article">
         <p className="text-xl text-gray-700 leading-relaxed mb-6">
           <strong>Pe malul râului Huangpu din Shanghai, arhitectura contemporană atinge noi culmi prin Opera din Shanghai</strong>, 
           proiectată de renumitul studio norvegian <Link href="https://snohetta.com" target="_blank" className="text-blue-600 hover:underline">Snøhetta</Link>. 
