@@ -36,7 +36,7 @@ export default function SubmitPage() {
             </div>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-              {benefits.map((benefit, index) => (
+              {benefits.map((benefit) => (
                 <div
                   key={benefit.title}
                   className="text-center p-6 bg-slate-50 rounded-2xl"
@@ -277,9 +277,9 @@ export default function SubmitPage() {
                   q: 'Pot modifica informațiile după înregistrare?',
                   a: 'Da, poți actualiza oricând informațiile din profil contactându-ne.',
                 },
-              ].map((faq, index) => (
+              ].map((faq) => (
                 <div
-                  key={index}
+                  key={faq.q}
                   className="bg-slate-50 rounded-2xl p-6"
                 >
                   <h3 className="font-semibold text-slate-900 mb-2">{faq.q}</h3>

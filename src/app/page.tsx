@@ -1,6 +1,9 @@
 import Link from "next/link";
 import CompanyCardPremium from "@/components/CompanyCardPremium";
-import { companies, categories } from "@/data/companies";
+import QuickSearchPanel from "@/components/QuickSearchPanel";
+import SectionHeading from "@/components/ui/SectionHeading";
+import StatPills from "@/components/ui/StatPills";
+import { companies, categories, cities } from "@/data/companies";
 import { newArticles } from "@/data/new-articles";
 
 type ArticlePreview = (typeof newArticles)[number] & { category?: string };
@@ -45,6 +48,9 @@ const curatedPlaybooks = [
   },
 ];
 
+const quickSearchCategoryOptions = categories.map((cat) => ({ label: cat.name, value: cat.slug }));
+const quickSearchCityOptions = cities.map((city) => ({ label: city, value: city }));
+
 export default function Home() {
   const totalCities = new Set(companies.map((c) => c.city)).size;
   const totalSpecialties = new Set(companies.map((c) => c.category)).size;
@@ -73,6 +79,16 @@ export default function Home() {
     },
   ];
 
+  const totalStudios = companies.length;
+
+  // IMPORTANT: Keep metrics truthy (no fabricated counts).
+  const metricsStats = [
+    { label: 'Birouri în director', value: `${totalStudios}+`, helper: 'listate și curate' },
+    { label: 'Birouri verificate', value: `${verifiedStudios}+`, helper: 'portofolii reale' },
+    { label: 'Orașe', value: `${totalCities}+`, helper: 'acoperire națională' },
+    { label: 'Specialități', value: `${totalSpecialties}+`, helper: 'rezidențial, comercial, urbanism' },
+  ];
+
   return (
     <>
       {/* Hero Section */}
@@ -84,28 +100,16 @@ export default function Home() {
               <div>
                 <p className="text-sm uppercase tracking-[0.3em] text-blue-200">Director premium · România</p>
                 <h1 className="mt-4 font-serif text-4xl leading-tight text-white sm:text-5xl lg:text-6xl">
-                  Descoperă biroul de arhitectură potrivit înainte să înceapă licitația
+                  Găsește arhitectul potrivit pentru proiectul tău
                 </h1>
                 <p className="mt-6 text-lg text-slate-200 sm:text-xl">
-                  Vezi capacitatea reală a echipelor, tipurile de proiecte livrate și disponibilitatea lor în următoarele 90 de zile.
+                  Filtrează rapid după oraș și specializare, apoi compară portofolii, stiluri și modul de lucru.
                 </p>
 
-                <form action="/directory" className="mt-8 rounded-2xl bg-white/10 p-4 backdrop-blur-sm">
-                  <div className="grid gap-4 sm:grid-cols-[minmax(0,1fr)_200px]">
-                    <input
-                      name="q"
-                      type="text"
-                      placeholder="Ex: casă lac Colibița, spațiu retail București"
-                      className="h-12 rounded-xl border border-white/20 bg-white/80 px-4 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-200"
-                    />
-                    <button type="submit" className="btn-premium bg-white text-slate-900 hover:bg-blue-50">
-                      Caută în director
-                    </button>
-                  </div>
-                  <p className="mt-3 text-xs text-slate-200">
-                    Filtrăm doar birourile care lucrează proiecte active în 2026.
-                  </p>
-                </form>
+                <div className="mt-8 rounded-2xl border border-white/15 bg-white/5 p-4 text-sm text-slate-200">
+                  <p className="text-xs font-semibold uppercase tracking-[0.35em] text-blue-100">Cum funcționează</p>
+                  <p className="mt-2">Completezi căutarea rapidă din dreapta, iar noi filtrăm instant directorul și confirmăm disponibilitatea birourilor în maximum 48 de ore.</p>
+                </div>
 
                 <div className="mt-10 flex flex-col gap-4">
                   {quickFilters.map((filter) => (
@@ -124,42 +128,44 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="relative">
-                <div className="absolute inset-0 rounded-[32px] border border-white/5" />
-                <div className="relative grid gap-6">
-                  <div className="rounded-3xl bg-white/10 p-6 text-white shadow-2xl backdrop-blur-xl">
-                    <p className="text-sm text-blue-200">Focus săptămânal</p>
-                    <h3 className="mt-3 font-serif text-3xl">Birouri cu rezultate măsurabile</h3>
-                    <p className="mt-3 text-sm text-slate-200">
-                      Rulăm interviuri lunare cu echipele și verificăm stadiul proiectelor publicate.
-                    </p>
-                    <div className="mt-6 grid gap-4 sm:grid-cols-2">
-                      <div className="rounded-2xl bg-white/10 p-4">
-                        <p className="text-xs uppercase tracking-widest text-blue-200">Livrări Q1</p>
-                        <p className="mt-2 text-3xl font-semibold">17</p>
-                        <p className="text-xs text-slate-200">clădiri finalizate în ultimele 90 de zile</p>
-                      </div>
-                      <div className="rounded-2xl bg-white/10 p-4">
-                        <p className="text-xs uppercase tracking-widest text-blue-200">Timp mediu estimări</p>
-                        <p className="mt-2 text-3xl font-semibold">48h</p>
-                        <p className="text-xs text-slate-200">până la răspuns cu ofertă preliminară</p>
-                      </div>
+              <div className="relative grid gap-6">
+                <QuickSearchPanel
+                  categories={quickSearchCategoryOptions}
+                  cities={quickSearchCityOptions}
+                  className="bg-white shadow-2xl"
+                />
+                <div className="rounded-3xl bg-white/10 p-6 text-white shadow-2xl backdrop-blur-xl">
+                  <p className="text-sm text-blue-200">Focus săptămânal</p>
+                  <h3 className="mt-3 font-serif text-3xl">Birouri cu rezultate măsurabile</h3>
+                  <p className="mt-3 text-sm text-slate-200">
+                    Rulăm interviuri lunare cu echipele și verificăm stadiul proiectelor publicate.
+                  </p>
+                  <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                    <div className="rounded-2xl bg-white/10 p-4">
+                      <p className="text-xs uppercase tracking-widest text-blue-200">Livrări Q1</p>
+                      <p className="mt-2 text-3xl font-semibold">17</p>
+                      <p className="text-xs text-slate-200">clădiri finalizate în ultimele 90 de zile</p>
+                    </div>
+                    <div className="rounded-2xl bg-white/10 p-4">
+                      <p className="text-xs uppercase tracking-widest text-blue-200">Timp mediu estimări</p>
+                      <p className="mt-2 text-3xl font-semibold">48h</p>
+                      <p className="text-xs text-slate-200">până la răspuns cu ofertă preliminară</p>
                     </div>
                   </div>
+                </div>
 
-                  <div className="rounded-3xl bg-white/10 p-6 text-white shadow-2xl backdrop-blur-xl">
-                    <p className="text-xs uppercase tracking-[0.4em] text-blue-200">Indicatori</p>
-                    <div className="mt-4 space-y-4">
-                      {heroStats.map((stat) => (
-                        <div key={stat.label} className="flex items-start justify-between">
-                          <div>
-                            <p className="text-sm text-slate-200">{stat.label}</p>
-                            <p className="text-xs text-slate-300">{stat.detail}</p>
-                          </div>
-                          <p className="text-2xl font-semibold text-white">{stat.value}</p>
+                <div className="rounded-3xl bg-white/10 p-6 text-white shadow-2xl backdrop-blur-xl">
+                  <p className="text-xs uppercase tracking-[0.4em] text-blue-200">Indicatori</p>
+                  <div className="mt-4 space-y-4">
+                    {heroStats.map((stat) => (
+                      <div key={stat.label} className="flex items-start justify-between">
+                        <div>
+                          <p className="text-sm text-slate-200">{stat.label}</p>
+                          <p className="text-xs text-slate-300">{stat.detail}</p>
                         </div>
-                      ))}
-                    </div>
+                        <p className="text-2xl font-semibold text-white">{stat.value}</p>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -171,54 +177,21 @@ export default function Home() {
       {/* Metrics Strip */}
       <section className="section-padding pb-10">
         <div className="container-premium">
-          <div className="grid gap-6 rounded-3xl border border-slate-100 bg-white p-6 sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              {
-                label: "Studii de fezabilitate",
-                value: "+60", 
-                detail: "în execuție acum",
-              },
-              {
-                label: "Firme premium",
-                value: `${premiumStudios}+`,
-                detail: "abonate la audit trimestrial",
-              },
-              {
-                label: "Proiecte listate",
-                value: "1000+",
-                detail: "documentate în ultimii 3 ani",
-              },
-              {
-                label: "Timp mediu introducere",
-                value: "4 zile",
-                detail: "de la solicitare la call tehnic",
-              },
-            ].map((item) => (
-              <div key={item.label} className="rounded-2xl bg-slate-50 p-4">
-                <p className="text-sm text-slate-500">{item.label}</p>
-                <p className="mt-1 text-3xl font-semibold text-slate-900">{item.value}</p>
-                <p className="text-sm text-slate-500">{item.detail}</p>
-              </div>
-            ))}
-          </div>
+          <StatPills stats={metricsStats} columns={4} />
         </div>
       </section>
 
       {/* Categories */}
       <section className="section-padding bg-slate-50">
         <div className="container-premium">
-          <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-            <div>
-              <p className="text-sm uppercase tracking-[0.4em] text-slate-500">Categorii</p>
-              <h2 className="mt-4 font-serif text-4xl text-slate-900">Scanează piața pe specialități reale</h2>
-              <p className="mt-3 max-w-2xl text-lg text-slate-600">
-                Fiecare categorie include doar birouri care au cel puțin 2 proiecte finalizate în ultimii 24 de luni.
-              </p>
-            </div>
-            <Link href="/directory" className="btn-premium btn-premium-outline self-start">
-              Toate serviciile
-            </Link>
-          </div>
+          <SectionHeading
+            eyebrow="Categorii"
+            title="Scanează piața pe specialități reale"
+            description="Fiecare categorie include doar birouri care au cel puțin două proiecte finalizate în ultimele 24 de luni."
+            kicker={(
+              <Link href="/directory" className="btn-premium btn-premium-outline mt-2">Toate serviciile</Link>
+            )}
+          />
 
           <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {categories.map((cat) => (
@@ -250,15 +223,13 @@ export default function Home() {
       {/* Featured Companies */}
       <section className="section-padding bg-white">
         <div className="container-premium">
-          <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-            <div>
-              <p className="text-sm uppercase tracking-[0.4em] text-slate-500">Selecție editorială</p>
-              <h2 className="mt-3 font-serif text-4xl text-slate-900">Birouri premium înregistrate recent</h2>
-            </div>
-            <Link href="/directory" className="btn-premium btn-premium-primary">
-              Vezi directorul complet
-            </Link>
-          </div>
+          <SectionHeading
+            eyebrow="Selecție editorială"
+            title="Birouri premium înregistrate recent"
+            kicker={(
+              <Link href="/directory" className="btn-premium btn-premium-primary mt-2">Vezi directorul complet</Link>
+            )}
+          />
 
           <div className="mt-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
             {featuredCompanies.map((company, index) => (
@@ -271,18 +242,14 @@ export default function Home() {
       {/* Playbooks */}
       <section className="section-padding bg-slate-900 text-white">
         <div className="container-premium">
-          <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
-            <div>
-              <p className="text-sm uppercase tracking-[0.4em] text-blue-200">Playbooks</p>
-              <h2 className="mt-3 font-serif text-4xl">Scenarii curate pentru proiectele critice</h2>
-              <p className="mt-3 max-w-2xl text-slate-200">
-                Pre-filtrăm echipele după buget, complexitate și experiența reală astfel încât să ajungi direct la discuții tehnice.
-              </p>
-            </div>
-            <Link href="/contact" className="btn-premium bg-white text-slate-900 hover:bg-blue-50">
-              Cere o recomandare
-            </Link>
-          </div>
+          <SectionHeading
+            eyebrow="Playbooks"
+            title="Scenarii curate pentru proiectele critice"
+            description="Pre-filtrăm echipele după buget, complexitate și experiență reală astfel încât să ajungi direct la discuții tehnice."
+            kicker={(
+              <Link href="/contact" className="btn-premium bg-white text-slate-900 hover:bg-blue-50 mt-2">Cere o recomandare</Link>
+            )}
+          />
 
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {curatedPlaybooks.map((playbook) => (
@@ -306,15 +273,13 @@ export default function Home() {
       {/* Articles */}
       <section className="section-padding bg-slate-50">
         <div className="container-premium">
-          <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-            <div>
-              <p className="text-sm uppercase tracking-[0.4em] text-slate-500">Field notes</p>
-              <h2 className="mt-3 font-serif text-4xl text-slate-900">Analize și studii de caz proaspete</h2>
-            </div>
-            <Link href="/news" className="btn-premium btn-premium-outline">
-              Toate articolele
-            </Link>
-          </div>
+          <SectionHeading
+            eyebrow="Field notes"
+            title="Analize și studii de caz proaspete"
+            kicker={(
+              <Link href="/news" className="btn-premium btn-premium-outline mt-2">Toate articolele</Link>
+            )}
+          />
 
           <div className="mt-10 grid gap-6 lg:grid-cols-3">
             {latestArticles.map((article, idx) => (

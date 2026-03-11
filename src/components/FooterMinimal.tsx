@@ -15,10 +15,10 @@ const footerSections = [
   {
     title: 'Categorii',
     links: [
-      { label: 'Rezidențial', href: '/directory?category=residential' },
-      { label: 'Comercial', href: '/directory?category=commercial' },
-      { label: 'Industrial', href: '/directory?category=industrial' },
-      { label: 'Restaurare', href: '/directory?category=restoration' },
+      { label: 'Rezidențial', href: '/directory?cat=rezidential' },
+      { label: 'Comercial', href: '/directory?cat=comercial' },
+      { label: 'Industrial', href: '/directory?cat=industrial' },
+      { label: 'Urbanism', href: '/directory?cat=urbanism' },
     ],
   },
   {

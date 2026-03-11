@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { companies } from "@/data/companies";
 import { notFound } from "next/navigation";
 import CompanyPageClient from "./CompanyPageClient";
