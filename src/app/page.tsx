@@ -111,20 +111,13 @@ export default function Home() {
                   <p className="mt-2">Completezi căutarea rapidă din dreapta, iar noi filtrăm instant directorul și confirmăm disponibilitatea birourilor în maximum 48 de ore.</p>
                 </div>
 
-                <div className="mt-10 flex flex-col gap-4">
-                  {quickFilters.map((filter) => (
-                    <Link
-                      key={filter.label}
-                      href={filter.href}
-                      className="flex flex-col rounded-2xl border border-white/10 bg-white/5 p-4 transition hover:border-white/30"
-                    >
-                      <div className="flex items-center justify-between text-white">
-                        <span className="font-medium">{filter.label}</span>
-                        <span className="text-sm text-blue-200">Vezi studiouri →</span>
-                      </div>
-                      <p className="text-sm text-slate-200">{filter.description}</p>
-                    </Link>
-                  ))}
+                <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+                  <Link href="/directory" className="btn-premium bg-white text-slate-900 justify-center">
+                    Găsește arhitect
+                  </Link>
+                  <Link href="/submit" className="btn-premium btn-premium-outline justify-center border-white/30 text-white hover:bg-white/10">
+                    Adaugă biroul
+                  </Link>
                 </div>
               </div>
 
@@ -135,22 +128,15 @@ export default function Home() {
                   className="bg-white shadow-2xl"
                 />
                 <div className="rounded-3xl bg-white/10 p-6 text-white shadow-2xl backdrop-blur-xl">
-                  <p className="text-sm text-blue-200">Focus săptămânal</p>
-                  <h3 className="mt-3 font-serif text-3xl">Birouri cu rezultate măsurabile</h3>
+                  <p className="text-xs uppercase tracking-[0.4em] text-blue-200">Cum selectăm</p>
+                  <h3 className="mt-3 font-serif text-3xl">Portofolii reale, filtre clare</h3>
                   <p className="mt-3 text-sm text-slate-200">
-                    Rulăm interviuri lunare cu echipele și verificăm stadiul proiectelor publicate.
+                    În director păstrăm doar birouri cu proiecte publice și descrieri clare ale serviciilor — ca să alegi rapid.
                   </p>
-                  <div className="mt-6 grid gap-4 sm:grid-cols-2">
-                    <div className="rounded-2xl bg-white/10 p-4">
-                      <p className="text-xs uppercase tracking-widest text-blue-200">Livrări Q1</p>
-                      <p className="mt-2 text-3xl font-semibold">17</p>
-                      <p className="text-xs text-slate-200">clădiri finalizate în ultimele 90 de zile</p>
-                    </div>
-                    <div className="rounded-2xl bg-white/10 p-4">
-                      <p className="text-xs uppercase tracking-widest text-blue-200">Timp mediu estimări</p>
-                      <p className="mt-2 text-3xl font-semibold">48h</p>
-                      <p className="text-xs text-slate-200">până la răspuns cu ofertă preliminară</p>
-                    </div>
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    <span className="rounded-full bg-white/10 px-3 py-1 text-xs text-slate-100">Verificat editorial</span>
+                    <span className="rounded-full bg-white/10 px-3 py-1 text-xs text-slate-100">Specializări explicite</span>
+                    <span className="rounded-full bg-white/10 px-3 py-1 text-xs text-slate-100">Oraș + arie de lucru</span>
                   </div>
                 </div>
 
