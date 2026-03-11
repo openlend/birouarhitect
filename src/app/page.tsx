@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import CompanyCardPremium from "@/components/CompanyCardPremium";
 import QuickSearchPanel from "@/components/QuickSearchPanel";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -61,23 +62,6 @@ export default function Home() {
     category: (article as { category?: string }).category ?? 'Insight',
   }));
 
-  const heroStats = [
-    {
-      label: "Birouri verificate",
-      value: `${verifiedStudios}+`,
-      detail: "Audit editorial & portofolii reale",
-    },
-    {
-      label: "Orașe acoperite",
-      value: `${totalCities}+`,
-      detail: "Rețea din Cluj până la Constanța",
-    },
-    {
-      label: "Specialități",
-      value: `${totalSpecialties}+`,
-      detail: "Rezidențial, industrial, urbanism, retail",
-    },
-  ];
 
   const totalStudios = companies.length;
 
@@ -94,66 +78,50 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative mt-6">
         <div className="container-premium">
-          <div className="relative overflow-hidden rounded-[32px] bg-gradient-to-br from-slate-900 via-blue-900 to-slate-950 px-6 py-12 md:px-12 md:py-16">
-            <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "radial-gradient(circle at top, #38bdf8 0%, transparent 55%)" }} />
+          <div className="relative overflow-hidden rounded-[32px] bg-white px-6 py-10 md:px-12 md:py-14 border border-slate-200 shadow-sm">
+
             <div className="relative grid gap-12 lg:grid-cols-[1.2fr_0.8fr]">
               <div>
-                <p className="text-sm uppercase tracking-[0.3em] text-blue-200">Director premium · România</p>
-                <h1 className="mt-4 font-serif text-4xl leading-tight text-white sm:text-5xl lg:text-6xl">
+                <p className="text-xs uppercase tracking-[0.32em] text-slate-500">Director · România</p>
+                <h1 className="mt-4 font-serif text-4xl leading-tight text-slate-900 sm:text-5xl lg:text-6xl">
                   Găsește arhitectul potrivit pentru proiectul tău
                 </h1>
-                <p className="mt-6 text-lg text-slate-200 sm:text-xl">
+                <p className="mt-6 text-lg text-slate-600 sm:text-xl">
                   Filtrează rapid după oraș și specializare, apoi compară portofolii, stiluri și modul de lucru.
                 </p>
 
-                <div className="mt-8 rounded-2xl border border-white/15 bg-white/5 p-4 text-sm text-slate-200">
-                  <p className="text-xs font-semibold uppercase tracking-[0.35em] text-blue-100">Cum funcționează</p>
-                  <p className="mt-2">Completezi căutarea rapidă din dreapta, iar noi filtrăm instant directorul și confirmăm disponibilitatea birourilor în maximum 48 de ore.</p>
+                <div className="mt-8 rounded-2xl border border-slate-200 bg-slate-50 p-4 text-sm text-slate-600">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.35em] text-slate-500">Cum funcționează</p>
+                  <p className="mt-2">Alegi orașul și specializarea, iar apoi compari birouri după portofoliu și stil.</p>
                 </div>
 
                 <div className="mt-10 flex flex-col gap-3 sm:flex-row">
                   <Link href="/directory" className="btn-premium bg-white text-slate-900 justify-center">
                     Găsește arhitect
                   </Link>
-                  <Link href="/submit" className="btn-premium btn-premium-outline justify-center border-white/30 text-white hover:bg-white/10">
+                  <Link href="/submit" className="btn-premium btn-premium-outline justify-center">
                     Adaugă biroul
                   </Link>
                 </div>
               </div>
 
               <div className="relative grid gap-6">
+                <div className="rounded-3xl overflow-hidden border border-slate-200 bg-slate-100">
+                  <Image
+                    src="/images/articles/lac-colibita-peisaj-munti-transilvania-arhitectura-lacustra-2025.jpg"
+                    alt="BirouArhitect.ro"
+                    width={1200}
+                    height={800}
+                    className="h-48 w-full object-cover sm:h-56"
+                    priority
+                  />
+                </div>
+
                 <QuickSearchPanel
                   categories={quickSearchCategoryOptions}
                   cities={quickSearchCityOptions}
-                  className="bg-white shadow-2xl"
+                  className="bg-white shadow-sm border border-slate-200"
                 />
-                <div className="rounded-3xl bg-white/10 p-6 text-white shadow-2xl backdrop-blur-xl">
-                  <p className="text-xs uppercase tracking-[0.4em] text-blue-200">Cum selectăm</p>
-                  <h3 className="mt-3 font-serif text-3xl">Portofolii reale, filtre clare</h3>
-                  <p className="mt-3 text-sm text-slate-200">
-                    În director păstrăm doar birouri cu proiecte publice și descrieri clare ale serviciilor — ca să alegi rapid.
-                  </p>
-                  <div className="mt-5 flex flex-wrap gap-2">
-                    <span className="rounded-full bg-white/10 px-3 py-1 text-xs text-slate-100">Verificat editorial</span>
-                    <span className="rounded-full bg-white/10 px-3 py-1 text-xs text-slate-100">Specializări explicite</span>
-                    <span className="rounded-full bg-white/10 px-3 py-1 text-xs text-slate-100">Oraș + arie de lucru</span>
-                  </div>
-                </div>
-
-                <div className="rounded-3xl bg-white/10 p-6 text-white shadow-2xl backdrop-blur-xl">
-                  <p className="text-xs uppercase tracking-[0.4em] text-blue-200">Indicatori</p>
-                  <div className="mt-4 space-y-4">
-                    {heroStats.map((stat) => (
-                      <div key={stat.label} className="flex items-start justify-between">
-                        <div>
-                          <p className="text-sm text-slate-200">{stat.label}</p>
-                          <p className="text-xs text-slate-300">{stat.detail}</p>
-                        </div>
-                        <p className="text-2xl font-semibold text-white">{stat.value}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
               </div>
             </div>
           </div>

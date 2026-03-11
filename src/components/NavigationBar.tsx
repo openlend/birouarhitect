@@ -29,10 +29,8 @@ export default function NavigationBar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-white/90 backdrop-blur-xl shadow-sm border-b border-white/40'
-          : 'bg-white/60 backdrop-blur-lg'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-slate-200/70 ${
+        isScrolled ? 'bg-white shadow-sm' : 'bg-white'
       }`}
     >
       <div className="container-premium">
